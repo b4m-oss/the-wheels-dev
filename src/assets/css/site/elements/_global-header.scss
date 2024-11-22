@@ -1,6 +1,4 @@
-@use '../variables' as var;
-
-.#{var.$ns}-global-header {
+.global-header {
   display: flex;
   flex-flow: row;
   justify-content: start;

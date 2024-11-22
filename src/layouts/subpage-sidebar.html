@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="ja">
   <head>
-    <include src="components/sources/Head.html"></include>
+    <include src="components/site/sources/Head.html"></include>
     <title>{{ title }}</title>
   </head>
   <body>
     <header>
-      <include src="components/elements/GlobalHeader.html"
-        locals='{"title": "The Wheels", "caption": "All purpose desgin system."}'></include>
+      <include
+        src="components/site/elements/GlobalHeader.html"
+        locals='{"title": "The Wheels", "caption": "All purpose desgin system."}'
+      ></include>
     </header>
     <main id="main">
       <div class="layout-container layout-sidebar">
@@ -16,7 +18,7 @@
       </div>
     </main>
     <footer>
-      <include src="components/elements/GlobalFooter.html"></include>
+      <include src="components/site/elements/GlobalFooter.html"></include>
     </footer>
   </body>
 </html>

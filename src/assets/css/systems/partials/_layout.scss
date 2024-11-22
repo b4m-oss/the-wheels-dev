@@ -1,4 +1,4 @@
-@use '_variables' as var;
+@use 'config/_variables' as var;
 
 .layout-container {
   width: 100%;
@@ -42,5 +42,19 @@
     cite {
       font-size: 1.6rem;
     }
+  }
+}
+
+.layout-sidebar {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  & > *:first-child {
+    min-width: 30%;
+    max-width: 33.5%;
+  }
+
+  @media (480px < width < 1280px) {
+    flex-flow: column;
   }
 }
