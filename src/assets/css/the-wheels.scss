@@ -1,1 +1,26 @@
+// Use global reset
 @use 'reset-css';
+
+// Use The Wheels' initial vairables.
+@use './partials/_variables';
+@use './partials/_breakpoints';
+
+// Use The Wheels' Typography.
+@use './partials/_typography';
+
+// Use The Wheels' Functions.
+@use './partials/functions';
+
+// Layouting
+@use './partials/_layout';
+
+// Styles Kitchen Sink Only
+@use './_kitchen-sink';
+
+// Styles document site only
+@use './_documents';
+
+@use './partials/elements/_global-header';
+@use './partials/elements/_global-footer';
+@use './partials/elements/_container';
+@use './partials/containers/_card-button';
