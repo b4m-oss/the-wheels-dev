@@ -14,7 +14,7 @@ export default defineConfig({
       },
     }),
     posthtml({
-      root: './src',
+      root: './dev/src',
     }),
   ],
   build: {
@@ -24,6 +24,7 @@ export default defineConfig({
     //   fileName: (format) => `the-wheels.${format}.css`,
     // },
     assetsDir: 'assets',
+    outDir: '../dist',
     rollupOptions: {
       input: ['./src/pages/**/*.html'],
       output: {
