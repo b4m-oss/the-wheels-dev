@@ -6,8 +6,7 @@
 
 .#{var.$ns}-container {
   width: 118rem;
-  // padding-left: 5rem;
-  // padding-right: 5rem;
+
   margin: 0 auto;
 
   @media (480px < width < 1200px) {
@@ -15,6 +14,11 @@
     padding-left: 8.25%;
     padding-right: 8.25%;
   }
+
+
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin: 0 auto;
 
   @media (width < 480px) {
     width: 100%;
@@ -25,8 +29,8 @@
 @media (1280px <= width) {
   .layout-container {
     width: 118rem;
-    // padding-left: 5rem;
-    // padding-right: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     margin: 0 auto;
   }
 }
