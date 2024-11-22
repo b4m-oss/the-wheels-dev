@@ -1,0 +1,117 @@
+@use '../config/_variables' as var;
+@use '_functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+body {
+  --fz: 18;
+  font-size: calc(var(--fz) / 10 * 1rem);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  @media (width < 480px) {
+    --fz: 16;
+  }
+}
+
+// General Spacing
+
+p,
+ul,
+ol,
+dl,
+li,
+figure,
+table,
+blockquote {
+  --mb: 30;
+  /* line-height分の上下をネガティブマージンで相殺 */
+  margin-top: calc(var(--fz) * ((1 - var(--body-text-lh) / 2)) * -1 * 1px);
+  margin-bottom: calc(
+    var(--fz) * ((1 - var(--body-text-lh) / 2)) * -1 * 1px + (var(--mb) * 1px)
+  );
+  line-height: var(--body-text-lh);
+  text-align: justify;
+
+  max-width: 40em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: var(--text-highlight) !important;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    nav &,
+    button & {
+      text-decoration: none;
+    }
+  }
+}
+
+em {
+  color: var(--text-caption);
+  font-size: 75%;
+}
+
+strong {
+  color: var(--text-highlight);
+  font-weight: 700;
+}
+
+.#{var.$ns}-heading-1,
+h1 {
+  --fz: 68;
+  --fz-root: 16;
+  font-size: calc(var(--fz) / var(--fz-root) * 1rem);
+  font-weight: 700;
+  color: var(--text-highlight);
+  @media (width < 480px) {
+    --fz: 54;
+  }
+}
+
+.#{var.$ns}-heading-2,
+h2 {
+  --fz: 54;
+  --mt: 85;
+  --mb: 32;
+  font-size: calc(var(--fz) / var(--fz-root) * 1rem);
+  line-height: var(--heading-lh);
+  font-weight: 700;
+  color: var(--text-caption);
+  margin-top: calc(var(--mt) / var(--fz) * 1em);
+  margin-bottom: calc(var(--mb) / var(--fz) * 1em);
+  @media (width < 480px) {
+    --fz: 43;
+    --heading-lh: 1.14;
+  }
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h5 + h6,
+.#{var.$ns}-heading-1 + .#{var.$ns}-heading-2,
+.#{var.$ns}-heading-2 + .#{var.$ns}-heading-3,
+.#{var.$ns}-heading-3 + .#{var.$ns}-heading-4,
+.#{var.$ns}-heading-4 + .#{var.$ns}-heading-5,
+.#{var.$ns}-heading-5 + .#{var.$ns}-heading-6 {
+  margin-top: 3.6rem;
+  @media (width < 480px) {
+    margin-top: 2.4rem;
+  }
+}
