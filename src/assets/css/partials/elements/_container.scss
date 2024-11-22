@@ -1,0 +1,30 @@
+@use '../variables' as var;
+
+.#{var.$ns}-index-nav-container {
+  max-width: 98rem;
+  width: 100%;
+  padding-left: clamp(1rem, 2rem, 9rem);
+  padding-right: clamp(1rem, 2rem, 9rem);
+  margin: 0 auto 10rem;
+
+  .heading {
+    font-weight: 2.5rem;
+    font-weight: 600;
+    color: var(--text-caption);
+  }
+}
+
+.#{var.$ns}-index-nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 3rem, 3rem);
+
+  & > * {
+    width: calc((100% - 3rem) / 2);
+    @media (width < 480px) {
+      width: 100%;
+    }
+  }
+}
