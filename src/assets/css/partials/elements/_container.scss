@@ -6,12 +6,12 @@
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0 auto 10rem;
+  counter-increment: navi-section;
 
   .heading {
     font-size: 2.9rem;
     font-weight: 600;
     color: var(--text-caption);
-    counter-increment: navi-section;
     &::before {
       content: counter(navi-section, decimal) '. ';
     }
