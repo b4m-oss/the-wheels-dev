@@ -101,3 +101,17 @@ h2 {
   }
 }
 
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h5 + h6,
+.#{var.$ns}-heading-1 + .#{var.$ns}-heading-2,
+.#{var.$ns}-heading-2 + .#{var.$ns}-heading-3,
+.#{var.$ns}-heading-3 + .#{var.$ns}-heading-4,
+.#{var.$ns}-heading-4 + .#{var.$ns}-heading-5,
+.#{var.$ns}-heading-5 + .#{var.$ns}-heading-6 {
+  margin-top: 3.6rem;
+  @media (width < 480px) {
+    margin-top: 2.4rem;
+  }
+}
