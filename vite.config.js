@@ -17,13 +17,22 @@ export default defineConfig({
     }),
   ],
   build: {
-    lib: {
-      entry: './src/assets/the-wheels.scss',
-      name: 'TheWheels',
-      fileName: (format) => `the-wheels.${format}.css`,
-    },
+    // lib: {
+    //   entry: './src/assets/the-wheels.scss',
+    //   name: 'TheWheels',
+    //   fileName: (format) => `the-wheels.${format}.css`,
+    // },
     rollupOptions: {
       input: ['./src/pages/**/*.html'],
+      output: {
+        entryFileNames: `assets/[name].css`,
+        chunkFileNames: `assets/[name].css`,
+        assetFileNames: `assets/[name].[ext]`,
+      },
+      // emptyOutDir: false, // you need to delete the output directory outside of vite!
+      // output: {
+      //   inlineDynamicImports: true,
+      // },
     },
   },
 })
