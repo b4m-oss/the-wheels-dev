@@ -1,0 +1,29 @@
+#global-footer {
+  display: block;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  border-top: 1px solid var(--text-caption);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  * {
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 0;
+    color: var(--text-caption);
+    text-align: center;
+    max-width: none;
+  }
+  @media (width < 480px) {
+    width: 100%;
+    max-width: none;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    * {
+      font-size: 1.1rem;
+      line-height: 1.12;
+    }
+  }
+}
