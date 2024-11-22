@@ -1,6 +1,21 @@
 import { defineConfig } from 'vite'
+import vituum from 'vituum'
+import posthtml from '@vituum/vite-plugin-posthtml'
 
 export default defineConfig({
+  plugins: [
+    vituum({
+      imports: {
+        filenamePattern: {
+          '+.css': [],
+          '+.scss': 'src/assets/css',
+        },
+      },
+    }),
+    posthtml({
+      root: './src',
+    }),
+  ],
   build: {
     lib: {
       entry: './src/assets/the-wheels.scss',
@@ -8,10 +23,7 @@ export default defineConfig({
       fileName: (format) => `the-wheels.${format}.css`,
     },
     rollupOptions: {
-      external: [], // 外部ライブラリがあればここに追加
+      input: ['./src/pages/**/*.html'],
     },
-  },
-  server: {
-    open: '/src/index.html', // 開発サーバー起動時にこのHTMLファイルを表示
   },
 })
