@@ -1,16 +1,14 @@
-<button class="twls-card-button">
-  <a href="{{ href }}">
-    <div class="label">
-      <p><b>{{ title }}</b></p>
-      <p class="caption">{{ caption }}</p>
-    </div>
-    <footer>
-      <p>{{ ctaLabel }}</p>
-      <include
-        src="components/icons/direction/arrow.svg"
-        locals='{"width": 18, "height": 8, "fill": "var(--text-main)"}'
-      >
-      </include>
-    </footer>
-  </a>
-</button>
+<a class="twls-card-button" href="{{ href }}">
+  <div class="label">
+    <p><b>{{ title }}</b></p>
+    <p class="caption">{{ caption }}</p>
+  </div>
+  <footer>
+    <p>{{ ctaLabel }}</p>
+    <include
+      src="components/icons/direction/arrow.svg"
+      locals='{"width": 18, "height": 8, "fill": "var(--text-main)"}'
+    >
+    </include>
+  </footer>
+</a>
