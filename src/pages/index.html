@@ -1,0 +1,31 @@
+<extends
+  src="layouts/home.html"
+  locals='{"title": "The Wheels - Japanese text style oriented design system"}'
+>
+  <block name="main">
+    <include src="components/containers/home/Hero.html"></include>
+    <article>
+      <section class="twls-index-nav-container">
+        <h2 class="heading">ガイダンス</h2>
+        <div class="twls-index-nav-list">
+          <include
+            src="components/containers/CardButton.html"
+            locals='{"href": "/about/index.html", "title":"はじめに", "caption": "The Wheelsの考え方について説明します", "ctaLabel": "詳細を見る"}'
+          ></include>
+          <include
+            src="components/containers/CardButton.html"
+            locals='{"href": "/about/index.html", "title":"はじめに", "caption": "The Wheelsの考え方について説明します", "ctaLabel": "詳細を見る"}'
+          ></include>
+          <include
+            src="components/containers/CardButton.html"
+            locals='{"href": "/about/index.html", "title":"はじめに", "caption": "The Wheelsの考え方について説明します", "ctaLabel": "詳細を見る"}'
+          ></include>
+          <include
+            src="components/containers/CardButton.html"
+            locals='{"href": "/about/index.html", "title":"はじめに", "caption": "The Wheelsの考え方について説明します", "ctaLabel": "詳細を見る"}'
+          ></include>
+        </div>
+      </section>
+    </article>
+  </block>
+</extends>
