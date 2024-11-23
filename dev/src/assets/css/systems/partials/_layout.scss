@@ -4,6 +4,27 @@
   width: 100%;
 }
 
+.page-title {
+  margin-bottom: 2.5rem;
+}
+
+.#{var.$ns}-main-content {
+  margin-bottom: 7rem;
+}
+
+.#{var.$ns}-layout-sidebar {
+  display: flex;
+  flex-flow: row;
+  gap: 4.5rem;
+
+  // &>* {
+  //   border: 1px solid red;
+  // }
+
+  .#{var.$ns}-sidebar {
+    min-width: 34rem;
+  }
+}
 .#{var.$ns}-container {
   width: 118rem;
   // padding-left: 5rem;
