@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/b4m-oss/the-wheels-dev/
-cd the-wheels-dev
+cd the-wheels-dev/dev
 npm i
 ```
 

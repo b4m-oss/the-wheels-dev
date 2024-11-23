@@ -24,6 +24,7 @@ export default defineConfig({
     //   fileName: (format) => `the-wheels.${format}.css`,
     // },
     assetsDir: 'assets',
+    outDir: '../dist',
     rollupOptions: {
       input: ['./src/pages/**/*.html'],
       output: {
