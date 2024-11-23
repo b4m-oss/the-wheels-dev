@@ -16,5 +16,6 @@
 @use './partials/_layout';
 
 // Use components
+@use './partials/atoms/_button';
 @use './partials/elements/_container';
 @use './partials/containers/_card-button';
