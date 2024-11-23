@@ -1,9 +1,11 @@
+
 @use '../config/_variables' as var;
 
 /* TODO:
  * optionalボタン、
  * disabledなどのスタイルを追加する
  */
+
 .#{var.$ns}-button {
   display: inline-block;
   border-radius: calc(var(--global-radius) * 1px);
@@ -13,7 +15,7 @@
   font-weight: 600;
   color: #e4e4e4;
   border-style: solid;
-  border-width: 0;
+  border-width: 1px;
   background-color: var(--bg-button-main);
   padding-top: 2.1rem;
   padding-bottom: 2.1rem;
@@ -23,16 +25,31 @@
 
   &:hover {
     background-color: var(--bg-button-hover);
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.025);
+    transform-origin: center center;
   }
 
-  &.ghost {
+  &:active {
+    background-color: var(--text-main);
+    top: 1px;
+  }
+  
+  &.#{var.$ns}-ghost {
     background-color: transparent;
-    border: var(--text-caption) 1px solid;
     color: var(--text-main);
+    border: 1px solid var(--text-main);
 
     &:hover {
-      color: var(--text-caption);
-      border-color: #b9b9b9;
+      color: var(--text-highlight);
+        background-color: transparent;
+        border-color: var(--text-highlight);
+        border-width: 3px;
+        padding-left: calc(3.8rem - 2px);
+        padding-left: calc(3.8rem - 2px);
+        padding-top: calc(2.1rem - 2px);
+        padding-bottom: calc(2.1rem - 2px);
     }
 
     &:active {
@@ -40,9 +57,12 @@
     }
   }
 
-  &:active {
-    background-color: var(--text-main);
-    top: 1px;
-    /* height: calc(fit-content - 10px); */
+  &.#{var.$ns}-optional {
+    background: #e4e4e4;
+    border: 0;
+    color: var(--text-main);
+    &:hover {
+      background: #f6f6f6;
+    }
   }
 }
