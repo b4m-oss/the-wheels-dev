@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "@markuplint/astro-parser": "^4.6.13",
-    "markuplint": "^4.11.3"
+    "markuplint": "^4.11.3",
+    "prettier": "^3.4.1",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
