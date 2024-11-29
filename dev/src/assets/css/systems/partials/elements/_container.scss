@@ -27,13 +27,20 @@
 
   & > * {
     width: calc((100% - 3rem) / 2);
-    @media (width < 768px) {
+    @media (width < 820px) {
       width: 100%;
     }
   }
 }
 
-@media (width < 768px) {
+@media (820px <= width < 1280px) {
+  .#{var.$ns}-index-nav-container {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}
+
+@media (width < 820px) {
   .#{var.$ns}-index-nav-container {
     max-width: 64rem;
   }
