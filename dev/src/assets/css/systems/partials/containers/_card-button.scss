@@ -1,7 +1,7 @@
-@use '../config/variables' as var;
+@use "../config/variables" as var;
 
 .#{var.$ns}-card-button {
---bw-normal: 1;
+  --bw-normal: 1;
   // width: 100%;
   max-width: 640px;
   padding: 0;
@@ -14,29 +14,39 @@
     --bw-hover: 4;
     text-decoration: none;
     border: calc(var(--bw-hover) * 1px) solid var(--text-main);
-    
-      .label {
-        padding-top: calc(2.3rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px));
-        padding-left: calc(2.7rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px));
-        padding-right: calc(2.7rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px));
-    
-        p b {
-          color: var(--text-hightlight) !important;
-        }
-      }
-    
-      footer {
-        padding-right: calc(2rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px));
-        padding-bottom: calc(1.2rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px));
-      }
-    
-      .nav-icon {
-        position: relative;
-        right: -.2em;
-        transition: all 2s ease;
+
+    .label {
+      padding-top: calc(
+        2.3rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
+      );
+      padding-left: calc(
+        2.7rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
+      );
+      padding-right: calc(
+        2.7rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
+      );
+
+      p b {
+        color: var(--text-hightlight) !important;
       }
     }
-    
+
+    footer {
+      padding-right: calc(
+        2rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
+      );
+      padding-bottom: calc(
+        1.2rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
+      );
+    }
+
+    .nav-icon {
+      position: relative;
+      right: -0.2em;
+      transition: all 2s ease;
+    }
+  }
+
   .label {
     padding-left: 2.7rem;
     padding-right: 2.7rem;

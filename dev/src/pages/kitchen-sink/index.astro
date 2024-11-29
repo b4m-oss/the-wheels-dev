@@ -6,10 +6,10 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
 <SidebarLayout title="About :: The Wheels - Multi purpose design system for human society.">
   <KitchenSinkSideMenu slot="sidebar" />
   <article slot="content">
-    <section>
+    <div>
       <h1>Kitchen Sink</h1>
       <section>
-        <h2>Button</h2>
+        <h2 id="button">Button</h2>
         <dl class="parts-gallery">
           <div>
             <dt class="title">通常</dt>
@@ -32,7 +32,7 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
         </dl>
       </section>
       <section>
-        <h2>Radio Group</h2>
+        <h2 id="radio-group">Radio Group</h2>
         <form class="twls-radio-group">
           <label class="radio-group-item">
             <input type="radio" name="radio-group-sample" checked />
@@ -49,7 +49,7 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
         </form>
       </section>
       <section>
-        <h2>Accordion</h2>
+        <h2 id="accordion">Accordion</h2>
         <div class="twls-accordion">
           <details class="accordion-item">
             <summary class="accordion-tab">
@@ -68,13 +68,12 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
             </div>
           </details>
         </div>
-      </div>
       </section>
       <section>
-        <h2>Modal</h2>
-        <dialog class="twls-modal" id="sample-modal">
-          <header class="modal-header">律令制とは</header>
-          <section class="modal-content">
+        <h2 id="modal">Modal</h2>
+        <dialog class="twls-modal" id="sample-modal" title="律令制とは">
+          <header class="modal-header" id="sample-modal-title">律令制とは</header>
+          <section class="modal-content" id="sample-modal-content">
             <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
             <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
           </section>
@@ -105,6 +104,6 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
           })
         </script>
       </section>
-    </section>
+    </div>
   </article>
 </SidebarLayout>
