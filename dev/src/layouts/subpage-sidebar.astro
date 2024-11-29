@@ -1,0 +1,49 @@
+---
+import '../assets/css/styles.scss'
+import Head from '../components/site/sources/Head.astro'
+import GlobalHeader from '../components/site/elements/GlobalHeader.astro'
+import GlobalFooter from '../components/site/elements/GlobalFooter.astro'
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <Head />
+    <title>{ title }</title>
+  </head>
+  <body>
+    <header>
+      <GlobalHeader title="The Wheels" caption="All purpose design system." />
+    </header>
+    <section class="main">
+      <div class="twls-container">
+        <slot name="pageTitle" />
+        <div class="twls-layout-sidebar">
+          <div class="twls-sidebar">
+            <slot name="sidebar" />
+          </div>
+          <main class="twls-main-content">
+            <slot name="content" />
+          </main>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <GlobalFooter />
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* TODO: 後で、SCSS本体に移植する */
+  @media (width < 1280px) {
+    .twls-sidebar {
+      /* 一時的に非表示。 */
+      display: none;
+    }   
+    .twls-layout-sidebar {
+      flex-flow: column;
+    }
+  }
+</style>

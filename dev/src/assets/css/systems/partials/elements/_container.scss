@@ -1,4 +1,4 @@
-@use '../config/variables' as var;
+@use "../config/variables" as var;
 
 .#{var.$ns}-index-nav-container {
   max-width: 98rem;
@@ -13,7 +13,7 @@
     font-weight: 600;
     color: var(--text-caption);
     &::before {
-      content: counter(navi-section, decimal) '. ';
+      content: counter(navi-section, decimal) ". ";
     }
   }
 }

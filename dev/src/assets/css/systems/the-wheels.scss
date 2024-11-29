@@ -1,24 +1,24 @@
 // Use global reset
-@use 'reset-css';
+@use "reset-css";
 
 // Use The Wheels' initial vairables.
-@use './partials/config/_variables';
-@use './partials/config/_breakpoints';
-@use './partials/config/_twls_config';
+@use "./partials/config/_variables";
+@use "./partials/config/_breakpoints";
+@use "./partials/config/_twls_config";
 
 // Use The Wheels' Typography.
-@use './partials/utils/_typography';
+@use "./partials/utils/_typography";
 
 // Use The Wheels' Functions.
-@use './partials/utils/functions';
+@use "./partials/utils/functions";
 
 // Use layout
-@use './partials/_layout';
+@use "./partials/_layout";
 
 // Use components
-@use './partials/atoms/_button';
-@use './partials/elements/_container';
-@use './partials/lists/_radio-group';
-@use './partials/containers/_card-button';
-@use './partials/organisms/_accordion';
-@use './partials/organisms/_modal';
+@use "./partials/atoms/_button";
+@use "./partials/elements/_container";
+@use "./partials/lists/_radio-group";
+@use "./partials/containers/_card-button";
+@use "./partials/organisms/_accordion";
+@use "./partials/organisms/_modal";
