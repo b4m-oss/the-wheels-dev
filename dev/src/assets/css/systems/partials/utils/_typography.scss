@@ -51,7 +51,7 @@ blockquote {
 }
 
 a {
-  color: var(--text-highlight) !important;
+  color: var(--text-highlight);
   text-decoration: none;
   &:hover {
     text-decoration: underline;
