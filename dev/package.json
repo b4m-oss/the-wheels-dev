@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:html": "markuplint \"src/**/*.astro\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -16,5 +17,9 @@
     "sass": "^1.81.0",
     "typescript": "^5.7.2",
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@markuplint/astro-parser": "^4.6.13",
+    "markuplint": "^4.11.3"
   }
 }
