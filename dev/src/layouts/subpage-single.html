@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <include src="components/site/sources/Head.html"></include>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header>
+      <include
+        src="components/site/elements/GlobalHeader.html"
+        locals='{"title": "The Wheels", "caption": "All purpose desgin system."}'
+      ></include>
+    </header>
+    <main id="main">
+      <div class="layout-container">
+        <block name="content"> </block>
+      </div>
+    </main>
+    <footer>
+      <include src="components/site/elements/GlobalFooter.html"></include>
+    </footer>
+  </body>
+</html>

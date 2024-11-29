@@ -1,8 +1,7 @@
 <extends
-  src="layouts/subpage-sidebar.html"
+  src="layouts/subpage-single.html"
   locals='{"title": "The Wheels Development Enviroment and Kitchen Sink"}'
 >
-  <block name="sidebar"> </block>
   <block name="content">
     <article>
       <section class="twls-container">
@@ -29,6 +28,23 @@
               </dd>
             </div>
           </dl>
+        </section>
+        <section>
+          <h2>Radio Group</h2>
+          <form class="twls-radio-group">
+            <label class="radio-group-item">
+              <input type="radio" name="radio-group-sample" />
+              <span>兵庫県</span>
+            </label>
+            <label class="radio-group-item">
+              <input type="radio" name="radio-group-sample" />
+              <span>大阪府</span>
+            </label>
+            <label class="radio-group-item">
+              <input type="radio" name="radio-group-sample" />
+              <span>京都府</span>
+            </label>
+          </form>
         </section>
       </section>
     </article>
