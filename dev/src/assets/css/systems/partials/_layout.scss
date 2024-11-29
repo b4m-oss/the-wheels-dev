@@ -1,4 +1,4 @@
-@use 'config/_variables' as var;
+@use "config/_variables" as var;
 
 .layout-container {
   width: 100%;
@@ -32,11 +32,11 @@
   margin: 0 auto;
 
   &.horizontal {
-      display: flex;
-      flex-flow: row;
-      justify-content: center;
-      align-items: center;
-    }
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
   @media (480px < width < 1200px) {
     width: 100%;
     padding-left: 8.25%;
