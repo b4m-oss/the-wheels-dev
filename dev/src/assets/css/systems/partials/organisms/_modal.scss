@@ -41,9 +41,13 @@
     text-align: right;
 
     & > .twls-button {
-      font-size: 1.3rem;
-      padding-top: .95em;
-      padding-bottom: .95em;
+      --fz: 1.3;
+      padding-top: calc(var(--fz) * 1rem * 0.95);
+      padding-bottom: calc(var(--fz) * 1rem * 0.95);
+      &:hover {
+        padding-top: calc(var(--fz) * 1rem * 0.95 - 1px);
+        padding-bottom: calc(var(--fz) * 1rem * 0.95 - 1px);
+      }
     }
   }
   &::backdrop {
