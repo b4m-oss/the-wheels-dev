@@ -11,19 +11,11 @@
         locals='{"title": "The Wheels", "caption": "All purpose desgin system."}'
       ></include>
     </header>
-    <section class="main">
+    <main id="main">
       <div class="layout-container">
-        <block name="pageTitle"></block>
-        <div class="twls-layout-sidebar">
-          <div class="twls-sidebar">
-            <block name="sidebar"></block>
-          </div>
-          <main class="twls-main-content">
-            <block name="content"></block>
-          </main>
-        </div>
-        </div>
-        </section>
+        <block name="content"> </block>
+      </div>
+    </main>
     <footer>
       <include src="components/site/elements/GlobalFooter.html"></include>
     </footer>

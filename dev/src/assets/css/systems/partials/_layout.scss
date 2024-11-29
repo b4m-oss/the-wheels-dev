@@ -4,12 +4,39 @@
   width: 100%;
 }
 
+.page-title {
+  margin-bottom: 2.5rem;
+}
+
+.#{var.$ns}-main-content {
+  margin-bottom: 7rem;
+}
+
+.#{var.$ns}-layout-sidebar {
+  display: flex;
+  flex-flow: row;
+  gap: 4.5rem;
+
+  // &>* {
+  //   border: 1px solid red;
+  // }
+
+  .#{var.$ns}-sidebar {
+    min-width: 34rem;
+  }
+}
 .#{var.$ns}-container {
   width: 118rem;
   // padding-left: 5rem;
   // padding-right: 5rem;
   margin: 0 auto;
 
+  &.horizontal {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+    }
   @media (480px < width < 1200px) {
     width: 100%;
     padding-left: 8.25%;
