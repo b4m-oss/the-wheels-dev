@@ -8,12 +8,13 @@
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 80dvw;
-    @media (width < 840px) {
-      min-width: 90dvw;
-    }
     border: 0;
     border-radius: calc(var(--global-radius) * 1px);
     background-color: var(--bg-page);
+    
+    @media (width < 840px) {
+      min-width: 90dvw;
+    }
   }
   .modal-header {
     font-size: 2.2rem;
