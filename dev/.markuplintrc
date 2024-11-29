@@ -1,4 +1,7 @@
 {
+  "rules": {
+    "no-refer-to-non-existent-id": false
+  },
   "extends": [
     "markuplint:recommended"
   ],
