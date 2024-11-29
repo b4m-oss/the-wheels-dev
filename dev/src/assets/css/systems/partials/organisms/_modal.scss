@@ -8,12 +8,13 @@
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 80dvw;
-    @media (width < 840px) {
-      min-width: 90dvw;
-    }
     border: 0;
     border-radius: calc(var(--global-radius) * 1px);
     background-color: var(--bg-page);
+    
+    @media (width < 840px) {
+      min-width: 90dvw;
+    }
   }
   .modal-header {
     font-size: 2.2rem;
@@ -41,9 +42,13 @@
     text-align: right;
 
     & > .twls-button {
-      font-size: 1.3rem;
-      padding-top: .95em;
-      padding-bottom: .95em;
+      --fz: 1.3;
+      padding-top: calc(var(--fz) * 1rem * 0.95);
+      padding-bottom: calc(var(--fz) * 1rem * 0.95);
+      &:hover {
+        padding-top: calc(var(--fz) * 1rem * 0.95 - 1px);
+        padding-bottom: calc(var(--fz) * 1rem * 0.95 - 1px);
+      }
     }
   }
   &::backdrop {
