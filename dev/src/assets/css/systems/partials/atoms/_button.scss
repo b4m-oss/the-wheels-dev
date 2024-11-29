@@ -1,20 +1,23 @@
 @use '../config/_variables' as var;
 
 .#{var.$ns}-button {
+  --fz: 1.6;
+  --px: 2.375;
+  --py: 1.3125;
   display: inline-block;
   border-radius: calc(var(--global-radius) * 1px);
   cursor: pointer;
   width: fit-content;
-  font-size: 1.6rem;
+  font-size: calc(var(--fz) * 1rem);
   font-weight: 600;
   color: #e4e4e4;
   border-style: solid;
   border-width: 0;
   background-color: var(--bg-button-main);
-  padding-top: 1.3125em;
-  padding-bottom: 1.3125em;
-  padding-left: 2.375em;
-  padding-right: 2.375em;
+  padding-top: calc(var(--py) * 1em);
+  padding-bottom: calc(var(--py) * 1em);
+  padding-left: calc(var(--px) * 1em);
+  padding-right: calc(var(--px) * 1em);
   position: relative;
 
   &:hover {
@@ -38,10 +41,10 @@
     &:hover {
       color: var(--text-highlight);
       border-color: var(--text-highlight);
-      padding-top: calc(1.3125em - 1px);
-      padding-bottom: calc(1.3125em - 1px);
-      padding-left: calc(2.375em - 1px);
-      padding-right: calc(2.375em - 1px);
+      padding-top: calc(var(--py) * 1em - 1px);
+      padding-bottom: calc(var(--py) * 1em - 1px);
+      padding-left: calc(var(--px) * 1em - 1px);
+      padding-right: calc(var(--px) * 1em - 1px);
       border-width: 2px;
     }
 
