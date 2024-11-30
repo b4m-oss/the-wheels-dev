@@ -59,12 +59,20 @@
 
     p b {
       font-size: 2.7rem;
+      line-height: var(--heading-lh);
       font-weight: 600;
       color: var(--text-main);
     }
     .caption {
       font-size: 1.4rem;
       color: var(--text-caption);
+    }
+    @media (width < 480px) {
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
+      p b {
+        letter-spacing: -.05em;
+      }
     }
   }
   footer {
