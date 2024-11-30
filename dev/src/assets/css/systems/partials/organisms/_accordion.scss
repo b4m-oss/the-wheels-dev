@@ -1,6 +1,7 @@
 @use "../config/_variables" as var;
 
 .#{var.$ns}-accordion {
+  width: 100%;
   border-bottom: 1px solid var(--text-caption);
   .accordion-tab {
     padding-top: 1em;
@@ -16,6 +17,7 @@
   }
 
   .accordion-detail {
+    width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 2em;
