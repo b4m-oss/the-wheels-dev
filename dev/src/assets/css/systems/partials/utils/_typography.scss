@@ -1,5 +1,5 @@
 @use "../config/_variables" as var;
-@use "_functions";
+@use "_functions" as func;
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
@@ -14,8 +14,9 @@
 }
 
 body {
-  --fz: 18;
-  font-size: calc(var(--fz) / 10 * 1rem);
+  --fz-root: 18;
+  --fz: var(--fz);
+  @include func.numberToRemFz(var(--fz));
   background-color: var(--bg-page);
   color: var(--text-main);
   font-family: "Inter", "Noto Sans JP", sans-serif;
@@ -33,19 +34,25 @@ dl,
 li,
 figure,
 table,
-blockquote {
+blockquote,
+summary,
+details {
   --mb: 30;
-  /* line-height分の上下をネガティブマージンで相殺 */
-  margin-top: calc(var(--fz) * ((1 - var(--body-text-lh) / 2)) * -1 * 1px);
-  margin-bottom: calc(
-    var(--fz) * ((1 - var(--body-text-lh) / 2)) * -1 * 1px + (var(--mb) * 1px)
-  );
+  --fz: 18;
+  @include func.lineHeightNegatieMargin(var(--fz));
+  @include func.numberToRemFz(var(--fz));
   line-height: var(--body-text-lh);
   text-align: justify;
 
   max-width: 40em;
 
   &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:is(summary),
+  &:is(details) {
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -74,27 +81,29 @@ strong {
 
 .#{var.$ns}-heading-1,
 h1 {
-  --fz: 68;
-  --fz-root: 16;
-  font-size: calc(var(--fz) / var(--fz-root) * 1rem);
+  --fz: 54;
+  @include func.numberToRemFz(var(--fz));
   font-weight: 700;
   color: var(--text-highlight);
   @media (width < 480px) {
     --fz: 54;
   }
+  & ~ * {
+    margin-top: 40px;
+  }
 }
 
 .#{var.$ns}-heading-2,
 h2 {
-  --fz: 54;
+  --fz: 42;
   --mt: 85;
   --mb: 32;
-  font-size: calc(var(--fz) / var(--fz-root) * 1rem);
+  @include func.numberToRemFz(var(--fz));
   line-height: var(--heading-lh);
   font-weight: 700;
   color: var(--text-caption);
-  margin-top: calc(var(--mt) / var(--fz) * 1em);
-  margin-bottom: calc(var(--mb) / var(--fz) * 1em);
+  @include func.lineHeightNegatieMargin(var(--fz));
+  margin-top: func.pxToRem(var(--mt));
   @media (width < 480px) {
     --fz: 43;
     --heading-lh: 1.14;
@@ -110,7 +119,7 @@ h5 + h6,
 .#{var.$ns}-heading-3 + .#{var.$ns}-heading-4,
 .#{var.$ns}-heading-4 + .#{var.$ns}-heading-5,
 .#{var.$ns}-heading-5 + .#{var.$ns}-heading-6 {
-  margin-top: 3.6rem;
+  margin-top: 1em;
   @media (width < 480px) {
     margin-top: 2.4rem;
   }
@@ -133,13 +142,15 @@ h5 + h6,
 
 main section,
 article section {
-  margin-bottom: 7rem;
+  --mb: 95;
+  margin-bottom: func.pxToRem(var(--mb));
 }
 
 h1 + section,
 .#{var.$ns}-.heading-1 + section {
-  margin-top: 3.6rem;
+  --mt: 36;
+  margin-top: func.pxToRem(var(--mt));
   @media (width < 480px) {
-    margin-top: 2.4rem;
+    --mt: 24;
   }
 }
