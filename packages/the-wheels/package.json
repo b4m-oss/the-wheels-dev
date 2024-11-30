@@ -1,0 +1,23 @@
+{
+  "name": "the-wheels",
+  "version": "1.0.0",
+  "description": "A CSS and JS framework.",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./src/styles/the-wheels.scss": "./src/styles/the-wheels.scss"
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "test": "vitest run"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3",
+    "typescript": "^5.7.2",
+    "sass": "^1.81.0"
+  }
+}
