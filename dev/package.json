@@ -1,5 +1,5 @@
 {
-  "name": "the-wheels",
+  "name": "the-wheels-docs",
   "type": "module",
   "version": "0.5.4",
   "scripts": {
@@ -16,7 +16,7 @@
     "reset-css": "^5.0.2",
     "sass": "^1.81.0",
     "typescript": "^5.7.2",
-    "vue": "^3.5.13"
+    "the-wheels": "*"
   },
   "devDependencies": {
     "@markuplint/astro-parser": "^4.6.13",
