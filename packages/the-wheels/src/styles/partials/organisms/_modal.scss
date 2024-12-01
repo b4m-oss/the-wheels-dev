@@ -59,7 +59,7 @@
     border-top: 1px solid var(--text-caption);
     text-align: right;
 
-    & > .twls-button {
+    & .twls-button {
       --fz: 13;
       padding-top: calc(var(--fz) * 0.1rem * 0.95);
       padding-bottom: calc(var(--fz) * 0.1rem * 0.95);

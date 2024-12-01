@@ -1,6 +1,6 @@
 {
   "name": "the-wheels-dev",
-  "version": "0.5.2",
+  "version": "0.7.0",
   "private": false,
   "workspaces": [
     "dev",
@@ -8,6 +8,6 @@
   ],
   "scripts": {
     "build": "npm run build -w packages/the-wheels",
-    "dev": "npm run dev -w packages/dev"
+    "dev": "npm run dev -w packages/the-wheels"
   }
 }
