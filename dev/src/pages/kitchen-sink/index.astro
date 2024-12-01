@@ -2,6 +2,8 @@
 import SidebarLayout from '../../layouts/subpage-sidebar.astro'
 import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideMenu.astro'
 import Button from '../../components/systems/atoms/Button.astro'
+import RadioGroup from '../../components/systems/lists/RadioGroup.astro'
+import RadioGroupItem from '../../components/systems/atoms/RadioGroupItem.astro'
 ---
 
 <SidebarLayout title="About :: The Wheels - Multi purpose design system for human society.">
@@ -126,20 +128,11 @@ import Button from '../../components/systems/atoms/Button.astro'
       </section>
       <section>
         <h2 id="radio-group">Radio Group</h2>
-        <form class="twls-radio-group">
-          <label class="radio-group-item">
-            <input type="radio" name="radio-group-sample" checked />
-            <span>兵庫県</span>
-          </label>
-          <label class="radio-group-item">
-            <input type="radio" name="radio-group-sample" />
-            <span>大阪府</span>
-          </label>
-          <label class="radio-group-item">
-            <input type="radio" name="radio-group-sample" />
-            <span>京都府</span>
-          </label>
-        </form>
+        <RadioGroup>
+          <RadioGroupItem label="兵庫県" name="radio-group-sample" isChecked={ false } />
+          <RadioGroupItem label="大阪府" name="radio-group-sample" isChecked={ true } />
+          <RadioGroupItem label="京都府" name="radio-group-sample" isChecked={ false } />
+        </RadioGroup>
       </section>
       <section>
         <h2 id="accordion">Accordion</h2>
