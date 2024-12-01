@@ -29,3 +29,12 @@
     $fz * ((1 - var(--body-text-lh) / 2)) * -1 * 1px + (var(--mb) * 1px)
   );
 }
+
+/*
+ * Mixin
+ * 斜線背景
+ */
+
+@mixin bgStripe($deg: -45deg, $color1: #b2b2b2, $color2: transparent, $lineWidth: 2px, $span: 15px) {
+  background: repeating-linear-gradient($deg, $color1, $color1 $lineWidth, $color2 $lineWidth, $color2 $span);
+}
