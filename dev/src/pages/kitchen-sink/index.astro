@@ -7,6 +7,86 @@ import RadioGroupItem from '../../components/systems/atoms/RadioGroupItem.astro'
 import AccordionContainer from '../../components/systems/lists/AccordionContainer.astro'
 import Accordion from '../../components/systems/containers/Accordion.astro'
 import Modal from '../../components/systems/containers/Modal.astro'
+import PartsGalleryItem from '../../components/site/elements/PartsGalleryItem.astro'
+
+const buttonGalleryList = [
+  {
+    title: '通常',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: '',
+    isFull: '',
+    isDiabled: false
+  },
+  {
+    title: 'ゴースト',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: 'ghost',
+    isFull: '',
+    isDiabled: false
+  },
+  {
+    title: 'オプショナル',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: 'optional',
+    isFull: '',
+    isDiabled: false
+  },
+  {
+    title: '不活性',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: '',
+    isFull: '',
+    isDiabled: true
+  },
+  {
+    title: '不活性ゴースト',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: 'ghost',
+    isFull: '',
+    isDiabled: true
+  },
+  {
+    title: '不活性オプショナル',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: 'optional',
+    isFull: '',
+    isDiabled: true
+  }
+]
+
+const buttonFullGalleryList = [
+{
+    title: '通常　横幅いっぱい',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: '',
+    isFull: true,
+    isDiabled: false
+  },
+  {
+    title: 'ゴースト　横幅いっぱい',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: 'ghost',
+    isFull: true,
+    isDiabled: false
+  },
+  {
+    title: 'オプショナル　横幅いっぱい',
+    label: 'クリックして送信',
+    buttonType: 'button',
+    buttonClass: 'optional',
+    isFull: true,
+    isDiabled: false
+  },
+]
+
 ---
 
 <SidebarLayout title="About :: The Wheels - Multi purpose design system for human society.">
@@ -17,18 +97,40 @@ import Modal from '../../components/systems/containers/Modal.astro'
       <section>
         <h2 id="button">Button</h2>
         <dl class="parts-gallery">
-          <div>
-            <dt class="title">通常</dt>
-            <dd>
+          {buttonGalleryList.map(item => 
+            <PartsGalleryItem title={ item.title }>
               <Button
+                  label={ item.label }
+                  buttonType={ item.buttonType }
+                  buttonClass={ item.buttonClass }
+                  isFull={ item.isFull }
+                  isDisabled={ item.isDiabled }
+                />
+            </PartsGalleryItem>  
+          )}
+        </dl>
+        <dl class="parts-gallery full">
+          {buttonFullGalleryList.map(item => 
+            <PartsGalleryItem title={ item.title }>
+              <Button
+                  label={ item.label }
+                  buttonType={ item.buttonType }
+                  buttonClass={ item.buttonClass }
+                  isFull={ item.isFull }
+                  isDisabled={ item.isDiabled }
+                />
+            </PartsGalleryItem>  
+          )}
+        </dl>
+          <!-- <PartsGalleryItem title="通常">
+            <Button
                 label="クリックして送信"
                 buttonType="button"
                 buttonClass=""
                 isFull=""
                 isDisabled={false}
               />
-            </dd>
-          </div>
+          </PartsGalleryItem>
           <div>
             <dt class="title">ゴースト</dt>
             <dd>
@@ -126,7 +228,7 @@ import Modal from '../../components/systems/containers/Modal.astro'
                 isDisabled={false}
               />
             </dd>
-          </div>
+          </div> -->
         </dl>
       </section>
       <section>
