@@ -43,8 +43,12 @@
         content: '';
         width: 100%;
         height: 100%;
-        background: repeating-linear-gradient(-45deg, #b2b2b2, #b2b2b2 2px, transparent 2px, transparent 15px);
         z-index: -30;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--text-highlight);
+        outline-offset: .5em;
+        border-radius: calc((var(--global-radius-minor) - 1) * 1px);
       }
     }
   }
