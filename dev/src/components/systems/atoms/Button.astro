@@ -1,0 +1,11 @@
+---
+type ButtonProps = {
+  label: string;
+  buttonType: 'button' | 'submit';
+  buttonClass: null | 'ghost' | 'optional';
+  isFull: boolean;
+  isDisabled: boolean;
+}
+const { label, buttonType, buttonClass, isFull, isDisabled } = Astro.props
+---
+<button type={ buttonType } class={'twls-button ' + (buttonClass ? buttonClass : '') + (isFull ? ' full' : '')} disabled={ isDisabled }>{label}</button>

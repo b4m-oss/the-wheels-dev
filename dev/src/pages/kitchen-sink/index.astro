@@ -1,6 +1,7 @@
 ---
 import SidebarLayout from '../../layouts/subpage-sidebar.astro'
 import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideMenu.astro'
+import Button from '../../components/systems/atoms/Button.astro'
 ---
 
 <SidebarLayout title="About :: The Wheels - Multi purpose design system for human society.">
@@ -14,37 +15,73 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
           <div>
             <dt class="title">通常</dt>
             <dd>
-              <button class="twls-button">クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass=""
+                isFull=""
+                isDisabled={false}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">ゴースト</dt>
             <dd>
-              <button class="twls-button ghost">クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass="ghost"
+                isFull=""
+                isDisabled={false}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">オプショナル</dt>
             <dd>
-              <button class="twls-button optional">クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass="optional"
+                isFull=""
+                isDisabled={false}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">不活性</dt>
             <dd>
-              <button class="twls-button" disabled>クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass=""
+                isFull=""
+                isDisabled={true}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">不活性ゴースト</dt>
             <dd>
-              <button class="twls-button ghost" disabled>クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass="ghost"
+                isFull=""
+                isDisabled={true}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">不活性オプショナル</dt>
             <dd>
-              <button class="twls-button optional" disabled>クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass="optional"
+                isFull=""
+                isDisabled={true}
+              />
             </dd>
           </div>
         </dl>
@@ -52,19 +89,37 @@ import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideM
           <div>
             <dt class="title">通常・横幅いっぱい</dt>
             <dd>
-              <button class="twls-button full">クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass=""
+                isFull={true}
+                isDisabled={false}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">ゴースト・横幅いっぱい</dt>
             <dd>
-              <button class="twls-button ghost full">クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass="ghost"
+                isFull={true}
+                isDisabled={false}
+              />
             </dd>
           </div>
           <div>
             <dt class="title">オプショナル・横幅いっぱい</dt>
             <dd>
-              <button class="twls-button optional full">クリックして送信</button>
+              <Button
+                label="クリックして送信"
+                buttonType="button"
+                buttonClass="optional"
+                isFull={true}
+                isDisabled={false}
+              />
             </dd>
           </div>
         </dl>
