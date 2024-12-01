@@ -2,10 +2,14 @@
 type ButtonProps = {
   label: string;
   buttonType: 'button' | 'submit';
-  buttonClass: null | 'ghost' | 'optional';
+  buttonClass: string | null;
   isFull: boolean;
   isDisabled: boolean;
 }
-const { label, buttonType, buttonClass, isFull, isDisabled } = Astro.props
+const { label, buttonType, buttonClass, isFull, isDisabled, ...otherProps } = Astro.props
+
+const dataAttributes = Object.fromEntries(
+  Object.entries(otherProps).filter(([key]) => key.startsWith('data-'))
+)
 ---
-<button type={ buttonType } class={'twls-button ' + (buttonClass ? buttonClass : '') + (isFull ? ' full' : '')} disabled={ isDisabled }>{label}</button>
+<button type={ buttonType } class={'twls-button ' + (buttonClass ? buttonClass : '') + (isFull ? ' full' : '')} disabled={ isDisabled } {...dataAttributes}>{label}</button>

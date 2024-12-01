@@ -1,0 +1,35 @@
+---
+const { modalId, modalTitle } = Astro.props
+---
+<dialog class="twls-modal" id={ modalId } title={ modalTitle }>
+  <header class="modal-header" id="sample-modal-title">{ modalTitle }</header>
+  <section class="modal-content" id="sample-modal-content">
+    <slot name="modal-content" />
+  </section>
+  <footer class="modal-footer">
+    <slot name="modal-footer" />
+  </footer>
+</dialog>
+<slot name="modal-initiater" />
+
+<script>
+  // TODO: 後でコンポーネントに切り出す
+  const openers = document.querySelectorAll('.twls-modal-opener')
+  openers.forEach(opener => {
+    const targetId = opener.getAttribute('data-twls-modal-open')
+    if(targetId) {
+      const target = document.getElementById(targetId)
+      opener.addEventListener('click', () => {
+        target ? (target as HTMLDialogElement).showModal() : ''
+        document.body.style.overflow = 'hidden'
+      })
+    }
+  })
+  const closers = document.querySelectorAll('.twls-modal-closer')
+  closers.forEach(closer => {
+    closer.addEventListener('click', () => {
+      (closer.closest('.twls-modal') as HTMLDialogElement).close()
+      document.body.style.overflow = 'scroll'
+    })
+  })
+</script>

@@ -6,6 +6,7 @@ import RadioGroup from '../../components/systems/lists/RadioGroup.astro'
 import RadioGroupItem from '../../components/systems/atoms/RadioGroupItem.astro'
 import AccordionContainer from '../../components/systems/lists/AccordionContainer.astro'
 import Accordion from '../../components/systems/containers/Accordion.astro'
+import Modal from '../../components/systems/containers/Modal.astro'
 ---
 
 <SidebarLayout title="About :: The Wheels - Multi purpose design system for human society.">
@@ -149,42 +150,22 @@ import Accordion from '../../components/systems/containers/Accordion.astro'
       </section>
       <section>
         <h2 id="modal">Modal</h2>
-        <dialog class="twls-modal" id="sample-modal" title="律令制とは">
-          <header class="modal-header" id="sample-modal-title">律令制とは</header>
-          <section class="modal-content" id="sample-modal-content">
+        <Modal modalId="sample-modal" modalTitle="律令制とは">
+          <div slot="modal-content">
             <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
             <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
             <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
             <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
             <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
             <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
-          </section>
-          <footer class="modal-footer">
-            <button class="twls-button ghost twls-modal-closer">閉じる</button>
-          </footer>
-        </dialog>
-        <button class="twls-button twls-modal-opener" data-twls-modal-open="sample-modal">律令制とは</button>
-        <script>
-          // TODO: 後でコンポーネントに切り出す
-          const openers = document.querySelectorAll('.twls-modal-opener')
-          openers.forEach(opener => {
-            const targetId = opener.getAttribute('data-twls-modal-open')
-            if(targetId) {
-              const target = document.getElementById(targetId)
-              opener.addEventListener('click', () => {
-                target ? (target as HTMLDialogElement).showModal() : ''
-                document.body.style.overflow = 'hidden'
-              })
-            }
-          })
-          const closers = document.querySelectorAll('.twls-modal-closer')
-          closers.forEach(closer => {
-            closer.addEventListener('click', () => {
-              (closer.closest('.twls-modal') as HTMLDialogElement).close()
-              document.body.style.overflow = 'scroll'
-            })
-          })
-        </script>
+          </div>
+          <div slot="modal-footer">
+            <Button buttonClass="ghost twls-modal-closer" label="閉じる">
+          </div>
+          <div slot="modal-initiater">
+            <Button buttonClass="twls-modal-opener" label="律令制とは" data-twls-modal-open="sample-modal">
+          </div>
+        </Modal>
       </section>
     </div>
   </article>
