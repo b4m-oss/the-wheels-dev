@@ -1,11 +1,4 @@
 ---
-type ButtonProps = {
-  label: string;
-  buttonType: 'button' | 'submit';
-  buttonClass: string | null;
-  isFull: boolean;
-  isDisabled: boolean;
-}
 const { label, buttonType, buttonClass, isFull, isDisabled, ...otherProps } = Astro.props
 
 const dataAttributes = Object.fromEntries(
