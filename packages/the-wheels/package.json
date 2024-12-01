@@ -3,10 +3,10 @@
   "version": "0.7.0",
   "description": "All purpose design system.",
   "main": "dist/the-wheels.cjs.js",
-  "module": "dist/the-wheels.esm.js",
+  "module": "src/main.ts",
   "exports": {
     ".": {
-      "import": "./dist/the-wheels.esm.js",
+      "import": "./src/main.ts",
       "require": "./dist/the-wheels.cjs.js"
     },
     "./src/styles/the-wheels.scss": "./src/styles/the-wheels.scss",
