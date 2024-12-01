@@ -1,11 +1,16 @@
 {
   "name": "the-wheels",
-  "version": "1.0.0",
-  "description": "A CSS and JS framework.",
-  "main": "dist/index.js",
+  "version": "0.7.0",
+  "description": "All purpose design system.",
+  "main": "dist/the-wheels.cjs.js",
+  "module": "dist/the-wheels.esm.js",
   "exports": {
-    ".": "./dist/index.js",
-    "./src/styles/the-wheels.scss": "./src/styles/the-wheels.scss"
+    ".": {
+      "import": "./dist/the-wheels.esm.js",
+      "require": "./dist/the-wheels.cjs.js"
+    },
+    "./src/styles/the-wheels.scss": "./src/styles/the-wheels.scss",
+    "./dist/the-wheels.css": "./dist/the-wheels.css"
   },
   "types": "dist/index.d.ts",
   "scripts": {

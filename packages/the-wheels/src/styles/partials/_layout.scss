@@ -1,6 +1,10 @@
 @use "config/_variables" as var;
 @use "utils/_functions" as func;
 
+html {
+	scroll-behavior: smooth;
+}
+
 .layout-container {
   width: 100%;
 }
