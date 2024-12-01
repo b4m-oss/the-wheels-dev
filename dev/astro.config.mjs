@@ -1,6 +1,10 @@
 // @ts-check
 // @ts-check
 import { defineConfig } from "astro/config";
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
 
 import vue from "@astrojs/vue";
 
@@ -12,12 +16,12 @@ export default defineConfig({
     assets: "assets",
   },
   vite: {
-    ssr: {
-      noExternal: ["the-wheels"], // the-wheels パッケージをnoExternalに追加
-    },
+    // ssr: {
+    //   noExternal: ["the-wheels"], // the-wheels パッケージをnoExternalに追加
+    // },
     resolve: {
       alias: {
-        "the-wheels": "../packages/the-wheels/dist/",
+        "the-wheels": path.join(path.dirname(__filename), "../packages/the-wheels/dist/the-wheels.es.js"),
       },
     },
     build: {
