@@ -1,158 +1,26 @@
 ---
 import SidebarLayout from '../../layouts/subpage-sidebar.astro'
 import KitchenSinkSideMenu from '../../components/site/elements/KitchenSinkSideMenu.astro'
+import ButtonContent from '../../components/site/contents/kitchen-sink/01_Button.astro'
+import RadioGroupContent from '../../components/site/contents/kitchen-sink/02_RadioGroup.astro'
+import AccordionContent from '../../components/site/contents/kitchen-sink/03_Accordion.astro'
+import ModalContent from '../../components/site/contents/kitchen-sink/04_Modal.astro'
 import Formula from '../../components/site/Formula.astro'
 ---
 
 <SidebarLayout title="About :: The Wheels - Multi purpose design system for human society.">
   <KitchenSinkSideMenu slot="sidebar" />
   <article slot="content">
-    <div>
-      <h1>Kitchen Sink</h1>
-      <section>
-        <h2 id="button">Button</h2>
-        <dl class="parts-gallery">
-          <div>
-            <dt class="title">通常</dt>
-            <dd>
-              <button class="twls-button">クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">ゴースト</dt>
-            <dd>
-              <button class="twls-button ghost">クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">オプショナル</dt>
-            <dd>
-              <button class="twls-button optional">クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">不活性</dt>
-            <dd>
-              <button class="twls-button" disabled>クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">不活性ゴースト</dt>
-            <dd>
-              <button class="twls-button ghost" disabled>クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">不活性オプショナル</dt>
-            <dd>
-              <button class="twls-button optional" disabled>クリックして送信</button>
-            </dd>
-          </div>
-        </dl>
-        <dl class="parts-gallery full">
-          <div>
-            <dt class="title">通常・横幅いっぱい</dt>
-            <dd>
-              <button class="twls-button full">クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">ゴースト・横幅いっぱい</dt>
-            <dd>
-              <button class="twls-button ghost full">クリックして送信</button>
-            </dd>
-          </div>
-          <div>
-            <dt class="title">オプショナル・横幅いっぱい</dt>
-            <dd>
-              <button class="twls-button optional full">クリックして送信</button>
-            </dd>
-          </div>
-        </dl>
-      </section>
-      <section>
-        <h2 id="radio-group">Radio Group</h2>
-        <form class="twls-radio-group">
-          <label class="radio-group-item">
-            <input type="radio" name="radio-group-sample" checked />
-            <span>兵庫県</span>
-          </label>
-          <label class="radio-group-item">
-            <input type="radio" name="radio-group-sample" />
-            <span>大阪府</span>
-          </label>
-          <label class="radio-group-item">
-            <input type="radio" name="radio-group-sample" />
-            <span>京都府</span>
-          </label>
-        </form>
-      </section>
-      <section>
-        <h2 id="accordion">Accordion</h2>
-        <div class="twls-accordion">
-          <details class="accordion-item">
-            <summary class="accordion-tab">
-              摂津国とは
-            </summary>
-            <div class="accordion-detail">
-              <p>摂津国（せっつのくに、旧字体:攝津國）は、日本の令制国の一つ。近畿地方に属する。現在の大阪府北中部の大半と兵庫県南東部にあたる。</p>
-            </div>
-          </details>
-          <details class="accordion-item">
-            <summary class="accordion-tab">
-              山城国とは
-            </summary>
-            <div class="accordion-detail">
-              <p>山城国（やましろのくに）は、日本の地方行政区分である令制国の一つ。畿内に属する。</p>
-            </div>
-          </details>
-        </div>
-      </section>
-      <section>
-        <h2 id="modal">Modal</h2>
-        <dialog class="twls-modal" id="sample-modal" title="律令制とは">
-          <header class="modal-header" id="sample-modal-title">律令制とは</header>
-          <section class="modal-content" id="sample-modal-content">
-            <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
-            <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
-            <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
-            <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
-            <p>日本の律令制は、中国の制度を参考にし設立され、7世紀後期（飛鳥時代後期）から10世紀頃まで実施された。開始後約100年間（8世紀後期まで）は経済・軍事に関してはほぼ設立時の制度に忠実に従った国家運営が行われた（律令国家・律令体制・律令時代）。</p>
-            <p>制度設立の背景は、7世紀初頭から始まった中央集権国家実現・国力増強への取り組みがあった。また白村江の戦い（663年）の大敗後に、唐に対峙する危機意識を背景とし、唐の仕組みを取り入れ、強力な国家体制の実現、国民皆兵制による大規模な国家軍事力の設立、他国（新羅、渤海）に対する宗主の位置付けを目指したとも考えられている。</p>
-          </section>
-          <footer class="modal-footer">
-            <button class="twls-button ghost twls-modal-closer">閉じる</button>
-          </footer>
-        </dialog>
-        <button class="twls-button twls-modal-opener" data-twls-modal-open="sample-modal">律令制とは</button>
-        <script>
-          // TODO: 後でコンポーネントに切り出す
-          const openers = document.querySelectorAll('.twls-modal-opener')
-          openers.forEach(opener => {
-            const targetId = opener.getAttribute('data-twls-modal-open')
-            if(targetId) {
-              const target = document.getElementById(targetId)
-              opener.addEventListener('click', () => {
-                target ? (target as HTMLDialogElement).showModal() : ''
-                document.body.style.overflow = 'hidden'
-              })
-            }
-          })
-          const closers = document.querySelectorAll('.twls-modal-closer')
-          closers.forEach(closer => {
-            closer.addEventListener('click', () => {
-              (closer.closest('.twls-modal') as HTMLDialogElement).close()
-              document.body.style.overflow = 'scroll'
-            })
-          })
-        </script>
-      </section>
-      <section>
-        <h2>Complex input form</h2>
-        <form>
-          <Formula />
-        </form>
-      </section>
-    </div>
+    <h1>Kitchen Sink</h1>
+    <ButtonContent />
+    <RadioGroupContent />
+    <AccordionContent />
+    <ModalContent />
+    <section>
+      <h2>Complex input form</h2>
+      <form>
+        <Formula />
+      </form>
+    </section>
   </article>
 </SidebarLayout>
