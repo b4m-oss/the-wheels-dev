@@ -1,6 +1,6 @@
 ---
 const { titleTag, title, id } = Astro.props
-const markup = `<${titleTag} ${id ? id : ''}>${title}</${titleTag}>`
+const markup = `<${titleTag} ${id ? `id=${id}` : ''}>${title}</${titleTag}>`
 ---
 <section class="twls-content-container">
   <Fragment set:html={markup} />
