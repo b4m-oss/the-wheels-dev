@@ -37,6 +37,9 @@ const { title } = Astro.props
 
 <style>
   /* TODO: 後で、SCSS本体に移植する */
+  .twls-main-content {
+    width: 72rem;
+  }
   @media (width < 1280px) {
     .twls-sidebar {
       /* 一時的に非表示。 */
@@ -44,6 +47,11 @@ const { title } = Astro.props
     }   
     .twls-layout-sidebar {
       flex-flow: column;
+    }
+    .twls-main-content {
+      max-width: 72rem;
+      width: 100%;
+      padding: 0;
     }
   }
 </style>

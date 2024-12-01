@@ -1,0 +1,13 @@
+{
+  "name": "the-wheels-dev",
+  "version": "0.5.2",
+  "private": false,
+  "workspaces": [
+    "dev",
+    "packages/the-wheels"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/the-wheels",
+    "dev": "npm run dev -w packages/dev"
+  }
+}
