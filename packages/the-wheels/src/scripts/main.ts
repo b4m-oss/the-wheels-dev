@@ -1,1 +1,3 @@
-export const hoge = "hogehogetext";
+import { modal } from "./lib/modal";
+
+export { modal };
