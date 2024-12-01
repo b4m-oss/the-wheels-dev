@@ -4,10 +4,17 @@
   padding: 0;
   &[open] {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     max-width: 80dvw;
+    height: auto;
+    max-height: 80dvh;
     border: 0;
     border-radius: calc(var(--global-radius) * 1px);
     background-color: var(--bg-page);
@@ -17,6 +24,10 @@
     }
   }
   .modal-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--bg-page);
     font-size: 2.2rem;
     padding-top: 0.95em;
     padding-bottom: 0.95em;
@@ -28,11 +39,18 @@
   }
 
   .modal-content {
+    flex: 1;
     font-size: 1.6rem;
     padding: 1.306em;
+    overflow: scroll;
+    margin-bottom: 0;
   }
 
   .modal-footer {
+    display: sticky;
+    bottom: 0;
+    width: 100%;
+    background: var(--bg-page);
     font-size: 1.6rem;
     padding-top: 0.8em;
     padding-bottom: 0.8em;
@@ -42,12 +60,12 @@
     text-align: right;
 
     & > .twls-button {
-      --fz: 1.3;
-      padding-top: calc(var(--fz) * 1rem * 0.95);
-      padding-bottom: calc(var(--fz) * 1rem * 0.95);
+      --fz: 13;
+      padding-top: calc(var(--fz) * 0.1rem * 0.95);
+      padding-bottom: calc(var(--fz) * 0.1rem * 0.95);
       &:hover {
-        padding-top: calc(var(--fz) * 1rem * 0.95 - 1px);
-        padding-bottom: calc(var(--fz) * 1rem * 0.95 - 1px);
+        padding-top: calc(var(--fz) * 0.1rem * 0.95 - 1px);
+        padding-bottom: calc(var(--fz) * 0.1rem * 0.95 - 1px);
       }
     }
   }

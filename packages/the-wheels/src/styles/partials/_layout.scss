@@ -1,4 +1,5 @@
 @use "config/_variables" as var;
+@use "utils/_functions" as func;
 
 .layout-container {
   width: 100%;
