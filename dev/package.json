@@ -1,7 +1,7 @@
 {
   "name": "the-wheels-docs",
   "type": "module",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
@@ -15,8 +15,7 @@
     "astro": "^4.16.16",
     "reset-css": "^5.0.2",
     "sass": "^1.81.0",
-    "typescript": "^5.7.2",
-    "the-wheels": "*"
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@markuplint/astro-parser": "^4.6.13",
