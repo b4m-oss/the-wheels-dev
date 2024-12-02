@@ -1,0 +1,70 @@
+<template>
+  <div id="hero-container">
+    <section id="hero">
+      <section class="title-group">
+        <hgroup>
+          <h1 class="title">
+            <span class="title-lead">Welcome to</span>
+            <span class="main-title">The Wheels</span>
+          </h1>
+          <p class="caption">by <strong>Bicycle for mind LLC</strong></p>
+        </hgroup>
+        <div class="lead first">
+          <p>
+            Multiple purpose designsystem<br />
+            for human society.
+          </p>
+          <p class="caption">
+            You don’t need to reinvent wheels anymore to success.
+          </p>
+        </div>
+      </section>
+      <div class="lead second">
+        <p>
+          <b
+            >The Wheelsは、<a href="https://b4m.co.jp/" target="_blank"
+              >合同会社 知的・自転車が開発</a
+            >
+            する<br />多用途で活用できるデザインシステムです</b
+          >
+        </p>
+        <p>
+          このデザインシステムは、<a
+            href="https://github.com/b4m-oss/the-wheels-dev/"
+            target="_blank"
+            >オープンソースとして公開され、MIT Licenseに基づいて配布</a
+          >されています。誰でもどのような目的でも複製して利用することができ、また改変することが可能です。複製したもの、改変したものを、オープンソースとして継承し公開する必要はありません。誰でも自由に使えるデザインシステムです。
+        </p>
+      </div>
+    </section>
+    <figure id="main-visual">
+      <img
+        width="522"
+        height="477"
+        src="/assets/img/home/main-visual.png"
+        srcset="
+          /assets/img/home/main-visual.png    1x,
+          /assets/img/home/main-visual@2x.png 2x
+        "
+        alt="自転車の始祖と言われるドライジーネの画像"
+      />
+      <figcaption>
+        <p>
+          自転車の始祖と言われるドライジーネ。<br />
+          ドライジーネの発明があったからこそ、<br />
+          今、私たちは長距離を軽やかに移動することができる。
+        </p>
+      </figcaption>
+    </figure>
+  </div>
+</template>
+
+<style>
+#main-visual {
+  img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto 522/477;
+  }
+}
+</style>

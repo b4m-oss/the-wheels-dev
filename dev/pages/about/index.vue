@@ -1,9 +1,7 @@
-<script setup lang="ts">
-definePageMeta({
-  layout: "single-content",
-});
-</script>
-
 <template>
-  <p>about, single layout is used to be expected.</p>
+  <div>
+    <NuxtLayout name="single-content">
+      <p>about, single layout is used to be expected.</p>
+    </NuxtLayout>
+  </div>
 </template>

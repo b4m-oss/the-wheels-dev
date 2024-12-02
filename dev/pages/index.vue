@@ -1,9 +1,12 @@
-<script setup lang="ts">
-definePageMeta({
-  layout: "home",
-});
+<script lang="ts" setup>
+import Hero from "~/components/site/container/Hero.vue";
 </script>
 
 <template>
-  <p>hoge</p>
+  <div>
+    <NuxtLayout name="home">
+      <Hero />
+      <p>Toppage</p>
+    </NuxtLayout>
+  </div>
 </template>
