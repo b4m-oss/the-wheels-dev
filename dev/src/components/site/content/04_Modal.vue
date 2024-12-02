@@ -2,6 +2,10 @@
 import ContentSection from "~/components/system/container/ContentSection.vue";
 import Modal from "~/components/system/container/Modal.vue";
 import Button from "~/components/system/atoms/Button.vue";
+import { modal } from "the-wheels";
+import { onMounted, nextTick } from "vue";
+
+onMounted(async () => {});
 </script>
 
 <template>
@@ -37,7 +41,7 @@ import Button from "~/components/system/atoms/Button.vue";
           :is-full="false"
         />
       </div>
-      <div slot="modal-initiater">
+      <template #modal-initiater>
         <Button
           type="button"
           class="twls-modal-opener"
@@ -45,8 +49,9 @@ import Button from "~/components/system/atoms/Button.vue";
           :data-attributes="{ 'data-twls-modal-open': 'sample-modal' }"
           :is-disabled="false"
           :is-full="false"
+          @click="modal"
         />
-      </div>
+      </template>
     </Modal>
   </ContentSection>
 </template>

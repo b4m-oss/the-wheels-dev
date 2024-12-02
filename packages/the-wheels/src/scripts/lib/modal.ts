@@ -1,4 +1,5 @@
-export const modal = (): void => {
+export const modal = () => {
+  console.log("Modal is fired.");
   const openers = document.querySelectorAll(".twls-modal-opener");
   openers.forEach((opener) => {
     const targetId = opener.getAttribute("data-twls-modal-open");

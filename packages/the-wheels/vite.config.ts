@@ -6,10 +6,10 @@ export default defineConfig({
     lib: {
       entry: {
         js: path.resolve(__dirname, "src/scripts/main.ts"),
-        css: path.resolve(__dirname, "src/styles/the-wheels.scss"), // SCSSをエントリに追加
+        // css: path.resolve(__dirname, "src/styles/the-wheels.scss"), // SCSSをエントリに追加
       },
       name: "TheWheels", // ライブラリ名
-      fileName: (format) => `the-wheels.${format}.js`, // 出力ファイル名
+      fileName: (format) => `the-wheels.${format === "es" ? "mjs" : "cjs"}.js`,
     },
     rollupOptions: {
       output: {

@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { modal } from "the-wheels";
-modal();
-
 const props = defineProps<{
   modalId: string | undefined;
   modalTitle: string | undefined;
