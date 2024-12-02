@@ -4,7 +4,7 @@ const buttonGalleryList = [
     label: "クリックして送信",
     buttonType: "button",
     buttonClass: "",
-    isFull: "",
+    isFull: false,
     isDiabled: false,
   },
   {
@@ -12,7 +12,7 @@ const buttonGalleryList = [
     label: "クリックして送信",
     buttonType: "button",
     buttonClass: "ghost",
-    isFull: "",
+    isFull: false,
     isDiabled: false,
   },
   {
@@ -20,7 +20,7 @@ const buttonGalleryList = [
     label: "クリックして送信",
     buttonType: "button",
     buttonClass: "optional",
-    isFull: "",
+    isFull: false,
     isDiabled: false,
   },
   {
@@ -28,7 +28,7 @@ const buttonGalleryList = [
     label: "クリックして送信",
     buttonType: "button",
     buttonClass: "",
-    isFull: "",
+    isFull: false,
     isDiabled: true,
   },
   {
@@ -36,7 +36,7 @@ const buttonGalleryList = [
     label: "クリックして送信",
     buttonType: "button",
     buttonClass: "ghost",
-    isFull: "",
+    isFull: false,
     isDiabled: true,
   },
   {
@@ -44,7 +44,7 @@ const buttonGalleryList = [
     label: "クリックして送信",
     buttonType: "button",
     buttonClass: "optional",
-    isFull: "",
+    isFull: false,
     isDiabled: true,
   },
 ];

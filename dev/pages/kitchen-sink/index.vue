@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import KitchenSinkNavigation from "~/components/site/container/KitchenSinkNavigation.vue";
 import ContenetSection from "~/components/system/container/ContenetSection.vue";
+import ButtonContent from "~/components/site/content/01_Button.vue";
 </script>
 <template>
   <div>
@@ -11,9 +12,7 @@ import ContenetSection from "~/components/system/container/ContenetSection.vue";
       <template #content>
         <article slot="content">
           <h1>Kitchen Sink</h1>
-          <ContenetSection title-tag="h2" title="hoge" id="hoge">
-            <p>hogehoge</p>
-          </ContenetSection>
+          <ButtonContent />
           <!-- <ButtonContent />
           <RadioGroupContent />
           <AccordionContent />
