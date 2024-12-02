@@ -2,6 +2,7 @@
 import KitchenSinkNavigation from "~/components/site/container/KitchenSinkNavigation.vue";
 import ContenetSection from "~/components/system/container/ContenetSection.vue";
 import ButtonContent from "~/components/site/content/01_Button.vue";
+import RadioGroupContent from "~/components/site/content/02_RadioGroup.vue";
 </script>
 <template>
   <div>
@@ -13,8 +14,9 @@ import ButtonContent from "~/components/site/content/01_Button.vue";
         <article slot="content">
           <h1>Kitchen Sink</h1>
           <ButtonContent />
-          <!-- <ButtonContent />
           <RadioGroupContent />
+          <!--
+
           <AccordionContent />
           <ModalContent /> -->
           <section>
