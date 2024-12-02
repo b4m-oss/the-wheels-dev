@@ -22,12 +22,22 @@
   border-left-width: 0;
   border-right-width: 0;
 
+  @media (width < 480px) {
+    border-bottom-width: 0;
+    gap: 3rem;
+  }
+
   .title-group {
     display: flex;
     flex-flow: column;
     justify-content: start;
     align-items: center;
     gap: 5rem;
+    @media (width < 480px) {
+      gap: 2rem;
+      padding-bottom: 3rem;
+      border-bottom: 2px solid var(--text-caption);
+    }
     .caption,
     .caption * {
       color: var(--text-caption);
@@ -93,6 +103,7 @@
       color: var(--text-caption);
       padding-left: 5rem;
       padding-right: 5rem;
+
       * {
         margin-bottom: 2rem;
       }
@@ -152,9 +163,12 @@
     padding-top: 3rem;
     padding-left: 6.25%;
     padding-right: 6.25%;
+    gap: 0;
   }
   #hero {
     padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
     .title-lead {
       font-size: 6.5dvw;
     }
@@ -164,10 +178,13 @@
     .caption {
       font-size: 3.215dvw;
     }
-    .lead.first,
-    .lead.second {
+    .lead.first {
       padding-left: 6.25%;
       padding-right: 6.25%;
+    }
+    .lead.second {
+      padding-left: 0;
+      padding-right: 0;
     }
     .lead.first {
       .caption {

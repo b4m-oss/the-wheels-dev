@@ -9,6 +9,10 @@
   border-bottom: 2px solid var(--text-caption);
   margin-bottom: 7rem;
 
+  @media (width < 480px) {
+    margin-bottom: 3.5rem;
+  }
+
   .title {
     --fz: 62;
     --fz-root: 16;
@@ -28,7 +32,7 @@
   }
 
   @media (width < 480px) {
-    padding-top: 3rem;
+    padding-top: 5.5rem;
     padding-bottom: 2rem;
 
     display: flex;
@@ -42,7 +46,8 @@
     }
 
     .caption {
-      font-size: 2rem;
+      font-size: 1.4rem;
+      padding-left: 0.15em;
     }
   }
 }
