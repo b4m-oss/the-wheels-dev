@@ -8,7 +8,9 @@ const props = defineProps<{
 <template>
   <div class="twls-container">
     <div class="global-header">
-      <p class="title">{{ props.title }}</p>
+      <p class="title">
+        <NuxtLink to="/">{{ props.title }}</NuxtLink>
+      </p>
       <template v-if="props.caption">
         <p class="caption">{{ props.caption }}</p>
       </template>
