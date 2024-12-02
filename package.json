@@ -9,5 +9,8 @@
   "scripts": {
     "build": "npm run build -w packages/the-wheels",
     "dev": "npm run dev -w packages/the-wheels"
+  },
+  "devDependencies": {
+    "vue-tsc": "^2.1.10"
   }
 }

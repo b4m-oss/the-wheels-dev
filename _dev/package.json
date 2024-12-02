@@ -1,31 +1,31 @@
 {
   "name": "the-wheels-docs",
-  "private": false,
   "type": "module",
   "version": "0.7.1",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "lint:html": "markuplint \"src/**/*.astro\"",
     "deploy": "npx netlify-cli deploy --prod --dir=dist",
     "login": "npx netlify-cli login",
     "init": "npx netlify-cli init"
   },
   "dependencies": {
-    "nuxt": "^3.14.1592",
-    "the-wheels": "file:../packages/the-wheels",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/vue": "^4.5.3",
+    "astro": "^4.16.16",
+    "reset-css": "^5.0.2",
+    "sass": "^1.81.0",
+    "typescript": "^5.7.2",
+    "the-wheels": "file:../packages/the-wheels"
   },
   "devDependencies": {
-    "@markuplint/vue-parser": "^4.6.13",
-    "@markuplint/vue-spec": "^4.5.13",
+    "@markuplint/astro-parser": "^4.6.13",
     "markuplint": "^4.11.3",
     "prettier": "^3.4.1",
-    "sass": "^1.81.0"
+    "prettier-plugin-astro": "^0.14.1"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
