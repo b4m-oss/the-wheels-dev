@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import GlobalHeader from "~/components/site/container/GlobalHeader.vue";
 import GlobalFooter from "~/components/site/container/GlobalFooter.vue";
+import SubpageNavigation from "~/components/site/elements/SubpageNavigation.vue";
 </script>
 <template>
   <header>
@@ -8,6 +9,7 @@ import GlobalFooter from "~/components/site/container/GlobalFooter.vue";
   </header>
   <main id="main">
     <div class="layout-container">
+      <SubpageNavigation />
       <slot />
     </div>
   </main>
