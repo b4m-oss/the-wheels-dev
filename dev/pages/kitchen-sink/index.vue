@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import KitchenSinkNavigation from "~/components/site/container/KitchenSinkNavigation.vue";
-import ContenetSection from "~/components/system/container/ContenetSection.vue";
+import ContentSection from "~/components/system/container/ContentSection.vue";
 import ButtonContent from "~/components/site/content/01_Button.vue";
 import RadioGroupContent from "~/components/site/content/02_RadioGroup.vue";
+import AccordionContent from "~/components/site/content/03_Accordion.vue";
+import ModalContent from "~/components/site/content/04_Modal.vue";
+import Formula from "~/components/site/content/Formula.vue";
 </script>
 <template>
   <div>
@@ -15,16 +18,17 @@ import RadioGroupContent from "~/components/site/content/02_RadioGroup.vue";
           <h1>Kitchen Sink</h1>
           <ButtonContent />
           <RadioGroupContent />
-          <!--
-
           <AccordionContent />
-          <ModalContent /> -->
-          <section>
-            <h2>Complex input form</h2>
+          <ModalContent />
+          <ContentSection
+            title-tag="h2"
+            title="Complex input form"
+            id="complex-input-form"
+          >
             <form>
-              <!-- <Formula /> -->
+              <Formula />
             </form>
-          </section>
+          </ContentSection>
         </article>
       </template>
     </NuxtLayout>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ContentSection from "~/components/system/container/ContenetSection.vue";
+import ContentSection from "~/components/system/container/ContentSection.vue";
 import PartsGalleryItem from "~/components/site/elements/PartsGalleryItem.vue";
 import Button from "~/components/system/atoms/Button.vue";
 import {

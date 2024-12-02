@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ContentSection from "~/components/system/container/ContenetSection.vue";
+import ContentSection from "~/components/system/container/ContentSection.vue";
 import RadioGroup from "~/components/system/lists/RadioGroup.vue";
 import RadioGroupItem from "~/components/system/atoms/RadioGroupItem.vue";
 </script>
