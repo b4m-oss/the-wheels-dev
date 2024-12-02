@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import GlobalFooter from "~/components/site/container/GlobalFooter.vue";
+</script>
+
 <template>
   <header>
     <!-- <GlobalHeader title="The Wheels" caption="All purpose design system." /> -->
@@ -8,6 +12,8 @@
     </div>
   </main>
   <footer>
-    <!-- <GlobalFooter /> -->
+    <GlobalFooter />
   </footer>
 </template>
+
+<style></style>

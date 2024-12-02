@@ -1,6 +1,10 @@
+<script lang="ts" setup>
+import GlobalHeader from "~/components/site/container/GlobalHeader.vue";
+import GlobalFooter from "~/components/site/container/GlobalFooter.vue";
+</script>
 <template>
   <header>
-    <!-- <GlobalHeader title="The Wheels" caption="All purpose design system." /> -->
+    <GlobalHeader title="The Wheels" caption="All purpose design system." />
   </header>
   <section class="main">
     <div class="twls-container">
@@ -16,7 +20,7 @@
     </div>
   </section>
   <footer>
-    <!-- <GlobalFooter /> -->
+    <GlobalFooter />
   </footer>
 </template>
 

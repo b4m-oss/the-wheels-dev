@@ -67,4 +67,7 @@
     aspect-ratio: auto 522/477;
   }
 }
+.title-group {
+  margin-bottom: 0;
+}
 </style>
