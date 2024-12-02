@@ -2,5 +2,5 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  css: ["the-wheels/dist/the-wheels.css"],
+  css: ["the-wheels/dist/the-wheels.css", "@/assets/styles/styles.scss"],
 });
