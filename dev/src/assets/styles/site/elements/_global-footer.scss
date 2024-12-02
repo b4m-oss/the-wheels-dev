@@ -30,14 +30,15 @@
 
   @media (width < 480px) {
     width: 100%;
+
     max-width: none;
     padding-left: 6.25%;
     padding-right: 6.25%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
     * {
-      font-size: 1.1rem;
-      line-height: 1.12;
+      font-size: 1.3rem;
+      line-height: 1.9;
     }
   }
 }
