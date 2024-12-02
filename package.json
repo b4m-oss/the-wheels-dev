@@ -1,6 +1,6 @@
 {
   "name": "the-wheels-dev",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "private": false,
   "workspaces": [
     "dev",
@@ -9,5 +9,8 @@
   "scripts": {
     "build": "npm run build -w packages/the-wheels",
     "dev": "npm run dev -w packages/the-wheels"
+  },
+  "devDependencies": {
+    "vue-tsc": "^2.1.10"
   }
 }
