@@ -55,6 +55,11 @@ details {
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  @media (width < 480px) {
+    --fz: 16;
+    --mb: 20;
+  }
 }
 
 a {
@@ -86,7 +91,7 @@ h1 {
   font-weight: 700;
   color: var(--text-highlight);
   @media (width < 480px) {
-    --fz: 54;
+    --fz: 36;
   }
   & ~ * {
     margin-top: 40px;
@@ -104,8 +109,11 @@ h2 {
   color: var(--text-caption);
   @include func.lineHeightNegatieMargin(var(--fz));
   margin-top: func.pxToRem(var(--mt));
+  margin-bottom: func.pxToRem(var(--mb));
   @media (width < 480px) {
-    --fz: 43;
+    --fz: 28;
+    --mt: 62;
+    --mb: 12;
     --heading-lh: 1.14;
   }
 }
@@ -137,6 +145,21 @@ h5 + h6,
 * > .#{var.$ns}-heading-5:first-child,
 * > h6:first-child,
 * > .#{var.$ns}-heading-6:first-child {
+  margin-top: 0;
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + *,
+.heading-1 + *,
+.heading-2 + *,
+.heading-3 + *,
+.heading-4 + *,
+.heading-5 + *,
+.heading-6 + * {
   margin-top: 0;
 }
 
