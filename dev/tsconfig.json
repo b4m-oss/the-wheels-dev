@@ -1,11 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "jsx": "preserve",
+    "baseUrl": ".",
     "paths": {
-      "the-wheels": ["../packages/the-wheels/dist/the-wheels.es.js"]
+      "the-wheels": ["../packages/the-wheels/src/scripts/main.ts"],
+      "~/*": ["./src/*"]
     }
-  }
+  },
+  "include": [
+    "node_modules/vue/macros.d.ts", // Vueの型を読み込む設定
+    "nuxt.config.ts",
+    "./src/**/*"
+  ]
 }
