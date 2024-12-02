@@ -2,7 +2,7 @@
 @use "utils/_functions" as func;
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .layout-container {
@@ -31,6 +31,9 @@ html {
   }
 }
 .#{var.$ns}-container {
+  @media (1580px < width) {
+    width: 156rem;
+  }
   width: 118rem;
   // padding-left: 5rem;
   // padding-right: 5rem;
@@ -63,6 +66,12 @@ html {
   }
 }
 
+@media (1580px < width) {
+  .layout-container {
+    width: 156rem;
+  }
+}
+
 .#{var.$ns}-main-content {
   @media (width < 480px) {
     padding-left: 6.25%;
@@ -88,5 +97,26 @@ html {
 
   @media (480px < width < 1280px) {
     flex-flow: column;
+  }
+}
+
+article {
+  .twls-container {
+    h1,
+    h2 {
+      column-span: all;
+    }
+    p,
+    li,
+    th,
+    td,
+    blockquote,
+    span,
+    cite {
+      font-size: 1.5rem;
+    }
+    column-width: 32em;
+    // column-fill: auto;
+    column-gap: 4.5em;
   }
 }
