@@ -6,11 +6,33 @@
     align-items: start;
     gap: 4.5rem;
 
+    overflow-y: visible;
     margin-top: -4rem;
     margin-bottom: 12rem;
 
     & > * {
       margin-bottom: 0;
+    }
+  }
+}
+@media (width < 480px) {
+  #subpage-navigation {
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    padding-left: 6dvw;
+    padding-right: 6vw;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: visible;
+    margin-top: 0;
+    position: relative;
+    & > ul {
+      width: max-content;
+      position: relative;
+      z-index: 10;
+      // top: -1rem;
+      margin-top: -2rem;
+      margin-bottom: 2rem;
     }
   }
 }
