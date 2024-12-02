@@ -10,7 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:html": "markuplint \"src/**/*.astro\"",
-    "deploy": "npx netlify-cli deploy --prod --dir=dist",
+    "deploy": "npx netlify-cli deploy --prod --dir=.output/public",
     "login": "npx netlify-cli login",
     "init": "npx netlify-cli init"
   },
