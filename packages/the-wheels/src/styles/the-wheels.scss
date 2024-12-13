@@ -9,6 +9,7 @@
 
 // Use The Wheels' Typography.
 @use "./partials/utils/_typography";
+@use "./partials/forms/basics";
 
 // Use The Wheels' Functions.
 @use "./partials/utils/functions";
@@ -40,13 +41,13 @@
 .twls-form-single-input {
   display: flex;
   flex-flow: column;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .twls-form-multiline-input {
   display: flex;
   flex-flow: column;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 [class^="twls-form-"] {
@@ -58,7 +59,7 @@
   textarea {
     --fz: 18;
     font-size: calc(var(--fz) / 10 * 1rem);
-    padding: .35em;
+    padding: 0.35em;
     max-width: 20em;
     width: 100%;
     border-color: var(--text-caption);
@@ -111,8 +112,8 @@
     padding: 0;
     --fz: 15;
     font-size: calc(var(--fz) / 10 * 1rem);
-    padding-top: .5em;
-    padding-bottom: .5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     max-width: unset;
   }
   .accordion-detail {

@@ -118,6 +118,39 @@ h2 {
   }
 }
 
+.#{var.$ns}-heading-3,
+h3 {
+  --fz: 24;
+  --mt: 78;
+  --mb: 24;
+  position: relative;
+  padding-left: 1em;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.6em;
+    height: 4px;
+    background: var(--text-caption);
+  }
+  @include func.numberToRemFz(var(--fz));
+  line-height: var(--heading-lh);
+  font-weight: 700;
+  color: var(--text-caption);
+  @include func.lineHeightNegatieMargin(var(--fz));
+  margin-top: func.pxToRem(var(--mt));
+  margin-bottom: func.pxToRem(var(--mb));
+  @media (width < 480px) {
+    --fz: 28;
+    --mt: 62;
+    --mb: 12;
+    --heading-lh: 1.14;
+  }
+}
+
 h1 + h2,
 h2 + h3,
 h3 + h4,
