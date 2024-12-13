@@ -1,0 +1,29 @@
+@use "../../config/_variables" as var;
+@use "../../utils/functions" as func;
+
+.#{var.$ns}-form-input-element {
+  width: fit-content;
+}
+
+.#{var.$ns}-form-input-assist {
+  display: flex;
+  flex-flow: row;
+  .#{var.$ns}-form-input-message-slot {
+    flex: 1;
+  }
+}
+
+.#{var.$ns}-form-assist-message {
+  --fz: 13;
+  @include func.numberToRemFz(var(--fz));
+  // color: var(--text-highlight);
+  margin-bottom: 0.15em;
+}
+
+.#{var.$ns}-form-input-text-counter {
+  * {
+    --fz: 11;
+    @include func.numberToRemFz(var(--fz));
+    color: var(--text-highlight);
+  }
+}
