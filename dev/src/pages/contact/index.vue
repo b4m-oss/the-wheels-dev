@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-
+import PrivacyPolicy from '~/components/site/elements/PrivacyPolicy.vue';
+import TOC from '~/components/site/elements/TOC.vue';
 </script>
 <template>
   <div>
@@ -11,8 +12,10 @@
         </div>
         <fieldset>
           <legend>サイト利用規約・プライバシーポリシーに同意が必要です</legend>
-          <!-- 利用規約の文言が入ります -->
-          <!-- プライバシーポリシーの文言が入ります -->
+          <b>サイト利用規約</b>
+          <TOC />
+          <b>プライバシーポリシー</b>
+          <PrivacyPolicy />
           <label>
             <input type="checkbox" name="contact-agree-policy" required>
             <span class="twls-label-text">サイト利用規約・プライバシーポリシーに同意する</span>
@@ -110,7 +113,7 @@
                 </div>
                 <div>
                   <dt>個人事業主</dt>
-                  <dd>個人事業主（フリーランス）の方が、ご自身の事業としてご発注の方</dd>
+                  <dd>個人事業主（フリーランス・自営業）の方が、ご自身の事業としてご発注の方</dd>
                 </div>
                 <div>
                   <dt>個人</dt>
@@ -122,8 +125,10 @@
               <option value="" selected hidden required>選択してください</option>
               <option value="法人">法人</option>
               <option value="個人事業主">個人事業主</option>
+              <option value="個人">個人</option>
             </select>
           </label>
+          <label>屋号</label>
         </fieldset>
       </form>
     </NuxtLayout>
