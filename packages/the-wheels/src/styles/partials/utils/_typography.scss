@@ -14,14 +14,16 @@
 }
 
 body {
-  --fz-root: 18;
-  --fz: var(--fz);
-  @include func.numberToRemFz(var(--fz));
-  background-color: var(--bg-page);
-  color: var(--text-main);
-  font-family: "Inter", "Noto Sans JP", sans-serif;
-  @media (width < 480px) {
-    --fz: 16;
+  > .twls-body {
+    --fz-root: 18;
+    --fz: var(--fz);
+    @include func.numberToRemFz(var(--fz));
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    @media (width < 480px) {
+      --fz: 16;
+    }
   }
 }
 
