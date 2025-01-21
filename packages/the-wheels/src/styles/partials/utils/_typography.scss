@@ -13,55 +13,106 @@
   box-sizing: border-box;
 }
 
-body {
-  > .twls-body {
-    --fz-root: 18;
-    --fz: var(--fz);
-    @include func.numberToRemFz(var(--fz));
-    background-color: var(--bg-page);
-    color: var(--text-main);
-    font-family: "Inter", "Noto Sans JP", sans-serif;
-    @media (width < 480px) {
-      --fz: 16;
+
+body .#{var.$ns}-body {
+  --fz-root: 18;
+  --fz: var(--fz-root);
+  --lh: 1.7;
+  line-height: var(--lh);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  @media (width < 720px) {
+    --fz: 16;
+    --lh: 1.55;
+  }
+}
+
+body * {
+  @include func.numberToRemFz(var(--fz));
+}
+
+.#{var.$ns}-layout {
+  container-type: inline-size;
+  .#{var.$ns}-container {
+    width: 100%;
+    max-width: calc(var(--fz-root) * 1px * 40);
+    display: flex;
+    flex-flow: column;
+    gap: 5.5rem;
+  
+    @container (max-width: 40em) {
+      width: calc(var(--fz-root) * 1px * 40);
+      // margin-left: 0;
+      // margin-right: 0;
     }
   }
 }
 
-// General Spacing
+.#{var.$ns}-page-text-title {
+  --fz: 54;
+  color: var(--text-highlight);
+  font-weight: 800;
+  // margin-bottom: 1em;
+  @media (width < 720px) {
+    --fz: 36;
+  }
+}
 
-p,
-ul,
-ol,
-dl,
-li,
-figure,
-table,
-blockquote,
-summary,
-details {
-  --mb: 30;
-  --fz: 18;
-  @include func.lineHeightNegatieMargin(var(--fz));
-  @include func.numberToRemFz(var(--fz));
-  line-height: var(--body-text-lh);
-  text-align: justify;
-
+.#{var.$ns}-content {
   max-width: 40em;
-
-  &:last-child {
+  display: flex;
+  flex-flow: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  *:last-child {
     margin-bottom: 0;
   }
 
-  &:is(summary),
-  &:is(details) {
-    margin-top: 0;
-    margin-bottom: 0;
+  * {
+    @include func.lineHeightNegatieMargin(var(--fz));
   }
 
-  @media (width < 480px) {
-    --fz: 16;
-    --mb: 20;
+  @media (width < 720px) {
+    max-width: none;
   }
+
+  .#{var.$ns}-h2 {
+    --fz: 42;
+    @include func.numberToRemFz(var(--fz));
+    line-height: var(--heading-lh);
+    font-weight: 700;
+    color: var(--text-caption);
+    @media (width < 720px) {
+      --fz: 28;
+      --heading-lh: 1.14;
+    }
+  }
+
+  .#{var.$ns}-h3 {
+    --fz: 23;
+    line-height: var(--heading-lh);
+    color: var(--text-highlight);
+    margin-top: 2em;
+    position: relative;
+    padding-left: 1.5em;
+    &::before {
+      position: absolute;
+      top: 0.5em;
+      transform: translateY(-1.5px);
+      left: 0;
+      content: '';
+      display: block;
+      width: 1em;
+      height: 3px;
+      background: currentColor;
+    }
+    @media (width < 720px) {
+      --fz: 20;
+      --heading-lh: 1.14;
+    }
+  }
+
 }
 
 a {
@@ -84,98 +135,4 @@ em {
 strong {
   color: var(--text-highlight);
   font-weight: 700;
-}
-
-.#{var.$ns}-heading-1,
-h1 {
-  --fz: 54;
-  @include func.numberToRemFz(var(--fz));
-  font-weight: 700;
-  color: var(--text-highlight);
-  @media (width < 480px) {
-    --fz: 36;
-  }
-  & ~ * {
-    margin-top: 40px;
-  }
-}
-
-.#{var.$ns}-heading-2,
-h2 {
-  --fz: 42;
-  --mt: 85;
-  --mb: 32;
-  @include func.numberToRemFz(var(--fz));
-  line-height: var(--heading-lh);
-  font-weight: 700;
-  color: var(--text-caption);
-  @include func.lineHeightNegatieMargin(var(--fz));
-  margin-top: func.pxToRem(var(--mt));
-  margin-bottom: func.pxToRem(var(--mb));
-  @media (width < 480px) {
-    --fz: 28;
-    --mt: 62;
-    --mb: 12;
-    --heading-lh: 1.14;
-  }
-}
-
-h1 + h2,
-h2 + h3,
-h3 + h4,
-h5 + h6,
-.#{var.$ns}-heading-1 + .#{var.$ns}-heading-2,
-.#{var.$ns}-heading-2 + .#{var.$ns}-heading-3,
-.#{var.$ns}-heading-3 + .#{var.$ns}-heading-4,
-.#{var.$ns}-heading-4 + .#{var.$ns}-heading-5,
-.#{var.$ns}-heading-5 + .#{var.$ns}-heading-6 {
-  margin-top: 1em;
-  @media (width < 480px) {
-    margin-top: 2.4rem;
-  }
-}
-
-* > h1:first-child,
-* > .#{var.$ns}-heading-1:first-child,
-* > h2:first-child,
-* > .#{var.$ns}-heading-2:first-child,
-* > h3:first-child,
-* > .#{var.$ns}-heading-3:first-child,
-* > h4:first-child,
-* > .#{var.$ns}-heading-4:first-child,
-* > h5:first-child,
-* > .#{var.$ns}-heading-5:first-child,
-* > h6:first-child,
-* > .#{var.$ns}-heading-6:first-child {
-  margin-top: 0;
-}
-
-h1 + *,
-h2 + *,
-h3 + *,
-h4 + *,
-h5 + *,
-h6 + *,
-.heading-1 + *,
-.heading-2 + *,
-.heading-3 + *,
-.heading-4 + *,
-.heading-5 + *,
-.heading-6 + * {
-  margin-top: 0;
-}
-
-main section,
-article section {
-  --mb: 95;
-  margin-bottom: func.pxToRem(var(--mb));
-}
-
-h1 + section,
-.#{var.$ns}-.heading-1 + section {
-  --mt: 36;
-  margin-top: func.pxToRem(var(--mt));
-  @media (width < 480px) {
-    --mt: 24;
-  }
 }
