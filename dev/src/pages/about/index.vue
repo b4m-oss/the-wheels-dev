@@ -1,10 +1,12 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import PageTextTitle from '~/components/system/atoms/PageTextTitle.vue';
+</script>
 <template>
   <div>
     <NuxtLayout name="single-content">
-      <article>
-        <section class="twls-container">
-          <h1>はじめに</h1>
+      <article class="twls-container">
+        <PageTextTitle>はじめに</PageTextTitle>
+        <section class="twls-text-content">
           <h2>デザインシステムとは</h2>
           <p>
             デザインシステムは、特定の製品や組織において、統一されたデザインの思想の基に定義された、デザインのルールをまとめたものです。昔からプロダクトデザインやグラフィックデザインの世界において、ある程度の規模のある組織には何らかのデザインシステムが作られていました。
@@ -17,12 +19,10 @@
             guidelinesが有名ですが、その後Twitter社のエンジニアが開発したBootstrapや、GoogleのMaterialDesign、日本ではデジタル庁のデザインシステムなどが生まれました。
           </p>
           <p>
-            このドキュメントでは、The
-            Wheelsという、知的・自転車の組織で利用するためのデザインシステムについて定義します。しかし、既にある、またはこれから生まれるであろうデザインシステムには、その組織や製品において、<strong>そうであるべきデザインのあり方</strong>が定義されています。もちろん、どのデザインシステムにも、<strong>ユーザーの利便性を追求する姿勢</strong>は共通します。そこに間違いがあるとも言えません。しかし、<strong>その組織の哲学（Philosopy：フィロソフィー）</strong>に基づいて開発されているものであり、<strong
-              >The Wheelsも同じ</strong
-            >です。The
-            Wheelsは、知的・自転車の考えるデザインの哲学を元に開発されていますから、まずは組織哲学とデザインシステムとの関係性から説明します。
+            このドキュメントでは、The Wheelsという、知的・自転車の組織で利用するためのデザインシステムについて定義します。しかし、既にある、またはこれから生まれるであろうデザインシステムには、その組織や製品において、<strong>そうであるべきデザインのあり方</strong>が定義されています。もちろん、どのデザインシステムにも、<strong>ユーザーの利便性を追求する姿勢</strong>は共通します。そこに間違いがあるとも言えません。しかし、<strong>その組織の哲学（Philosopy：フィロソフィー）</strong>に基づいて開発されているものであり、<strong>The Wheelsも同じ</strong>です。The Wheelsは、知的・自転車の考えるデザインの哲学を元に開発されていますから、まずは組織哲学とデザインシステムとの関係性から説明します。
           </p>
+        </section>
+        <section class="twls-text-content">
           <h2>The Wheelsの目的</h2>
           <p>
             知的・自転車の提供するものは、大きく2つあります。それは、コンテンツとデジタルシステムです。コンテンツは、Webサイトであったり、記事コンテンツであったり、動画コンテンツであったり、チラシやパンフレットであったりします。一方、デジタルシステムとは、Webシステムだったり、スマホアプリだったり、業務改善システムであったりします。
