@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import PrivacyPolicy from '~/components/site/elements/PrivacyPolicy.vue';
 import TOC from '~/components/site/elements/TOC.vue';
+import StepNavList from '~/components/system/lists/StepNavList.vue';
 </script>
 <template>
   <div>
@@ -8,7 +9,7 @@ import TOC from '~/components/site/elements/TOC.vue';
       <h1>Typical Contact Form</h1>
       <form action="">
         <div>
-          <!-- step navigation goes here -->
+          <StepNavList />
         </div>
         <fieldset>
           <legend>サイト利用規約・プライバシーポリシーに同意が必要です</legend>

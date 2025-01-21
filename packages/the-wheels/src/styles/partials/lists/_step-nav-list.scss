@@ -1,0 +1,52 @@
+@use "../config/_variables" as var;
+
+.#{var.$ns}-step-nav-list {
+  display: flex;
+  flex-flow: row;
+  gap: 3rem;
+  counter-set: step;
+
+  * {
+    --mb: 0;
+  }
+
+  
+
+  .#{var.$ns}-step-nav-item {
+    --fz: 15;
+    border: 1px solid var(--text-caption);
+    counter-increment: step;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.25em 0.75em;
+    border-radius: 4px;
+    color: var(--text-caption);
+    &::before {
+      font-size: 89%;
+      content: counter(step);
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 999px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid var(--text-main);
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &.active {
+      width: calc(auto - 8px);
+      border-width: 4px;
+      border-color: var(--text-highlight);
+      font-weight: 600;
+      color: var(--text-highlight);
+      &::before {
+        background-color: var(--text-highlight);
+        color: #fff;
+      }
+    }
+  }
+}
