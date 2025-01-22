@@ -2,6 +2,7 @@
 import PrivacyPolicy from '~/components/site/elements/PrivacyPolicy.vue';
 import TOC from '~/components/site/elements/TOC.vue';
 import StepNavList from '~/components/system/lists/StepNavList.vue';
+import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
 </script>
 <template>
   <div>
@@ -17,10 +18,7 @@ import StepNavList from '~/components/system/lists/StepNavList.vue';
           <TOC />
           <b>プライバシーポリシー</b>
           <PrivacyPolicy />
-          <label>
-            <input type="checkbox" name="contact-agree-policy" required>
-            <span class="twls-label-text">サイト利用規約・プライバシーポリシーに同意する</span>
-          </label>
+          <Checkbox :required="true">サイト利用規約・プライバシーポリシーに同意する</Checkbox>
         </fieldset>
         <fieldset>
           <legend>お問い合わせの種類を選択してください</legend>

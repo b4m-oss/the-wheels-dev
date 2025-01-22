@@ -15,13 +15,12 @@
 }
 
 body {
-  &:has(*[open]) {
+  &:has(dialog[open]) {
     overflow: hidden;
   }
   * {
     line-height: var(--lh);
-    // @include func.numberToRemFz(var(--fz));
-    font-size: inherit;
+    @include func.numberToRemFz(var(--fz));
   }
   .#{var.$ns}-body {
     --fz-root: 18;

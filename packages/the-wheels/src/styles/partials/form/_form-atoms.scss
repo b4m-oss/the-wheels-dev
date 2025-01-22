@@ -1,0 +1,25 @@
+.twls-select-element {
+  display: flex;
+  flex-flow: row;
+  gap: .5em;
+  border: 1px solid var(--text-caption);
+  width: fit-content;
+  padding: .25em .5em;
+  border-radius: calc(var(--global-radius) * 1px);
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--text-highlight);
+    background: #f4f4f4;
+  }
+  *:required {
+    + .twls-label-text {
+      &::after {
+        content: attr(data-required-label);
+        font-size: 75%;
+        color: #fff;
+        background: var(--alert);
+        padding: .25em .5em;
+      }
+    }
+  }
+}
