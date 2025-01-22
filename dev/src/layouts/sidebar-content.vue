@@ -4,26 +4,28 @@ import GlobalFooter from "~/components/site/container/GlobalFooter.vue";
 import SubpageNavigation from "~/components/site/elements/SubpageNavigation.vue";
 </script>
 <template>
-  <header>
-    <GlobalHeader title="The Wheels" caption="All purpose design system." />
-  </header>
-  <section class="main">
-    <div class="twls-container">
-      <slot name="pageTitle" />
-      <SubpageNavigation />
-      <div class="twls-layout-sidebar">
-        <div class="twls-sidebar">
-          <slot name="sidebar" />
+  <div class="twls-body">
+    <header>
+      <GlobalHeader title="The Wheels" caption="All purpose design system." />
+    </header>
+    <section class="main">
+      <div class="twls-container">
+        <slot name="pageTitle" />
+        <SubpageNavigation />
+        <div class="twls-layout-sidebar">
+          <div class="twls-sidebar">
+            <slot name="sidebar" />
+          </div>
+          <main class="twls-main-content">
+            <slot name="content" />
+          </main>
         </div>
-        <main class="twls-main-content">
-          <slot name="content" />
-        </main>
       </div>
-    </div>
-  </section>
-  <footer>
-    <GlobalFooter />
-  </footer>
+    </section>
+    <footer>
+      <GlobalFooter />
+    </footer>
+  </div>
 </template>
 
 <style>

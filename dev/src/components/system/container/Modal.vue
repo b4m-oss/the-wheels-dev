@@ -61,7 +61,9 @@ onMounted(() => {
       {{ props.modalTitle }}
     </header>
     <section class="modal-content" id="sample-modal-content">
-      <slot name="modal-content"></slot>
+      <div class="twls-content">
+        <slot name="modal-content"></slot>
+      </div>
     </section>
     <footer ref="slotFooter" class="modal-footer">
       <slot name="modal-footer"></slot>
