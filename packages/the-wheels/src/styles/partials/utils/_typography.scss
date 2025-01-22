@@ -11,25 +11,31 @@
 * {
   line-height: 1;
   box-sizing: border-box;
+
 }
 
-
-body .#{var.$ns}-body {
-  --fz-root: 18;
-  --fz: var(--fz-root);
-  --lh: 1.7;
-  line-height: var(--lh);
-  background-color: var(--bg-page);
-  color: var(--text-main);
-  font-family: "Inter", "Noto Sans JP", sans-serif;
-  @media (width < 720px) {
-    --fz: 16;
-    --lh: 1.55;
+body {
+  &:has(*[open]) {
+    overflow: hidden;
   }
-}
-
-body * {
-  @include func.numberToRemFz(var(--fz));
+  * {
+    line-height: var(--lh);
+    // @include func.numberToRemFz(var(--fz));
+    font-size: inherit;
+  }
+  .#{var.$ns}-body {
+    --fz-root: 18;
+    --fz: var(--fz-root);
+    --lh: 1.8;
+    line-height: var(--lh);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    @media (width < 720px) {
+      --fz: 16;
+      --lh: 1.7;
+    }
+  }
 }
 
 .#{var.$ns}-layout {
@@ -40,8 +46,8 @@ body * {
     display: flex;
     flex-flow: column;
     gap: 5.5rem;
-  
-    @container (max-width: 40em) {
+    // padding: 0;
+    @container (min-width: 40em) {
       width: calc(var(--fz-root) * 1px * 40);
       // margin-left: 0;
       // margin-right: 0;
