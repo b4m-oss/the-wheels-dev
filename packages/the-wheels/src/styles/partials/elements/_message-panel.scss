@@ -1,0 +1,51 @@
+@use "../config/variables" as var;
+.#{var.$ns}-message-panel {
+  border: 1px solid var(--text-main);
+  border-radius: calc(var(--global-radius) * 1px);
+  font-size: 1.5rem;
+  max-width: 40em;
+
+  * {
+    font-size: 1.5rem;
+  }
+
+  & > .#{var.$ns}-message-panel_header {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 4.3rem;
+    font-weight: 600;
+    color: var(--text-highlight);
+  }
+
+  & > .#{var.$ns}-message-panel_content {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+  }
+
+  &.#{var.$ns}-state_optional {
+    background: var(--bg-optional);
+    border: 0;
+  }
+
+  &.#{var.$ns}-state_warning {
+    background: var(--bg-warning);
+    border: 0;
+  }
+
+  &.#{var.$ns}-state_caution {
+    background: var(--bg-caution);
+    border: 0;
+  }
+
+  &.#{var.$ns}-state_alert {
+    background: transparent;
+    border: 2px solid var(--alert);
+    * {
+      color: var(--alert);
+    }
+    
+  }
+}
