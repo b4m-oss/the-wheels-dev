@@ -38,15 +38,16 @@ import Radio from '~/components/system/atoms/form/Radio.vue';
           </MessagePanel>
         </fieldset>
         <fieldset>
-          <legend>ご検討内容について</legend>
-          <div class="twls-selective-group">
-            <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">Webサイト・ランディングページ</Checkbox>
-            <Checkbox name="contact-customer-service-type[]" :required="false" value="Web/SNSマーケティング（SEO/広告等）">Web/SNSマーケティング（SEO/広告等）</Checkbox>
-            <Checkbox name="contact-customer-service-type[]" :required="false" value="動画制作・配信">Webシステム・アプリ</Checkbox>
-            <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">その他</Checkbox>
-          </div>
-        </fieldset>
-        <fieldset>
+          <legend>お問い合わせ内容詳細</legend>
+          <fieldset>
+            <legend>ご検討内容について</legend>
+            <div class="twls-selective-group">
+              <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">Webサイト・ランディングページ</Checkbox>
+              <Checkbox name="contact-customer-service-type[]" :required="false" value="Web/SNSマーケティング（SEO/広告等）">Web/SNSマーケティング（SEO/広告等）</Checkbox>
+              <Checkbox name="contact-customer-service-type[]" :required="false" value="動画制作・配信">Webシステム・アプリ</Checkbox>
+              <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">その他</Checkbox>
+            </div>
+          </fieldset>
           <label class="twls-select">
             <span class="twls-label-text">ご予算</span>
             <select name="contact-customer-budget" required>
@@ -60,48 +61,29 @@ import Radio from '~/components/system/atoms/form/Radio.vue';
               <option value="1,000万円以上">予算未設定</option>
             </select>
           </label>
-          <div class="twls-input-field-group">
-            <label class="twls-input">
-              <span class="twls-label-text">ご検討内容の詳細についてお知らせください</span>
-              <textarea name="contact-customer-detail" maxlength="3000" required></textarea>
-            </label>
-          </div>
+          <label class="twls-input">
+            <span class="twls-label-text">ご検討内容の詳細についてお知らせください</span>
+            <textarea name="contact-customer-detail" maxlength="3000" required></textarea>
+          </label>
         </fieldset>
         <fieldset>
           <legend>お客様情報をご記載ください</legend>
-          <div class="twls-input-field-group">
-            <label><span class="twls-label-text">お名前</span><input type="text" name="contact-user-name" maxlength="200" required></label>
-            <ul class="twls-input-field-messages">
-              <li>お仕事でお問い合わせの方は、ビジネスでご利用のお名前でお願いいたします</li>
-            </ul>
-          </div>
-          <div class="twls-input-field-group">
-            <label><span class="twls-label-text">メールアドレス</span><input type="email" name="" maxlength="200" required></label>
-            <ul class="twls-input-field-messages">
-              <li>こちらにご記入のメールアドレスに返信いたします。必ず受信が可能なアドレスを記載ください</li>
-            </ul>
-          </div>
-          <label>
+          <label class="twls-input">
+            <span class="twls-label-text">お名前</span>
+            <input type="text" name="contact-user-name" maxlength="200" required>
+            <span class="twls-assist-message-list">
+              <span class="twls-assist-message">お仕事でお問い合わせの方は、ビジネスでご利用のお名前でお願いいたします</span>
+            </span>
+          </label>
+          <label class="twls-input">
+            <span class="twls-label-text">メールアドレス</span>
+            <input type="email" name="" maxlength="200" required>
+            <span class="twls-assist-message-list">
+              <span class="twls-assist-message">こちらにご記入のメールアドレスに返信いたします。必ず受信が可能なアドレスを記載ください</span>
+            </span>
+          </label>
+          <label class="twls-select">
             <span class="twls-label-text">組織種別</span>
-            <MessagePanel html-class="">
-              <template #header>選択肢については、以下の要領でお願いいたします</template>
-              <template #content>
-                <dl>
-                  <div>
-                    <dt>法人</dt>
-                    <dd>会社組織や、公共団体などの組織で、事業としてご発注の方</dd>
-                  </div>
-                  <div>
-                    <dt>個人事業主</dt>
-                    <dd>個人事業主（フリーランス・自営業）の方が、ご自身の事業としてご発注の方</dd>
-                  </div>
-                  <div>
-                    <dt>個人</dt>
-                    <dd>プライベートでのご利用においてご発注の方</dd>
-                  </div>
-                </dl>
-              </template>
-            </MessagePanel>
             <select name="contact-user-type">
               <option value="" selected hidden required>選択してください</option>
               <option value="法人">法人</option>
@@ -109,6 +91,25 @@ import Radio from '~/components/system/atoms/form/Radio.vue';
               <option value="個人">個人</option>
             </select>
           </label>
+          <MessagePanel html-class="">
+            <template #header>選択肢については、以下の要領でお願いいたします</template>
+            <template #content>
+              <dl>
+                <div>
+                  <dt>法人</dt>
+                  <dd>会社組織や、公共団体などの組織で、事業としてご発注の方</dd>
+                </div>
+                <div>
+                  <dt>個人事業主</dt>
+                  <dd>個人事業主（フリーランス・自営業）の方が、ご自身の事業としてご発注の方</dd>
+                </div>
+                <div>
+                  <dt>個人</dt>
+                  <dd>プライベートでのご利用においてご発注の方</dd>
+                </div>
+              </dl>
+            </template>
+          </MessagePanel>
           <label>屋号</label>
         </fieldset>
       </form>
