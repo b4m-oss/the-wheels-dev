@@ -8,6 +8,13 @@ import AccordionContent from "~/components/site/content/03_Accordion.vue";
 import ModalContent from "~/components/site/content/04_Modal.vue";
 import MessagePanel from "~/components/system/elements/MessagePanel.vue";
 import Formula from "~/components/site/content/Formula.vue";
+import IAlertTriangle from "~/components/system/icons/IAlertTriangle.vue";
+import IPC from "~/components/system/icons/IPC.vue";
+import ISun from "~/components/system/icons/ISun.vue";
+import IMoon from "~/components/system/icons/IMoon.vue";
+import ILock from "~/components/system/icons/ILock.vue";
+import IArrow from "~/components/system/icons/IArrow.vue";
+import ITriangle from "~/components/system/icons/ITriangle.vue";
 </script>
 <template>
   <div>
@@ -67,6 +74,16 @@ import Formula from "~/components/site/content/Formula.vue";
               <Formula />
             </form>
           </ContentSection>
+          <section>
+            <h2>Icons</h2>
+            <IAlertTriangle width="16" height="16" fill="var(--text-highlight)" rotate="" />
+            <IPC width="16" height="15" fill="var(--text-highlight)" rotate="" />
+            <ISun width="16" height="16" fill="var(--text-highlight)" rotate="" />
+            <IMoon width="16" height="16" fill="var(--text-highlight)" rotate="" />
+            <ILock width="16" height="16" fill="var(--text-highlight)" rotate="" />
+            <IArrow width="16" height="16" fill="var(--text-highlight)" rotate="" />
+            <ITriangle width="16" height="16" fill="var(--text-highlight)" rotate="" />
+          </section>
         </article>
       </template>
     </NuxtLayout>
