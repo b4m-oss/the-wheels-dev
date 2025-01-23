@@ -33,8 +33,8 @@ import PC from "~/components/system/icons/PC.vue";
           </ContentSection>
           <section>
             <h2>Icons</h2>
-            <AlertTriangle width="256" height="232" fill="var(--text-highlight)" />
-            <PC width="16" height="15" fill="var(--text-highlight)" />
+            <AlertTriangle width="256" height="232" fill="var(--text-highlight)" rotate="30" />
+            <PC width="16" height="15" fill="var(--text-highlight)" rotate="" />
           </section>
           
         </article>
