@@ -3,6 +3,7 @@ import PrivacyPolicy from '~/components/site/elements/PrivacyPolicy.vue';
 import TOC from '~/components/site/elements/TOC.vue';
 import StepNavList from '~/components/system/lists/StepNavList.vue';
 import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
+import Radio from '~/components/system/atoms/form/Radio.vue';
 </script>
 <template>
   <div>
@@ -18,27 +19,15 @@ import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
           <TOC />
           <b>プライバシーポリシー</b>
           <PrivacyPolicy />
-          <Checkbox :required="true">サイト利用規約・プライバシーポリシーに同意する</Checkbox>
+          <Checkbox name="contact-agree-policy" value="はい" :required="true">サイト利用規約・プライバシーポリシーに同意する</Checkbox>
         </fieldset>
         <fieldset>
           <legend>お問い合わせの種類を選択してください</legend>
-          <div class="twls-select-group">
-            <label>
-              <input type="radio" name="contact-inquiry-type">
-              <span class="twls-label-text">当社へのご発注をご検討の方</span>
-            </label>
-            <label>
-              <input type="radio" name="contact-inquiry-type">
-              <span class="twls-label-text">取材のお申し込み</span>
-            </label>
-            <label>
-              <input type="radio" name="contact-inquiry-type">
-              <span class="twls-label-text">営業・協業のご提案</span>
-            </label>
-            <label>
-              <input type="radio" name="contact-inquiry-type">
-              <span class="twls-label-text">その他</span>
-            </label>
+          <div class="twls-selective-group">
+            <Radio name="contact-agree-policy" :required="true" value="当社へのご発注をご検討の方">当社へのご発注をご検討の方</Radio>
+            <Radio name="contact-agree-policy" :required="true" value="取材のお申し込み">取材のお申し込み</Radio>
+            <Radio name="contact-agree-policy" :required="true" value="営業・協業のご提案">営業・協業のご提案</Radio>
+            <Radio name="contact-agree-policy" :required="true" value="その他">その他</Radio>
           </div>
           <div class="twls-alert">
             <p>営業・協業が目的の方は<strong>必ず</strong>「営業・協業のご提案」からご連絡ください。</p>
@@ -47,28 +36,14 @@ import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
         </fieldset>
         <fieldset>
           <legend>ご検討内容について</legend>
-          <label>
-            <input type="checkbox" name="contact-customer-service-type">
-            <span class="twls-label-text">Webサイト・ランディングページ</span>
-          </label>
-          <label>
-            <input type="checkbox" name="contact-customer-service-type">
-            <span class="twls-label-text">Web/SNSマーケティング（SEO/広告等）</span>
-          </label>
-          <label>
-            <input type="checkbox" name="contact-customer-service-type">
-            <span class="twls-label-text">動画制作・配信</span>
-          </label>
-          <label>
-            <input type="checkbox" name="contact-customer-service-type">
-            <span class="twls-label-text">Webシステム・アプリ</span>
-          </label>
-          <label>
-            <input type="checkbox" name="contact-customer-service-type">
-            <span class="twls-label-text">その他</span>
-          </label>
+          <div class="twls-selective-group">
+            <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">Webサイト・ランディングページ</Checkbox>
+            <Checkbox name="contact-customer-service-type[]" :required="false" value="Web/SNSマーケティング（SEO/広告等）">Web/SNSマーケティング（SEO/広告等）</Checkbox>
+            <Checkbox name="contact-customer-service-type[]" :required="false" value="動画制作・配信">Webシステム・アプリ</Checkbox>
+            <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">その他</Checkbox>
+          </div>
         </fieldset>
-        <label>
+        <label class="twls-select">
           <span class="twls-label-text">ご予算</span>
           <select name="contact-customer-budget" required>
             <option value="" selected hidden>選択してください</option>
@@ -82,9 +57,9 @@ import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
           </select>
         </label>
         <div class="twls-input-field-group">
-          <label>
+          <label class="twls-input">
             <span class="twls-label-text">ご検討内容の詳細についてお知らせください</span>
-            <textarea name="contact-customer-detail" maxlength="3000"></textarea>
+            <textarea name="contact-customer-detail" maxlength="3000" required></textarea>
           </label>
         </div>
         <fieldset>

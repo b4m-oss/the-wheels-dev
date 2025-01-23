@@ -1,6 +1,19 @@
-.twls-select-element {
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0;
+  margin-left: .25em;
+  margin-right: .25em;
+}
+
+.twls-selective-group {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.twls-selective-element {
   display: flex;
   flex-flow: row;
+  align-items: center;
   gap: .5em;
   border: 1px solid var(--text-caption);
   width: fit-content;
@@ -11,15 +24,73 @@
     border: 1px solid var(--text-highlight);
     background: #f4f4f4;
   }
-  *:required {
+  [type="checkbox"]:only-of-type:required {
     + .twls-label-text {
+      position: relative;
+      padding-right: 2.5em;
       &::after {
-        content: attr(data-required-label);
-        font-size: 75%;
+        content: var(--required-label);
+        font-size: 55%;
         color: #fff;
         background: var(--alert);
-        padding: .25em .5em;
+        padding: .25em .75em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
       }
+    }
+    &:valid + .twls-label-text::after {
+      background-color: green;
+    }
+  }
+
+  &:has(*:checked) {
+    border: 2px solid var(--text-highlight);
+    color: var(--text-highlight);
+    padding: calc(.25em - 1px) calc(.5em - 1px);
+  }
+}
+
+fieldset:has([type="radio"]:required) {
+  legend {
+    display: block;
+    position: relative;
+    padding-left: 2.5em;
+    &::before {
+      position: absolute;
+      content: var(--required-label);
+      font-size: 65%;
+      color: #fff;
+      background: var(--alert);
+      padding: .25em .75em;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+  &:has(*:valid) legend::before { 
+    background-color: green;
+  }
+}
+
+.twls-select:has(*:required) {
+  > .twls-label-text{
+    display: inline-flex;
+    flex-flow: column;
+    gap: .3em;
+    position: relative;
+    padding-left: 2.5em;
+    &::before {
+      position: absolute;
+      content: var(--required-label);
+      font-size: 65%;
+      color: #fff;
+      background: var(--alert);
+      padding: .25em .75em;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
     }
   }
 }

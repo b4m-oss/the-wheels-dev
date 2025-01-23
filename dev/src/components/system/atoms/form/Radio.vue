@@ -7,8 +7,8 @@ const props = defineProps<{
 </script>
 <template>
   <label class="twls-selective-element">
-    <input type="checkbox" :name="props.name" :value="props.value" :required="props.required">
-    <span class="twls-label-text" data-required-label="必須">
+    <input type="radio" :name="props.name" :value="props.value" :required="props.required">
+    <span class="twls-label-text">
       <slot />
     </span>
   </label>
