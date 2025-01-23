@@ -1,7 +1,7 @@
 @use "../config/_variables" as var;
 @use "../utils/_functions" as func;
 
-fieldset {
+form, fieldset {
   display: flex;
   flex-flow: column;
   gap: 3rem;

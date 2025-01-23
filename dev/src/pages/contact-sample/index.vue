@@ -44,6 +44,7 @@ import Radio from '~/components/system/atoms/form/Radio.vue';
             <div class="twls-selective-group">
               <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">Webサイト・ランディングページ</Checkbox>
               <Checkbox name="contact-customer-service-type[]" :required="false" value="Web/SNSマーケティング（SEO/広告等）">Web/SNSマーケティング（SEO/広告等）</Checkbox>
+              <Checkbox name="contact-customer-service-type[]" :required="false" value="動画制作・配信">動画制作・配信</Checkbox>
               <Checkbox name="contact-customer-service-type[]" :required="false" value="動画制作・配信">Webシステム・アプリ</Checkbox>
               <Checkbox name="contact-customer-service-type[]" :required="false" value="Webサイト・ランディングページ">その他</Checkbox>
             </div>

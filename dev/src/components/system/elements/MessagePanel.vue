@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { onMounted, useSlots } from 'vue';
 const props = defineProps<{
   htmlClass: string;
 }>()

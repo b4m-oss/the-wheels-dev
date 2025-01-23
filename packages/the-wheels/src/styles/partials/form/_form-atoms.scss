@@ -30,9 +30,10 @@ input[type="checkbox"] {
       padding-right: 2.5em;
       &::after {
         content: var(--required-label);
-        font-size: 55%;
+        font-size: 65%;
         color: #fff;
-        background: var(--alert);
+        background: var(--text-highlight);
+        border-radius: calc(var(--global-radius-minor) * 1px);
         padding: .25em .75em;
         position: absolute;
         top: 50%;
@@ -41,7 +42,10 @@ input[type="checkbox"] {
       }
     }
     &:valid + .twls-label-text::after {
-      background-color: green;
+      background-color: var(--bg-optional);
+      border-radius: calc(var(--global-radius-minor) * 1px);
+      color: var(--text-highlight);
+      font-weight: bold;
     }
   }
 
@@ -49,6 +53,85 @@ input[type="checkbox"] {
     border: 2px solid var(--text-highlight);
     color: var(--text-highlight);
     padding: calc(.25em - 1px) calc(.5em - 1px);
+  }
+}
+
+.twls-input {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="url"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    max-width: 40em;
+  }
+
+  &:has(*:required) {
+    > .twls-label-text{
+      display: inline-flex;
+      flex-flow: column;
+      gap: .3em;
+      position: relative;
+      padding-left: 2.5em;
+      &::before {
+        position: absolute;
+        content: var(--required-label);
+        font-size: 65%;
+        color: #fff;
+        background: var(--text-highlight);
+        border-radius: calc(var(--global-radius-minor) * 1px);
+        padding: .25em .75em;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+    }
+    &:has(*:valid) {
+      > .twls-label-text{ 
+        &::before {
+          background-color: var(--bg-optional);
+          border-radius: calc(var(--global-radius-minor) * 1px);
+          color: var(--text-highlight);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+  &:has(*:not(*:required)) {
+    > .twls-label-text{
+      display: inline-flex;
+      flex-flow: column;
+      gap: .3em;
+      position: relative;
+      padding-left: 2.5em;
+      &::before {
+        position: absolute;
+        content: var(--optional-label);
+        font-size: 65%;
+        color: var(--text-caption);
+        background: var(--bg-optional);
+        border-radius: calc(var(--global-radius-minor) * 1px);
+        padding: .25em .75em;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+    }
+    &:has(*:valid) {
+      > .twls-label-text{ 
+        &::before {
+          background-color: var(--bg-optional);
+          border-radius: calc(var(--global-radius-minor) * 1px);
+          color: var(--text-highlight);
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
 
@@ -72,9 +155,10 @@ input[type="checkbox"] {
       &::before {
         position: absolute;
         content: var(--required-label);
+        border-radius: calc(var(--global-radius-minor) * 1px);
         font-size: 65%;
         color: #fff;
-        background: var(--alert);
+        background: var(--text-highlight);
         padding: .25em .75em;
         top: 50%;
         transform: translateY(-50%);
@@ -84,7 +168,10 @@ input[type="checkbox"] {
     &:has(*:valid) {
       > .twls-label-text{ 
         &::before {
-          background-color: green;
+          background-color: var(--bg-optional);
+          border-radius: calc(var(--global-radius-minor) * 1px);
+          color: var(--text-highlight);
+          font-weight: bold;
         }
       }
     }
@@ -99,9 +186,10 @@ fieldset:has([type="radio"]:required) {
     &::before {
       position: absolute;
       content: var(--required-label);
+      border-radius: calc(var(--global-radius-minor) * 1px);
       font-size: 65%;
       color: #fff;
-      background: var(--alert);
+      background: var(--text-highlight);
       padding: .25em .75em;
       top: 50%;
       transform: translateY(-50%);
@@ -109,6 +197,9 @@ fieldset:has([type="radio"]:required) {
     }
   }
   &:has(*:valid) legend::before { 
-    background-color: green;
+    background-color: var(--bg-optional);
+    border-radius: calc(var(--global-radius-minor) * 1px);
+    color: var(--text-highlight);
+    font-weight: bold;
   }
 }
