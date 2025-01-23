@@ -23,6 +23,9 @@
     padding-bottom: 2rem;
     padding-left: 4.3rem;
     padding-right: 4.3rem;
+    &:only-child {
+      padding-top: 2rem;
+    }
   }
 
   &.#{var.$ns}-state_optional {

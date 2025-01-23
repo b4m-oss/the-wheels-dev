@@ -30,6 +30,7 @@
 @use "./partials/organisms/_accordion";
 @use "./partials/organisms/_modal";
 @use "./partials/form/_form-atoms";
+@use "./partials/form/_form-layout";
 
 .twls-form-element-group {
   border: 1px solid var(--text-caption);

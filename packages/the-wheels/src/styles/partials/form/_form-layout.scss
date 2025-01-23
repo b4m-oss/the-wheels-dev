@@ -1,0 +1,14 @@
+@use "../config/_variables" as var;
+@use "../utils/_functions" as func;
+
+fieldset {
+  display: flex;
+  flex-flow: column;
+  gap: 3rem;
+}
+
+.#{var.$ns}-selective-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+}
