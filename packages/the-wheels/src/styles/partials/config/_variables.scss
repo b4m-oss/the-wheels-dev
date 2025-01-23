@@ -4,6 +4,9 @@ $ns: twls;
 // Colors
 $bg-page: #efefef;
 $bg-highlight: #ffffff;
+$bg-optional: #e7e7e7;
+$bg-warning: #F3EDCE;
+$bg-caution: #F9CCBB;
 $text-main: #494949;
 $text-caption: #747474;
 $text-highlight: #000000;
@@ -26,6 +29,9 @@ $global-radius-minor: 3;
 :root {
   --bg-page: #{$bg-page};
   --bg-highlight: #{$bg-highlight};
+  --bg-optional: #{$bg-optional};
+  --bg-warning: #{$bg-warning};
+  --bg-caution: #{$bg-caution};
   --text-main: #{$text-main};
   --text-caption: #{$text-caption};
   --text-highlight: #{$text-highlight};
