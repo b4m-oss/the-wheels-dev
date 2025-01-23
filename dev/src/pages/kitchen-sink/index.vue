@@ -17,7 +17,7 @@ import Formula from "~/components/site/content/Formula.vue";
       </template>
       <template #content>
         <article slot="content">
-          <h1>Kitchen Sink</h1>
+          <PageTextTitle>Kitchen Sink</PageTextTitle>
           <ButtonContent />
           <RadioGroupContent />
           <AccordionContent />

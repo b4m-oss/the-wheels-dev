@@ -11,6 +11,7 @@
         </li>
         <li class="twls-sidemenu-item"><a href="#accordion">Accordion</a></li>
         <li class="twls-sidemenu-item"><a href="#modal">Modal</a></li>
+        <li class="twls-sidemenu-item"><a href="#message-panel">Message Panel</a></li>
       </ul>
     </section>
   </nav>
@@ -18,6 +19,8 @@
 
 <style>
 .kitchen-sink-sidemenu {
+  position: sticky;
+  top: 1.5rem;
   [class*="sidemenu-heading"] {
     margin-top: 0.5em; /* メインコンテンツ見出しとのツラ合わせ微調整 */
     font-size: 1.5rem;

@@ -6,6 +6,7 @@
       <li><a href="/">トップページ</a></li>
       <li><a href="/about/">仮の下層ページ（About）</a></li>
       <li><a href="/kitchen-sink/">Kitchen sink</a></li>
+      <li><a href="/contact-sample/">Contact sample</a></li>
     </ul>
   </nav>
 </template>

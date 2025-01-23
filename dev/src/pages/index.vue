@@ -10,6 +10,7 @@ import { navigationData } from "~/constants/navigation";
       <Hero />
       <nav class="twls-container horizontal">
         <a href="/kitchen-sink/" class="twls-button">Kitchen sink</a>
+        <a href="/contact-sample/" class="twls-button">Contact sample</a>
       </nav>
       <nav>
         <template

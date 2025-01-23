@@ -7,7 +7,7 @@ const props = defineProps<{
 
 <template>
   <section class="twls-content">
-    <h2 class="twls-h2">{{ props.title }}</h2>
+    <h2 class="twls-h2" :id="props.id ? props.id : ''">{{ props.title }}</h2>
     <slot />
   </section>
 </template>
