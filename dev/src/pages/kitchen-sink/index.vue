@@ -9,6 +9,7 @@ import Formula from "~/components/site/content/Formula.vue";
 import IAlertTriangle from "~/components/system/icons/IAlertTriangle.vue";
 import IPC from "~/components/system/icons/IPC.vue";
 import ISun from "~/components/system/icons/ISun.vue";
+import IMoon from "~/components/system/icons/IMoon.vue";
 </script>
 <template>
   <div>
@@ -37,6 +38,7 @@ import ISun from "~/components/system/icons/ISun.vue";
             <IAlertTriangle width="16" height="16" fill="var(--text-highlight)" rotate="" />
             <IPC width="16" height="15" fill="var(--text-highlight)" rotate="" />
             <ISun width="16" height="16" fill="var(--text-highlight)" rotate="" />
+            <IMoon width="16" height="16" fill="var(--text-highlight)" rotate="" />
           </section>
         </article>
       </template>
