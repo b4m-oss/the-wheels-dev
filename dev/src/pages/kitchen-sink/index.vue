@@ -6,8 +6,8 @@ import RadioGroupContent from "~/components/site/content/02_RadioGroup.vue";
 import AccordionContent from "~/components/site/content/03_Accordion.vue";
 import ModalContent from "~/components/site/content/04_Modal.vue";
 import Formula from "~/components/site/content/Formula.vue";
-import AlertTriangle from "~/components/system/icons/AlertTriangle.vue";
-import PC from "~/components/system/icons/PC.vue";
+import IAlertTriangle from "~/components/system/icons/IAlertTriangle.vue";
+import IPC from "~/components/system/icons/IPC.vue";
 </script>
 <template>
   <div>
@@ -33,10 +33,9 @@ import PC from "~/components/system/icons/PC.vue";
           </ContentSection>
           <section>
             <h2>Icons</h2>
-            <AlertTriangle width="256" height="232" fill="var(--text-highlight)" rotate="30" />
-            <PC width="16" height="15" fill="var(--text-highlight)" rotate="" />
+            <IAlertTriangle width="256" height="232" fill="var(--text-highlight)" rotate="30" />
+            <IPC width="16" height="15" fill="var(--text-highlight)" rotate="" />
           </section>
-          
         </article>
       </template>
     </NuxtLayout>
