@@ -8,6 +8,7 @@ import ModalContent from "~/components/site/content/04_Modal.vue";
 import Formula from "~/components/site/content/Formula.vue";
 import IAlertTriangle from "~/components/system/icons/IAlertTriangle.vue";
 import IPC from "~/components/system/icons/IPC.vue";
+import ISun from "~/components/system/icons/ISun.vue";
 </script>
 <template>
   <div>
@@ -33,8 +34,9 @@ import IPC from "~/components/system/icons/IPC.vue";
           </ContentSection>
           <section>
             <h2>Icons</h2>
-            <IAlertTriangle width="256" height="232" fill="var(--text-highlight)" rotate="30" />
+            <IAlertTriangle width="16" height="16" fill="var(--text-highlight)" rotate="" />
             <IPC width="16" height="15" fill="var(--text-highlight)" rotate="" />
+            <ISun width="16" height="16" fill="var(--text-highlight)" rotate="" />
           </section>
         </article>
       </template>
