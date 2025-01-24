@@ -5,6 +5,7 @@ import MessagePanel from '~/components/system/elements/MessagePanel.vue';
 import StepNavList from '~/components/system/lists/StepNavList.vue';
 import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
 import Radio from '~/components/system/atoms/form/Radio.vue';
+import MultiLineInput from '~/components/system/atoms/form/MultiLineInput.vue';
 </script>
 <template>
   <div>
@@ -63,10 +64,16 @@ import Radio from '~/components/system/atoms/form/Radio.vue';
                 <option value="1,000万円以上">予算未設定</option>
               </select>
             </label>
-            <label class="twls-input">
-              <span class="twls-label-text">ご検討内容の詳細についてお知らせください</span>
-              <textarea name="contact-customer-detail" maxlength="3000" required></textarea>
-            </label>
+            <MultiLineInput
+              label="ご検討内容詳細"
+              :minlength="100"
+              :maxlength="3000"
+              name="contact-inquiry-detail"
+              :required="true"
+              :rows="8"
+              placeholder=""
+              initial-value=""
+            ></MultiLineInput>
           </fieldset>
           <fieldset>
             <legend>お客様情報をご記載ください</legend>
