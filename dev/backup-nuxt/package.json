@@ -1,0 +1,33 @@
+{
+  "name": "the-wheels-docs",
+  "private": false,
+  "type": "module",
+  "version": "0.8.3",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint:html": "markuplint \"src/**/*.astro\"",
+    "deploy": "npx netlify-cli deploy --prod --dir=.output/public",
+    "login": "npx netlify-cli login",
+    "init": "npx netlify-cli init"
+  },
+  "dependencies": {
+    "nuxt": "^3.14.1592",
+    "the-wheels": "file:../packages/the-wheels",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@markuplint/vue-parser": "^4.6.13",
+    "@markuplint/vue-spec": "^4.5.13",
+    "markuplint": "^4.11.3",
+    "prettier": "^3.4.1",
+    "sass": "^1.81.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  }
+}
