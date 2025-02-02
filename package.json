@@ -11,6 +11,7 @@
     "dev": "npm run dev -w packages/the-wheels"
   },
   "devDependencies": {
+    "vituum": "^1.1.1",
     "vue-tsc": "^2.1.10"
   }
 }
