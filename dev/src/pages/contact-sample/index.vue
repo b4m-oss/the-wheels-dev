@@ -6,12 +6,21 @@ import StepNavList from '~/components/system/lists/StepNavList.vue';
 import Checkbox from '~/components/system/atoms/form/Checkbox.vue';
 import Radio from '~/components/system/atoms/form/Radio.vue';
 import MultiLineInput from '~/components/system/atoms/form/MultiLineInput.vue';
+import { useContact } from '~/composables/useContact';
+
+const { contactData } = useContact()
+
+const updateText = (text: string) => {
+  contactData.value.hoge = text
+}
+
 </script>
 <template>
   <div>
     <NuxtLayout name="single-content">
       <div class="twls-container">
         <h1>Typical Contact Form</h1>
+        <input type="text" v-model="contactData.hoge">
         <form action="">
           <div>
             <StepNavList />
@@ -72,7 +81,7 @@ import MultiLineInput from '~/components/system/atoms/form/MultiLineInput.vue';
               :required="true"
               :rows="8"
               placeholder=""
-              initial-value=""
+              :initial-value="contactData.hoge"
             ></MultiLineInput>
           </fieldset>
           <fieldset>
