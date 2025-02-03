@@ -1,0 +1,34 @@
+<section class="twls-content-container">
+  <h2 lang="en">Buttons</h2>
+  <dl class="parts-gallery">
+    {% for item in buttonGalleryList %}
+      <twls-items-gallery title="{{ item.title }}">
+        <twls-button 
+          label="{{ item.label }}"
+          type="{{ item.buttonType }}"
+          class="{{ item.buttonClass }}"
+          {% if item.isFull %}is-full{% endif %}
+          {% if item.isDisabled %}is-disabled{% endif %}
+        >
+          {{ item.label }}
+        </twls-button>
+      </twls-items-gallery>
+    {% endfor %}
+    </twls-items-gallery>
+  </dl>
+  <dl class="parts-gallery full">
+    {% for item in buttonFullGalleryList %}
+      <twls-items-gallery title="{{ item.title }}">
+        <twls-button 
+          label="{{ item.label }}"
+          type="{{ item.buttonType }}"
+          class="{{ item.buttonClass }}"
+          {% if item.isFull %}is-full{% endif %}
+          {% if item.isDisabled %}is-disabled{% endif %}
+        >
+          {{ item.label }}
+        </twls-button>
+      </twls-items-gallery>
+    {% endfor %}
+  </dl>
+</section>
