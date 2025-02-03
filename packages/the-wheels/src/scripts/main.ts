@@ -1,3 +1,5 @@
+import '../styles/the-wheels.scss';
+
 // import { modal } from "./lib/modal";
 import TwlsCardButton from "./lib/components/modules/TwlsCardButton";
 import TwlsGlobalHeader from "./lib/components/elements/TwlsGlobalHeader";
