@@ -144,5 +144,81 @@
         }
       ]
     }
+  ],
+  "buttonGalleryList": [
+    {
+      "title": "通常",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "",
+      "isFull": false,
+      "isDisabled": false
+    },
+    {
+      "title": "ゴースト",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "ghost",
+      "isFull": false,
+      "isDisabled": false
+    },
+    {
+      "title": "オプショナル",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "optional",
+      "isFull": false,
+      "isDisabled": false
+    },
+    {
+      "title": "不活性",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "",
+      "isFull": false,
+      "isDisabled": true
+    },
+    {
+      "title": "不活性ゴースト",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "ghost",
+      "isFull": false,
+      "isDisabled": true
+    },
+    {
+      "title": "不活性オプショナル",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "optional",
+      "isFull": false,
+      "isDisabled": true
+    }
+  ],
+  "buttonFullGalleryList": [
+    {
+      "title": "通常　横幅いっぱい",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "",
+      "isFull": true,
+      "isDisabled": false
+    },
+    {
+      "title": "ゴースト　横幅いっぱい",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "ghost",
+      "isFull": true,
+      "isDisabled": false
+    },
+    {
+      "title": "オプショナル　横幅いっぱい",
+      "label": "クリックして送信",
+      "buttonType": "button",
+      "buttonClass": "optional",
+      "isFull": true,
+      "isDisabled": false
+    }
   ]
 }
