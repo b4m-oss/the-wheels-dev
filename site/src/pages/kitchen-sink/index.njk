@@ -7,12 +7,20 @@
 {% block content %}
   <article>
     <h1 lang="en">Kitchen Sink</h1>
-    <!-- Buttons section start -->
     {% include 'components/site/kitchen-sink/01_buttons.njk' %}
     {% include 'components/site/kitchen-sink/02_radio-group.njk' %}
     {% include 'components/site/kitchen-sink/03_modal.njk' %}
     {% include 'components/site/kitchen-sink/04_accordion.njk' %}
-    
-    
+    {% include 'components/site/kitchen-sink/05_message-panel.njk' %}
+    <section class="twls-content-container">
+      <h2>Icons</h2>
+      <twls-icon-alert-triangle width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-alert-triangle>
+      <twls-icon-pc width="16" height="15" fill="var(--text-highlight)" rotate="0"></twls-icon-pc>
+      <twls-icon-sun width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-sun>
+      <twls-icon-moon width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-moon>
+      <twls-icon-lock width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-lock>
+      <twls-icon-arrow width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-arrow>
+      <twls-icon-triangle width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-triangle>
+    </section>
   </article>
 {% endblock %}
