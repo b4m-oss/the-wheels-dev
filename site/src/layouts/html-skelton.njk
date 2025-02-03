@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/src/assets/styles/style.scss">
+  <script type="module">
+    // 明示的なインポート
+    import '@b4m-oss/the-wheels';
+  </script>
   {% block headEnd %}
   {% endblock %}
 </head>
@@ -18,7 +22,7 @@
   {% block skelton %}
   {% endblock %}
   
-  <script src="/src/assets/scripts/main.ts" type="modules"></script>
+  <!-- <script src="/src/assets/scripts/main.ts" type="modules"></script> -->
   {% block bodyEnd %}
   {% endblock %}
 </body>

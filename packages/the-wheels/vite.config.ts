@@ -16,7 +16,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'lib': path.resolve(__dirname, 'src/scripts/lib')  // aliasの設定を追加
+      '@lib': path.resolve(__dirname, 'src/scripts/lib')  // @libとして明示的に指定
     }
   },
   optimizeDeps: {
@@ -31,8 +31,8 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001,  // メインのポートも明示的に指定
-    strictPort: true,  // 指定したポートが使用中の場合はエラーにする
+    port: 3001,
+    strictPort: true,
     hmr: {
       protocol: "ws",
       host: "localhost",

@@ -1,9 +1,10 @@
+import { defineConfig } from "vite";
 import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
 import path from 'path';
 
 
-export default {
+export default defineConfig({
     plugins: [
         vituum({
           imports: {
@@ -19,7 +20,7 @@ export default {
     ],
   resolve: {
     alias: {
-      'the-wheels': path.resolve(__dirname, '../packages/the-wheels/src/index.ts')
+      '@b4m-oss/the-wheels': path.resolve(__dirname, '../packages/the-wheels/src/scripts/main.ts')
     }
   }
-}
+})
