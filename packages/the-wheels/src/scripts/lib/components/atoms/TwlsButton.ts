@@ -49,6 +49,12 @@ class TwlsButton extends HTMLElement {
       `;
     }
   }
+  updateStyles(newStyles: string) {
+    const styleSheet = this.shadowRoot?.querySelector('style');
+    if (styleSheet) {
+      styleSheet.textContent = newStyles;
+    }
+  }
 }
 
 customElements.define("twls-button", TwlsButton);
