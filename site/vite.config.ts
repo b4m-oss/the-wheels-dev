@@ -1,5 +1,7 @@
 import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
+import path from 'path';
+
 
 export default {
     plugins: [
@@ -14,5 +16,10 @@ export default {
         nunjucks({
           root: './src'
       })
-    ]
+    ],
+  resolve: {
+    alias: {
+      'the-wheels': path.resolve(__dirname, '../packages/the-wheels/src/index.ts')
+    }
+  }
 }

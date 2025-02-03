@@ -1,0 +1,15 @@
+{% for item in navigationData %}
+<section class="twls-index-nav-container">
+  <h2 class="heading">{{ item.category }}</h2>
+  {% for link in item.items %}
+  <div class="twls-index-nav-list">
+    <twls-card-button
+      href="{{ link.href }}"
+      title="{{ link.title }}"
+      caption="{{ link.caption }}"
+      cta-label="{{ link.ctaLabel}}"
+    ></twls-card-button>
+  </div>
+  {% endfor %}
+</section>
+{% endfor %}

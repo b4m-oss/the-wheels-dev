@@ -1,6 +1,6 @@
 {
-  "name": "the-wheels-html",
-  "private": true,
+  "name": "@b4m-oss/the-wheels-site",
+  "private": false,
   "version": "0.9.0",
   "type": "module",
   "scripts": {
@@ -8,6 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "workspaces": [
+    "packages/the-wheels"
+  ],
   "devDependencies": {
     "@markuplint/vue-parser": "^4.6.13",
     "@markuplint/vue-spec": "^4.5.13",
@@ -19,7 +22,7 @@
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
-    "the-wheels": "file:../packages/the-wheels",
+    "the-wheels": "*",
     "vue": "latest",
     "vue-router": "latest"
   },
