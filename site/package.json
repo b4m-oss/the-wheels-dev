@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
-    "the-wheels": "*",
+    "@b4m-oss/the-wheels": "*",
     "vue": "latest",
     "vue-router": "latest"
   },

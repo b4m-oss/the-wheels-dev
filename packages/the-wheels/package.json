@@ -1,12 +1,12 @@
 {
-  "name": "the-wheels",
+  "name": "@b4m-oss/the-wheels",
   "version": "0.8.0",
   "description": "All purpose design system.",
   "main": "dist/the-wheels.cjs.js",
   "module": "src/main.ts",
   "exports": {
     ".": {
-      "import": "./src/main.ts",
+      "import": "./src/scripts/main.ts",
       "require": "./dist/the-wheels.cjs.js"
     },
     "./src/styles/the-wheels.scss": "./src/styles/the-wheels.scss",
