@@ -1,1 +1,1 @@
-import 'the-wheels'
+import '@b4m-oss/the-wheels'
