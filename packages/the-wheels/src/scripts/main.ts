@@ -7,14 +7,18 @@ import TwlsButton from "./lib/components/atoms/TwlsButton";
 import TwlsRadioGroup from "./lib/components/lists/TwlsRadioGroup";
 import TwlsRadioGroupItem from "./lib/components/atoms/TwlsRadioGroupItem";
 import TwlsModal from "./lib/components/modules/TwlsModal";
+import TwlsAccordion from "./lib/components/modules/TwlsAccordion";
+import TwlsAccordionContainer from "./lib/components/lists/TwlsAccordionContainer";
 
 export { 
   TwlsCardButton, 
-  TwlsGlobalHeader, 
+  TwlsGlobalHeader,
   TwlsGlobalFooter, 
   TwlsItemsGallery,
   TwlsButton,
   TwlsRadioGroup,
   TwlsRadioGroupItem,
-  TwlsModal 
+  TwlsModal,
+  TwlsAccordion,
+  TwlsAccordionContainer 
 };
