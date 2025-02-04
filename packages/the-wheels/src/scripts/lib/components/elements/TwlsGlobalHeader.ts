@@ -1,11 +1,10 @@
 class TwlsGlobalHeader extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "caption"];
+    return ["title", "titleHref", "caption"];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -18,20 +17,17 @@ class TwlsGlobalHeader extends HTMLElement {
 
   render() {
     const title = this.getAttribute("title") || "";
+    const titleHref = this.getAttribute("titleHref") || "/";
     const caption = this.getAttribute("caption");
 
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <div class="twls-container">
-          <div class="global-header">
-            <p class="title">
-              <a href="/">${title}</a>
-            </p>
-            ${caption ? `<p class="caption">${caption}</p>` : ""}
-          </div>
-        </div>
-      `;
-    }
+    this.innerHTML = `
+      <div class="global-header">
+        <p class="title">
+          <a href="${titleHref}">${title}</a>
+        </p>
+        ${caption ? `<p class="caption">${caption}</p>` : ""}
+      </div>
+    `;
   }
 }
 

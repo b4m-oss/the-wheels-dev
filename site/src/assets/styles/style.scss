@@ -3,6 +3,29 @@
 @layer reset-css, the-wheels, site;
 
 @layer site {
+  .global-header {
+    display: flex;
+    flex-flow: row;
+    gap: 5rem;
+    justify-content: start;
+    align-items: center;
+    width: 86.77%;
+    margin: 0 auto 3rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    border-bottom: 2px solid var(--text-highlight);
+
+    .title * {
+      --fz: 62;
+      font-weight: bold;
+      font-family: serif;
+      color: var(--text-highlight);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: -.015em;
+    }
+  }
   #hero-container {
     display: grid;
     grid-template-columns: 575fr 522fr;

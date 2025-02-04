@@ -1,33 +1,44 @@
 @layer reset-css, the-wheels;
 
-@layer reset-css {
-  @import "reset-css";
+
+@import "reset-css" layer(reset-css);
+
+
+:root {
+  // Define 1rem as 10px equivalent.
+  font-size: 62.5%; 
+
+  // variables
+  --bg-page: #efefef;
+  --bg-page-hilight: #ffffff;
+  --text-main: #464646;
+  --text-caption: #666666;
+  --text-highlight: #000000;
+  --alert: #ca2727;
+  --fz-root-pc: 18;
+  --fz-root-mobile: 16;
+  --lh-root-pc: 1.7;
+  --lh-root-mobile: 1.55;
+  --br-major: 15;
+  --br-normal: 7;
+  --br-minor: 4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'Noto Sans JP', Inter, sans-serif;
+  &[lang="en"] {
+    font-family: Inter, sans-serif;
+  }
 }
 
 @layer the-wheels {
-  :root {
-    // Define 1rem as 10px equivalent.
-    font-size: 62.5%; 
+
   
-    // variables
-    --bg-page: #efefef;
-    --bg-page-hilight: #ffffff;
-    --text-main: #464646;
-    --text-caption: #666666;
-    --text-highlight: #000000;
-    --alert: #ca2727;
-    --fz-root-pc: 18;
-    --fz-root-mobile: 16;
-    --lh-root-pc: 1.7;
-    --lh-root-mobile: 1.55;
-    --br-major: 15;
-    --br-normal: 7;
-    --br-minor: 4;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+
   
   body {
     display: flex;
@@ -44,9 +55,7 @@
       margin-bottom: calc((1em * var(--lh) - var(--fz)) / 2 * -1px);
       font-family: 'Noto Sans JP', Inter, sans-serif;
     }
-    *[lang="en"] {
-      font-family: Inter, sans-serif;
-    }
+
   }
 
   strong {
