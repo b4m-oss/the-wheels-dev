@@ -1,0 +1,76 @@
+.content-text {
+  // Basic style, to spacing by gap, cause use flexbox.
+  &, * {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+
+    max-width: 40em;
+  }
+  
+  a:not(.button) {
+    text-decoration: underline;
+  }
+
+  h1,h2,h3,h4,h5,h6,
+  [class^="heading-"] {
+    margin-top: 3rem;
+    line-height: 1.04;
+  }
+
+  h1, .heading-1 {
+    --fz: 62;
+    font-weight: 800;
+    color: var(--text-highlight);
+  }
+
+  h2, .heading-2 {
+    --fz: 50;
+  }
+
+  h3, .heading-3 {
+    --fz: 23;
+    color: var(--text-caption);
+    font-weight: 600;
+    position: relative;
+    padding-left: 1.5em;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 1px;
+      background-color: currentColor;
+      top: 1em;
+      left: 0;
+      transform: translateY(-0.475em);
+    }
+  } 
+}
+
+@media (720px < width) {
+  .content-text {
+    &, * {
+      max-width: fit-content;
+    }
+  }
+  .content-section {
+    display: block;
+    column-count: 2;
+    column-rule: solid 1px var(--text-caption);
+    column-gap: 3rem;
+    column-fill: balance;
+    column-width: 36em;
+    max-width: 100dvw;
+    height: auto;
+    max-height: calc(100dvh - 12%);
+
+    p > * {
+      display: inline;
+    }
+
+    h2, .heading-2 {
+      // column-span: all;
+    }
+  }
+}
