@@ -1,1 +1,22 @@
 @forward '../../../../packages/the-wheels/src/styles/the-wheels.scss';
+
+@layer reset-css, the-wheels, site;
+
+@layer site {
+  #hero-container {
+    display: flex;
+    flex-flow: row;
+    gap: 3rem;
+  }
+
+  #main-visual {
+    img {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: auto 522/477;
+    }
+  }
+  .title-group {
+    margin-bottom: 0;
+  }
+}

@@ -21,5 +21,8 @@ export default {
     alias: {
       'the-wheels': path.resolve(__dirname, '../packages/the-wheels/src/index.ts')
     }
+  },
+  server: {
+    allowedHosts: true
   }
 }

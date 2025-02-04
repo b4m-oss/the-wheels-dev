@@ -1,140 +1,52 @@
-// Use global reset
-@use "reset-css";
+@layer reset-css, the-wheels;
 
-// Use The Wheels' initial vairables.
-@use "./partials/config/_variables";
-@use "./partials/config/_focus";
-@use "./partials/config/_breakpoints";
-@use "./partials/config/_twls_config";
-
-// Use The Wheels' Typography.
-@use "./partials/utils/_typography";
-
-// Use The Wheels' Functions.
-@use "./partials/utils/functions";
-
-// Use The Wheels' Visibility.
-@use "./partials/utils/_visibility";
-
-// Use layout
-@use "./partials/_layout";
-
-// Use components
-@use "./partials/atoms/_button";
-@use "./partials/elements/_container";
-@use "./partials/lists/_radio-group";
-// @use "./partials/modules/_card-button";
-@use "./partials/elements/_message-panel";
-@use "./partials/organisms/_accordion";
-@use "./partials/organisms/_modal";
-
-.twls-form-element-group {
-  border: 1px solid var(--text-caption);
-  border-radius: calc(var(--global-radius) * 1px);
-  padding: 1.5em;
-  .twls-form-label {
-    --fz: 13;
-    font-size: calc(var(--fz) / 10 * 1rem);
-  }
+@layer reset-css {
+  @import "reset-css";
 }
 
-.twls-form-single-input {
-  display: flex;
-  flex-flow: column;
-  gap: .5em;
-}
-
-.twls-form-multiline-input {
-  display: flex;
-  flex-flow: column;
-  gap: .5em;
-}
-
-[class^="twls-form-"] {
-  input[type="text"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="number"],
-  textarea {
-    --fz: 18;
-    font-size: calc(var(--fz) / 10 * 1rem);
-    padding: .35em;
-    max-width: 20em;
-    width: 100%;
-    border-color: var(--text-caption);
-    border-style: solid;
-    border-width: 1px;
-    background-color: transparent;
-    border-radius: calc(var(--global-radius-minor) * 1px);
+@layer the-wheels {
+  :root {
+    // Define 1rem as 10px equivalent.
+    font-size: 62.5%; 
+  
+    // variables
+    --bg-page: #f2f2f2;
+    --bg-page-hilight: #ffffff;
+    --text-main: #464646;
+    --text-caption: #666666;
+    --text-highlight: #000000;
+    --alert: #ca2727;
+    --fz-root-pc: 18;
+    --fz-root-mobile: 16;
+    --lh-root-pc: 1.7;
+    --lh-root-mobile: 1.55;
   }
-  textarea {
-    min-height: 8em;
-    max-width: 40em;
+  
+  * {
+    box-sizing: border-box;
   }
-}
-
-.formula-container {
-  display: flex;
-  flex-flow: column;
-  gap: 1.5rem;
-}
-
-.formula-group {
-  display: flex;
-  flex-flow: row;
-  gap: 1.5rem;
-
-  .formula-item-id {
-    max-width: 10em;
-  }
-  .formula-item-formula {
-    width: 100%;
-    > input[type="text"] {
-      max-width: 100%;
-    }
-  }
-  .formula-item-result {
-    min-width: 14em;
-    .formula-result-label {
-      --fz: 13;
-      font-size: calc(var(--fz) / 10 * 1rem);
-    }
-  }
-}
-
-.formula-accordion {
-  border: 0;
-  width: 100%;
-  .accordion-tab {
-    width: 100%;
-    border: 0;
-    padding: 0;
-    --fz: 15;
-    font-size: calc(var(--fz) / 10 * 1rem);
-    padding-top: .5em;
-    padding-bottom: .5em;
-    max-width: unset;
-  }
-  .accordion-detail {
-    padding: 0;
-    width: 100%;
+  
+  body {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
     * {
-      --fz: 14;
-      padding: 0.5em;
+      --fz: var(--fz-root-pc);
+      --lh: var(--lh-root-pc);
+      color: var(--text-main);
       font-size: calc(var(--fz) / 10 * 1rem);
-      max-width: unset;
+      line-height: calc(var(--lh));
+      margin-top: calc((1em * var(--lh) - var(--fz)) / 2 * -1px);
+      margin-bottom: calc((1em * var(--lh) - var(--fz)) / 2 * -1px);
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-highlight);
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
 
-.formula-result-container {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  height: 100%;
-  span {
-    --fz: 20;
-    font-size: calc(var(--fz) / 10 * 1rem);
-  }
-}
