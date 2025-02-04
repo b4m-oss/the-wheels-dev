@@ -1,7 +1,7 @@
 {% extends 'layouts/sidebar-content.njk' %}
 
 {% block sidebar%}
-<!-- sidebar content is goes here. -->
+  {% include 'components/site/kitchen-sink/kitchen-sink-side-nav.njk' %}
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
     {% include 'components/site/kitchen-sink/04_accordion.njk' %}
     {% include 'components/site/kitchen-sink/05_message-panel.njk' %}
     <section class="twls-content-container">
-      <h2>Icons</h2>
+      <h2 id="icons">Icons</h2>
       <twls-icon-alert-triangle width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-alert-triangle>
       <twls-icon-pc width="16" height="15" fill="var(--text-highlight)" rotate="0"></twls-icon-pc>
       <twls-icon-sun width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-sun>
