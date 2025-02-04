@@ -1,8 +1,8 @@
-<section class="twls-content-container">
+<section class="content-section">
   <h2 lang="en" id="buttons">Buttons</h2>
-  <dl class="parts-gallery">
+  <dl class="gallery">
     {% for item in buttonGalleryList %}
-      <twls-items-gallery title="{{ item.title }}">
+      <twls-gallery-item title="{{ item.title }}">
         <twls-button 
           label="{{ item.label }}"
           type="{{ item.buttonType }}"
@@ -12,13 +12,12 @@
         >
           {{ item.label }}
         </twls-button>
-      </twls-items-gallery>
+      </twls-gallery-item>
     {% endfor %}
-    </twls-items-gallery>
   </dl>
-  <dl class="parts-gallery full">
+  <dl class="gallery full">
     {% for item in buttonFullGalleryList %}
-      <twls-items-gallery title="{{ item.title }}">
+      <twls-gallery-item title="{{ item.title }}">
         <twls-button 
           label="{{ item.label }}"
           type="{{ item.buttonType }}"
@@ -28,7 +27,7 @@
         >
           {{ item.label }}
         </twls-button>
-      </twls-items-gallery>
+      </twls-gallery-item>
     {% endfor %}
   </dl>
 </section>

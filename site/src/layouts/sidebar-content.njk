@@ -10,10 +10,12 @@
 <main id="main">
   <div class="layout-container">
     {% include 'components/site/global/subpage-nav.njk' %}
-    {% block sidebar%}
-    {% endblock %}
-    {% block content %}
-    {% endblock %}
+    <div class="two-col-wrap">
+      {% block sidebar%}
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+    </div>
   </div>
 </main>
 <footer>

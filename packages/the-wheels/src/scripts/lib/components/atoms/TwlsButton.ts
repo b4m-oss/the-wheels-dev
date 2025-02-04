@@ -5,7 +5,6 @@ class TwlsButton extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -36,21 +35,20 @@ class TwlsButton extends HTMLElement {
       .map(([key, value]) => `${key}="${value}"`)
       .join(" ");
 
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <button
-          type="${type}"
-          class="twls-button ${buttonClass}${isFull ? ' full' : ''}"
-          ${isDisabled ? 'disabled' : ''}
-          ${dataAttributesString}
-        >
-          ${label}
-        </button>
-      `;
-    }
+    this.innerHTML = `
+      <button
+        type="${type}"
+        class="button ${buttonClass}${isFull ? ' full' : ''}"
+        ${isDisabled ? 'disabled' : ''}
+        ${dataAttributesString}
+      >
+        ${label}
+      </button>
+    `;
   }
+
   updateStyles(newStyles: string) {
-    const styleSheet = this.shadowRoot?.querySelector('style');
+    const styleSheet = this.querySelector('style');
     if (styleSheet) {
       styleSheet.textContent = newStyles;
     }

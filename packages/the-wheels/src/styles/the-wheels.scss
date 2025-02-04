@@ -10,7 +10,10 @@
 
   // variables
   --bg-page: #efefef;
-  --bg-page-hilight: #ffffff;
+  --bg-page-highlight: #ffffff;
+  --bg-button-main: #3B3B3B;
+  --bg-button-optional: #E1E1E1;
+  --bg-button-hover: #696969;
   --text-main: #464646;
   --text-caption: #666666;
   --text-highlight: #000000;
@@ -20,8 +23,8 @@
   --lh-root-pc: 1.7;
   --lh-root-mobile: 1.55;
   --br-major: 15;
-  --br-normal: 7;
-  --br-minor: 4;
+  --br-normal: 4;
+  --br-minor: 2;
 }
 
 * {
@@ -35,11 +38,12 @@ body * {
   }
 }
 
+nav a {
+  text-decoration: none;
+}
+
 @layer the-wheels {
 
-  
-
-  
   body {
     display: flex;
     flex-flow: column;
@@ -63,10 +67,24 @@ body * {
   }
 
   // Utilities Importing
+  @import "partials/utils/_layout.scss";
   @import "partials/utils/_typography.scss";
 
   // Components Importing
+  @import "partials/atoms/_button.scss";
+  @import "partials/elements/_gallery.scss";
   @import "partials/modules/_card-button.scss";
   
+  .subpage-nav {
+    padding-left: 6.615%;
+    padding-right: 6.615%;
+    margin-bottom: 7rem;
+
+    .nav-item {
+      display: flex;
+      flex-flow: row;
+      gap: 4rem;
+    }
+  }
 }
 

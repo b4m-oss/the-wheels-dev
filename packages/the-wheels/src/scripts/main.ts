@@ -4,7 +4,7 @@ import '../styles/the-wheels.scss';
 import TwlsCardButton from "./lib/components/modules/TwlsCardButton";
 import TwlsGlobalHeader from "./lib/components/elements/TwlsGlobalHeader";
 import TwlsGlobalFooter from "./lib/components/elements/TwlsGlobalFooter";
-import TwlsItemsGallery from "./lib/components/elements/TwlsItemsGallery";
+import TwlsGalleryItem from "./lib/components/elements/TwlsGalleryItem";
 import TwlsButton from "./lib/components/atoms/TwlsButton";
 import TwlsRadioGroup from "./lib/components/lists/TwlsRadioGroup";
 import TwlsRadioGroupItem from "./lib/components/atoms/TwlsRadioGroupItem";
@@ -24,7 +24,7 @@ export {
   TwlsCardButton, 
   TwlsGlobalHeader,
   TwlsGlobalFooter, 
-  TwlsItemsGallery,
+  TwlsGalleryItem,
   TwlsButton,
   TwlsRadioGroup,
   TwlsRadioGroupItem,
