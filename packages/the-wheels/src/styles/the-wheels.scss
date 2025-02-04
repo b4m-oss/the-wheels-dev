@@ -48,18 +48,12 @@
       font-family: Inter, sans-serif;
     }
   }
-  
-  a,
-  twls-card-button a {
-    text-decoration: none;
-    color: var(--text-highlight);
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
   strong {
     font-weight: 700;
   }
+
+  // Module Importing
+  @import "partials/modules/_card-button.scss";
 }
 
