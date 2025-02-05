@@ -21,10 +21,7 @@
     "vituum": "^1.1.1"
   },
   "dependencies": {
-    "nuxt": "^3.14.1592",
-    "@b4m-oss/the-wheels": "*",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@b4m-oss/the-wheels": "*"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
