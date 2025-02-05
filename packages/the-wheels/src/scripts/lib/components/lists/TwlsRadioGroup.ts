@@ -1,7 +1,6 @@
 class TwlsRadioGroup extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -9,13 +8,13 @@ class TwlsRadioGroup extends HTMLElement {
   }
 
   render() {
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <form class="twls-radio-group">
-          <slot></slot>
-        </form>
-      `;
-    }
+    const children = Array.from(this.children);
+    this.innerHTML = `
+      <form class="radio-group">
+      </form>
+    `;
+    const form = this.querySelector('form');
+    children.forEach(child => form?.appendChild(child));
   }
 }
 

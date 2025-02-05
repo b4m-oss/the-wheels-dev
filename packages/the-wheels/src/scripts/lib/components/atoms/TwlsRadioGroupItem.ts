@@ -32,7 +32,7 @@ class TwlsRadioGroupItem extends HTMLElement {
     const isChecked = this.hasAttribute("checked");
 
     this.innerHTML = `
-      <label class="twls-radio-group-item">
+      <label class="radio-group-item">
         <input type="radio" name="${name}" ${isChecked ? 'checked' : ''} />
         <span>${label}</span>
       </label>
