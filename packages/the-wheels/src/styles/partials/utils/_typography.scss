@@ -29,56 +29,8 @@
     margin-bottom: 1.25rem;
   }
 
-<<<<<<< HEAD
-.#{var.$ns}-heading-3,
-h3 {
-  --fz: 24;
-  --mt: 78;
-  --mb: 24;
-  position: relative;
-  padding-left: 1em;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: block;
-    width: 0.6em;
-    height: 4px;
-    background: var(--text-caption);
-  }
-  @include func.numberToRemFz(var(--fz));
-  line-height: var(--heading-lh);
-  font-weight: 700;
-  color: var(--text-caption);
-  @include func.lineHeightNegatieMargin(var(--fz));
-  margin-top: func.pxToRem(var(--mt));
-  margin-bottom: func.pxToRem(var(--mb));
-  @media (width < 480px) {
-    --fz: 28;
-    --mt: 62;
-    --mb: 12;
-    --heading-lh: 1.14;
-  }
-}
-
-h1 + h2,
-h2 + h3,
-h3 + h4,
-h5 + h6,
-.#{var.$ns}-heading-1 + .#{var.$ns}-heading-2,
-.#{var.$ns}-heading-2 + .#{var.$ns}-heading-3,
-.#{var.$ns}-heading-3 + .#{var.$ns}-heading-4,
-.#{var.$ns}-heading-4 + .#{var.$ns}-heading-5,
-.#{var.$ns}-heading-5 + .#{var.$ns}-heading-6 {
-  margin-top: 1em;
-  @media (width < 480px) {
-    margin-top: 2.4rem;
-=======
   h2, .heading-2 {
     --fz: 50;
->>>>>>> 2b7f8174ef35338c72a160cbb4e3dc3c9f899506
   }
 
   h3, .heading-3 {
