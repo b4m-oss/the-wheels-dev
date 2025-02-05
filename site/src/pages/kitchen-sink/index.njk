@@ -12,15 +12,33 @@
     {% include 'components/site/kitchen-sink/03_modal.njk' %}
     {% include 'components/site/kitchen-sink/04_accordion.njk' %}
     {% include 'components/site/kitchen-sink/05_message-panel.njk' %}
-    <section class="twls-content-container">
+    <section class="content-section">
       <h2 id="icons">Icons</h2>
-      <twls-icon-alert-triangle width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-alert-triangle>
-      <twls-icon-pc width="16" height="15" fill="var(--text-highlight)" rotate="0"></twls-icon-pc>
-      <twls-icon-sun width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-sun>
-      <twls-icon-moon width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-moon>
-      <twls-icon-lock width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-lock>
-      <twls-icon-arrow width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-arrow>
-      <twls-icon-triangle width="16" height="16" fill="var(--text-highlight)" rotate="0"></twls-icon-triangle>
+      <dl class="gallery">
+        <twls-gallery-item title="Triangle">
+          <twls-icon-alert-triangle width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-alert-triangle>
+        </twls-gallery-item>
+        <twls-gallery-item title="PC">
+          <twls-icon-pc width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-pc>
+        </twls-gallery-item>
+        <twls-gallery-item title="Sun">
+          <twls-icon-sun width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-sun>
+        </twls-gallery-item>
+        <twls-gallery-item title="Moon">
+          <twls-icon-moon width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-moon>
+        </twls-gallery-item>
+        <twls-gallery-item title="Lock">
+          <twls-icon-lock width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-lock>
+        </twls-gallery-item>
+        <twls-gallery-item title="Arrow">
+          <twls-icon-arrow width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-arrow>
+        </twls-gallery-item>
+        <twls-gallery-item title="Triangle">
+          <twls-icon-triangle width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-triangle>
+        </twls-gallery-item>
+      </dl>
+
+      
     </section>
   </article>
 {% endblock %}

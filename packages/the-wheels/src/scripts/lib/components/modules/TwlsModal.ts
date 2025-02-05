@@ -15,7 +15,6 @@ class TwlsModal extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -35,68 +34,84 @@ class TwlsModal extends HTMLElement {
     const modalId = this.getAttribute("modal-id") || "";
     const modalTitle = this.getAttribute("modal-title") || "";
 
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <dialog 
-          class="twls-modal" 
-          id="${modalId}"
-          title="${modalTitle}"
-        >
-          <header class="modal-header" id="${modalId}-title">
-            ${modalTitle}
-          </header>
-          <section class="modal-content" id="${modalId}-content">
-            <slot name="modal-content"></slot>
-          </section>
-          <footer class="modal-footer">
-            <slot name="modal-footer"></slot>
-          </footer>
-        </dialog>
-        <div class="modal-trigger-container">
-          <slot name="modal-initiater"></slot>
-        </div>
-      `;
+    const modalContent = this.querySelector('[slot="modal-content"]')?.outerHTML || "";
+    const modalFooter = this.querySelector('[slot="modal-footer"]')?.outerHTML || "";
+    const modalInitiater = this.querySelector('[slot="modal-initiater"]')?.outerHTML || "";
 
-      this.modalDialog = this.shadowRoot.querySelector('dialog');
-    }
+    this.innerHTML = `
+      <dialog 
+        class="modal" 
+        id="${modalId}"
+        title="${modalTitle}"
+      >
+        <header class="modal-header" id="${modalId}-title">
+          ${modalTitle}
+        </header>
+        <section class="modal-content" id="${modalId}-content">
+          ${modalContent}
+        </section>
+        <footer class="modal-footer">
+          ${modalFooter}
+        </footer>
+      </dialog>
+      <div class="modal-trigger-container">
+        ${modalInitiater}
+      </div>
+    `;
+
+    this.modalDialog = this.querySelector('dialog');
   }
 
   private setupEventListeners() {
     // モーダルを開くトリガーの設定
-    const triggerSlot = this.shadowRoot?.querySelector('slot[name="modal-initiater"]');
-    triggerSlot?.addEventListener('slotchange', (e) => {
-      const nodes = (e.target as HTMLSlotElement).assignedNodes();
-      nodes.forEach(node => {
-        if (node instanceof HTMLElement) {
-          const openers = node.querySelectorAll('.twls-modal-opener');
-          openers.forEach(opener => {
-            if (opener instanceof HTMLElement) {
-              opener.addEventListener('click', () => this.openModal());
-            }
-          });
-        }
-      });
+    const openers = this.querySelectorAll('.twls-modal-opener');
+    openers.forEach(opener => {
+      if (opener instanceof HTMLElement) {
+        opener.addEventListener('click', () => this.openModal());
+      }
     });
 
     // モーダルを閉じるトリガーの設定
-    const footerSlot = this.shadowRoot?.querySelector('slot[name="modal-footer"]');
-    footerSlot?.addEventListener('slotchange', (e) => {
-      const nodes = (e.target as HTMLSlotElement).assignedNodes();
-      nodes.forEach(node => {
-        if (node instanceof HTMLElement) {
-          const closers = node.querySelectorAll('.twls-modal-closer');
-          closers.forEach(closer => {
-            if (closer instanceof HTMLElement) {
-              closer.addEventListener('click', () => this.closeModal());
-            }
-          });
+    const closers = this.querySelectorAll('.twls-modal-closer');
+    closers.forEach(closer => {
+      if (closer instanceof HTMLElement) {
+        closer.addEventListener('click', () => this.closeModal());
+      }
+    });
+
+    // バックドロップをクリックしてモーダルを閉じる設定
+    if (this.modalDialog) {
+      this.modalDialog.addEventListener('click', (event) => {
+        if (event.target === this.modalDialog) {
+          this.closeModal();
         }
       });
-    });
+    }
   }
 
   private removeEventListeners() {
     // 必要に応じてイベントリスナーのクリーンアップを実装
+    const openers = this.querySelectorAll('.twls-modal-opener');
+    openers.forEach(opener => {
+      if (opener instanceof HTMLElement) {
+        opener.removeEventListener('click', () => this.openModal());
+      }
+    });
+
+    const closers = this.querySelectorAll('.twls-modal-closer');
+    closers.forEach(closer => {
+      if (closer instanceof HTMLElement) {
+        closer.removeEventListener('click', () => this.closeModal());
+      }
+    });
+
+    if (this.modalDialog) {
+      this.modalDialog.removeEventListener('click', (event) => {
+        if (event.target === this.modalDialog) {
+          this.closeModal();
+        }
+      });
+    }
   }
 
   private openModal() {

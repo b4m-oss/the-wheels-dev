@@ -1,4 +1,4 @@
-<section class="twls-content-container">
+<section class="content-section">
   <h2 lang="en" id="modal">Modal</h2>
   <twls-modal modal-id="sample-modal" modal-title="律令制とは">
     <div slot="modal-content">
@@ -22,14 +22,12 @@
       </p>
     </div>
     <div slot="modal-footer">
-      <button type="button" class="twls-button ghost twls-modal-closer">
-        閉じる
-      </button>
+      <twls-button type="button" class="twls-modal-closer ghost" label="閉じる">
+      </twls-button>
     </div>
     <div slot="modal-initiater">
-      <button type="button" class="twls-button twls-modal-opener" data-twls-modal-open="sample-modal">
-        律令制とは
-      </button>
+      <twls-button type="button" class="twls-modal-opener" data-twls-modal-open="sample-modal" label="律令制とは">
+      </twls-button>
     </div>
   </twls-modal>
 </section>
