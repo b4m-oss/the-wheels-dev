@@ -1,0 +1,24 @@
+{% extends 'layouts/html-skelton.njk' %}
+
+{% set pageTitle = 'The Wheels' %}
+{% set caption = 'All purpose design system Japanese language and text oriented.' %}
+
+{% block skelton %}
+<header>
+  <twls-global-header title="{{ pageTitle }}" caption="{{ caption }}"></twls-global-header>
+</header>
+<main id="main">
+  <div class="layout-container">
+    {% include 'components/site/global/subpage-nav.njk' %}
+    <div class="two-col-wrap">
+      {% block sidebar%}
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</main>
+<footer>
+  {% include 'components/site/global/global-footer.njk' %}
+</footer>
+{% endblock %}
