@@ -1,15 +1,11 @@
-@use "../config/_variables" as var;
-@use "../utils/_functions" as func;
-
-.#{var.$ns}-button {
+.button {
   --fz: 16;
   --px: 2.375;
   --py: 1.3125;
   display: inline-block;
-  border-radius: calc(var(--global-radius) * 1px);
+  border-radius: calc(var(--br-normal) * 1px);
   cursor: pointer;
   width: fit-content;
-  @include func.numberToRemFz(var(--fz));
   font-weight: 600;
   color: #e4e4e4;
   border-style: solid;

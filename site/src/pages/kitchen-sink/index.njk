@@ -1,0 +1,44 @@
+{% extends 'layouts/sidebar-content.njk' %}
+
+{% block sidebar%}
+  {% include 'components/site/kitchen-sink/kitchen-sink-side-nav.njk' %}
+{% endblock %}
+
+{% block content %}
+  <article class="content">
+    <h1 lang="en">Kitchen Sink</h1>
+    {% include 'components/site/kitchen-sink/01_buttons.njk' %}
+    {% include 'components/site/kitchen-sink/02_radio-group.njk' %}
+    {% include 'components/site/kitchen-sink/03_modal.njk' %}
+    {% include 'components/site/kitchen-sink/04_accordion.njk' %}
+    {% include 'components/site/kitchen-sink/05_message-panel.njk' %}
+    <section class="content-section">
+      <h2 id="icons">Icons</h2>
+      <dl class="gallery">
+        <twls-gallery-item title="Triangle">
+          <twls-icon-alert-triangle width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-alert-triangle>
+        </twls-gallery-item>
+        <twls-gallery-item title="PC">
+          <twls-icon-pc width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-pc>
+        </twls-gallery-item>
+        <twls-gallery-item title="Sun">
+          <twls-icon-sun width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-sun>
+        </twls-gallery-item>
+        <twls-gallery-item title="Moon">
+          <twls-icon-moon width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-moon>
+        </twls-gallery-item>
+        <twls-gallery-item title="Lock">
+          <twls-icon-lock width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-lock>
+        </twls-gallery-item>
+        <twls-gallery-item title="Arrow">
+          <twls-icon-arrow width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-arrow>
+        </twls-gallery-item>
+        <twls-gallery-item title="Triangle">
+          <twls-icon-triangle width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-triangle>
+        </twls-gallery-item>
+      </dl>
+
+      
+    </section>
+  </article>
+{% endblock %}

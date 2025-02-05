@@ -4,11 +4,8 @@ import path from "path";
 export default defineConfig({
   build: {
     lib: {
-      entry: {
-        js: path.resolve(__dirname, "src/scripts/main.ts"),
-        // css: path.resolve(__dirname, "src/styles/the-wheels.scss"), // SCSSをエントリに追加
-      },
-      name: "TheWheels", // ライブラリ名
+      entry: path.resolve(__dirname, "src/scripts/main.ts"),  // 単一のエントリーポイントとして指定
+      name: "TheWheels",
       fileName: (format) => `the-wheels.${format === "es" ? "mjs" : "cjs"}.js`,
     },
     rollupOptions: {
@@ -16,6 +13,14 @@ export default defineConfig({
         assetFileNames: `the-wheels.[ext]`, // CSSファイルの出力名
       },
     },
+  },
+  resolve: {
+    alias: {
+      '@lib': path.resolve(__dirname, 'src/scripts/lib')  // @libとして明示的に指定
+    }
+  },
+  optimizeDeps: {
+    include: ['reset-css'], // 依存パッケージを明示的に含める
   },
   css: {
     preprocessorOptions: {
@@ -26,10 +31,12 @@ export default defineConfig({
     },
   },
   server: {
+    port: 3001,
+    strictPort: true,
     hmr: {
-      protocol: "ws", // WebSocketを使ってHMRを行う
-      host: "localhost", // HMRが接続するホスト
-      port: 3001, // HMRのポートを指定する（Astro側と異なるポートにする）
+      protocol: "ws",
+      host: "localhost",
+      port: 3002,  // HMR用のポートを変更
     },
   },
 });
