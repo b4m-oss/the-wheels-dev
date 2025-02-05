@@ -1,6 +1,6 @@
 {
   "name": "@b4m-oss/the-wheels-monorepo",
-  "version": "0.10.0",
+  "version": "0.10.2",
   "private": false,
   "workspaces": [
     "site",

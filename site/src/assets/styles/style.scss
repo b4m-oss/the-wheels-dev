@@ -26,6 +26,23 @@
       letter-spacing: -.015em;
     }
   }
+
+  .global-footer {
+    width: 86.77%;
+    margin: 0 auto 3rem;
+    border-top: 1px solid var(--text-main);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    @media (480px < width) {
+      br {
+        display: none;
+      }
+    }
+    * {
+      --fz: 12;
+      text-align: center;
+    }
+  }
   #hero-container {
     display: grid;
     grid-template-columns: 575fr 522fr;
