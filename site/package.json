@@ -1,0 +1,29 @@
+{
+  "name": "@b4m-oss/the-wheels-site",
+  "private": false,
+  "version": "0.10.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "workspaces": [
+    "packages/the-wheels"
+  ],
+  "devDependencies": {
+    "@markuplint/vue-parser": "^4.6.13",
+    "@markuplint/vue-spec": "^4.5.13",
+    "@vituum/vite-plugin-nunjucks": "^1.1.0",
+    "markuplint": "^4.11.3",
+    "prettier": "^3.4.1",
+    "sass": "^1.81.0",
+    "vituum": "^1.1.1"
+  },
+  "dependencies": {
+    "@b4m-oss/the-wheels": "*"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  }
+}

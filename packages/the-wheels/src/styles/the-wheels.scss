@@ -1,140 +1,91 @@
-// Use global reset
-@use "reset-css";
+@layer reset-css, the-wheels;
 
-// Use The Wheels' initial vairables.
-@use "./partials/config/_variables";
-@use "./partials/config/_focus";
-@use "./partials/config/_breakpoints";
-@use "./partials/config/_twls_config";
+@import "reset-css" layer(reset-css);
 
-// Use The Wheels' Typography.
-@use "./partials/utils/_typography";
-@use "./partials/forms/basics";
 
-// Use The Wheels' Functions.
-@use "./partials/utils/functions";
+:root {
+  // Define 1rem as 10px equivalent.
+  font-size: 62.5%; 
 
-// Use The Wheels' Visibility.
-@use "./partials/utils/_visibility";
+  // variables
+  --bg-page: #efefef;
+  --bg-page-highlight: #ffffff;
+  --bg-button-main: #3B3B3B;
+  --bg-button-optional: #E1E1E1;
+  --bg-button-hover: #696969;
+  --text-main: #464646;
+  --text-caption: #666666;
+  --text-highlight: #000000;
+  --alert: #ca2727;
+  --fz-root-pc: 18;
+  --fz-root-mobile: 16;
+  --lh-root-pc: 1.7;
+  --lh-root-mobile: 1.55;
+  --br-major: 15;
+  --br-normal: 4;
+  --br-minor: 2;
+}
 
-// Use layout
-@use "./partials/_layout";
+* {
+  box-sizing: border-box;
+}
 
-// Use components
-@use "./partials/atoms/_button";
-@use "./partials/elements/_container";
-@use "./partials/lists/_radio-group";
-@use "./partials/containers/_card-button";
-@use "./partials/organisms/_accordion";
-@use "./partials/organisms/_modal";
-
-.twls-form-element-group {
-  border: 1px solid var(--text-caption);
-  border-radius: calc(var(--global-radius) * 1px);
-  padding: 1.5em;
-  .twls-form-label {
-    --fz: 13;
-    font-size: calc(var(--fz) / 10 * 1rem);
+body * {
+  font-family: 'Noto Sans JP', Inter, sans-serif;
+  &[lang="en"] {
+    font-family: Inter, sans-serif;
   }
 }
 
-.twls-form-single-input {
-  display: flex;
-  flex-flow: column;
-  gap: 0.5em;
+nav a {
+  text-decoration: none;
 }
 
-.twls-form-multiline-input {
-  display: flex;
-  flex-flow: column;
-  gap: 0.5em;
-}
+@layer the-wheels {
 
-[class^="twls-form-"] {
-  input[type="text"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="number"],
-  textarea {
-    --fz: 18;
-    font-size: calc(var(--fz) / 10 * 1rem);
-    padding: 0.35em;
-    max-width: 20em;
-    width: 100%;
-    border-color: var(--text-caption);
-    border-style: solid;
-    border-width: 1px;
-    background-color: transparent;
-    border-radius: calc(var(--global-radius-minor) * 1px);
-  }
-  textarea {
-    min-height: 8em;
-    max-width: 40em;
-  }
-}
-
-.formula-container {
-  display: flex;
-  flex-flow: column;
-  gap: 1.5rem;
-}
-
-.formula-group {
-  display: flex;
-  flex-flow: row;
-  gap: 1.5rem;
-
-  .formula-item-id {
-    max-width: 10em;
-  }
-  .formula-item-formula {
-    width: 100%;
-    > input[type="text"] {
-      max-width: 100%;
-    }
-  }
-  .formula-item-result {
-    min-width: 14em;
-    .formula-result-label {
-      --fz: 13;
-      font-size: calc(var(--fz) / 10 * 1rem);
-    }
-  }
-}
-
-.formula-accordion {
-  border: 0;
-  width: 100%;
-  .accordion-tab {
-    width: 100%;
-    border: 0;
-    padding: 0;
-    --fz: 15;
-    font-size: calc(var(--fz) / 10 * 1rem);
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    max-width: unset;
-  }
-  .accordion-detail {
-    padding: 0;
-    width: 100%;
+  body {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    background-color: var(--bg-page);
     * {
-      --fz: 14;
-      padding: 0.5em;
+      --fz: var(--fz-root-pc);
+      --lh: var(--lh-root-pc);
+      color: var(--text-main);
       font-size: calc(var(--fz) / 10 * 1rem);
-      max-width: unset;
+      line-height: calc(var(--lh));
+      margin-top: calc((1em * var(--lh) - var(--fz)) / 2 * -1px);
+      margin-bottom: calc((1em * var(--lh) - var(--fz)) / 2 * -1px);
+      font-family: 'Noto Sans JP', Inter, sans-serif;
+    }
+
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  // Utilities Importing
+  @import "partials/utils/_layout.scss";
+  @import "partials/utils/_typography.scss";
+
+  // Components Importing
+  @import "partials/atoms/_button.scss";
+  @import "partials/elements/_gallery.scss";
+  @import "partials/lists/_radio-group.scss";
+  @import "partials/modules/_card-button.scss";
+  @import "partials/modules/_modal.scss";
+  
+  .subpage-nav {
+    padding-left: 6.615%;
+    padding-right: 6.615%;
+    margin-bottom: 7rem;
+
+    .nav-item {
+      display: flex;
+      flex-flow: row;
+      gap: 4rem;
     }
   }
 }
 
-.formula-result-container {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  height: 100%;
-  span {
-    --fz: 20;
-    font-size: calc(var(--fz) / 10 * 1rem);
-  }
-}

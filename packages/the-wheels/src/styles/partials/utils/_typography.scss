@@ -1,123 +1,35 @@
-@use "../config/_variables" as var;
-@use "_functions" as func;
+.content {
+  // Basic style, to spacing by gap, cause use flexbox.
+  &-section {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
+    max-width: 40em;
 
-:root {
-  font-size: 62.5%;
-}
-
-* {
-  line-height: 1;
-  box-sizing: border-box;
-}
-
-body {
-  --fz-root: 18;
-  --fz: var(--fz);
-  @include func.numberToRemFz(var(--fz));
-  background-color: var(--bg-page);
-  color: var(--text-main);
-  font-family: "Inter", "Noto Sans JP", sans-serif;
-  @media (width < 480px) {
-    --fz: 16;
-  }
-}
-
-// General Spacing
-
-p,
-ul,
-ol,
-dl,
-li,
-figure,
-table,
-blockquote,
-summary,
-details {
-  --mb: 30;
-  --fz: 18;
-  @include func.lineHeightNegatieMargin(var(--fz));
-  @include func.numberToRemFz(var(--fz));
-  line-height: var(--body-text-lh);
-  text-align: justify;
-
-  max-width: 40em;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &:is(summary),
-  &:is(details) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  @media (width < 480px) {
-    --fz: 16;
-    --mb: 20;
-  }
-}
-
-a {
-  color: var(--text-highlight);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-    nav &,
-    button & {
-      text-decoration: none;
+    &.full {
+      min-width: 100%;
     }
   }
-}
-
-em {
-  color: var(--text-caption);
-  font-size: 75%;
-}
-
-strong {
-  color: var(--text-highlight);
-  font-weight: 700;
-}
-
-.#{var.$ns}-heading-1,
-h1 {
-  --fz: 54;
-  @include func.numberToRemFz(var(--fz));
-  font-weight: 700;
-  color: var(--text-highlight);
-  @media (width < 480px) {
-    --fz: 36;
+  
+  a:not(.button) {
+    text-decoration: underline;
   }
-  & ~ * {
-    margin-top: 40px;
-  }
-}
 
-.#{var.$ns}-heading-2,
-h2 {
-  --fz: 42;
-  --mt: 85;
-  --mb: 32;
-  @include func.numberToRemFz(var(--fz));
-  line-height: var(--heading-lh);
-  font-weight: 700;
-  color: var(--text-caption);
-  @include func.lineHeightNegatieMargin(var(--fz));
-  margin-top: func.pxToRem(var(--mt));
-  margin-bottom: func.pxToRem(var(--mb));
-  @media (width < 480px) {
-    --fz: 28;
-    --mt: 62;
-    --mb: 12;
-    --heading-lh: 1.14;
+  h1,h2,h3,h4,h5,h6,
+  [class^="heading-"] {
+    margin-top: 4rem;
+    line-height: 1.04;
   }
-}
 
+  h1, .heading-1 {
+    --fz: 62;
+    font-weight: 800;
+    color: var(--text-highlight);
+    margin-bottom: 1.25rem;
+  }
+
+<<<<<<< HEAD
 .#{var.$ns}-heading-3,
 h3 {
   --fz: 24;
@@ -163,50 +75,55 @@ h5 + h6,
   margin-top: 1em;
   @media (width < 480px) {
     margin-top: 2.4rem;
+=======
+  h2, .heading-2 {
+    --fz: 50;
+>>>>>>> 2b7f8174ef35338c72a160cbb4e3dc3c9f899506
   }
+
+  h3, .heading-3 {
+    --fz: 23;
+    color: var(--text-caption);
+    font-weight: 600;
+    position: relative;
+    padding-left: 1.5em;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 1px;
+      background-color: currentColor;
+      top: 1em;
+      left: 0;
+      transform: translateY(-0.475em);
+    }
+  } 
 }
 
-* > h1:first-child,
-* > .#{var.$ns}-heading-1:first-child,
-* > h2:first-child,
-* > .#{var.$ns}-heading-2:first-child,
-* > h3:first-child,
-* > .#{var.$ns}-heading-3:first-child,
-* > h4:first-child,
-* > .#{var.$ns}-heading-4:first-child,
-* > h5:first-child,
-* > .#{var.$ns}-heading-5:first-child,
-* > h6:first-child,
-* > .#{var.$ns}-heading-6:first-child {
-  margin-top: 0;
-}
+// @media (720px < width) {
+//   .content-text {
+//     &, * {
+//       max-width: fit-content;
+//     }
+//   }
+//   .content-section {
+//     display: block;
+//     column-count: 2;
+//     column-rule: solid 1px var(--text-caption);
+//     column-gap: 3rem;
+//     column-fill: balance;
+//     column-width: 36em;
+//     max-width: 100dvw;
+//     height: auto;
+//     max-height: calc(100dvh - 12%);
 
-h1 + *,
-h2 + *,
-h3 + *,
-h4 + *,
-h5 + *,
-h6 + *,
-.heading-1 + *,
-.heading-2 + *,
-.heading-3 + *,
-.heading-4 + *,
-.heading-5 + *,
-.heading-6 + * {
-  margin-top: 0;
-}
+//     p > * {
+//       display: inline;
+//     }
 
-main section,
-article section {
-  --mb: 95;
-  margin-bottom: func.pxToRem(var(--mb));
-}
-
-h1 + section,
-.#{var.$ns}-.heading-1 + section {
-  --mt: 36;
-  margin-top: func.pxToRem(var(--mt));
-  @media (width < 480px) {
-    --mt: 24;
-  }
-}
+//     h2, .heading-2 {
+//       column-span: all;
+//     }
+//   }
+// }

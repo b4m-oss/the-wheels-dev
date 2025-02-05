@@ -1,6 +1,0 @@
-@use "../utils/_functions" as func;
-
-*:focus {
-  outline-color: var(--text-highlight);
-  outline-offset: .5em;
-}
