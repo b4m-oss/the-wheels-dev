@@ -9,6 +9,7 @@
   "scripts": {
     "build": "npm run build -w packages/the-wheels",
     "dev": "npm run dev -w site",
+    "build:site": "npm run build -w site",
     "dev:lib": "npm run dev -w packages/the-wheels"
   },
   "devDependencies": {
