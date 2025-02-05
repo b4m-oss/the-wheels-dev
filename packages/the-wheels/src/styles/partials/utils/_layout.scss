@@ -1,0 +1,52 @@
+.content {
+  padding-left: 6.615%;
+  padding-right: 6.615%;
+}
+
+.two-col-wrap {
+  width: 94%;
+  margin: 0 auto;
+  border: 2px solid var(--text-main);
+  display: flex;
+  flex-flow: row;
+  gap: 0;
+  position: relative;
+
+  .sidebar {
+    padding: 4.5rem;
+    min-width: 32rem;
+    border-right: 2px solid var(--text-main);
+    position: relative;
+    &-container {
+      position: sticky;
+      top: 20px;
+    }
+
+    &-heading {
+      --fz: 28;
+      font-weight: 600;
+      margin-bottom: 0.75em;
+    }
+
+    &-list {
+      display: flex;
+      flex-flow: column;
+      gap: 0.75em;
+    }
+
+    &-item {
+      display: flex;
+      flex-flow: row;
+      gap: .5em;
+      align-items: center;
+    }
+  }
+
+  .content {
+    padding: 4.5rem;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
