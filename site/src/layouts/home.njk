@@ -1,0 +1,19 @@
+{% extends 'layouts/html-skelton.njk' %}
+
+{% block skelton %}
+
+<header>
+  {% block hero %}
+  {% endblock %}
+</header>
+<main id="main">
+  <div class="layout-container">
+    {% block content%}
+    {% endblock %}
+  </div>
+</main>
+<footer>
+  {% include 'components/site/global/global-footer.njk' %}
+</footer>
+
+{% endblock %}
