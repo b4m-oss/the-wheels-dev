@@ -1,0 +1,14 @@
+{% extends 'layouts/home.njk' %}
+
+{% block hero %}
+  {% include 'components/site/home/hero.njk' %}
+{% endblock %}
+
+{% block content %}
+    <nav class="twls-container horizontal">
+      <a href="/kitchen-sink/" class="button">Kitchen sink</a>
+    </nav>
+    <nav class="index-nav-area">
+      {% include 'components/site/home/navigation.njk' %}
+    </nav>
+{% endblock %}
