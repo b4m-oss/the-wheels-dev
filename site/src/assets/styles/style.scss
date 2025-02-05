@@ -1,4 +1,4 @@
-@forward '../../../../packages/the-wheels/src/styles/the-wheels.scss';
+@use '../../../../packages/the-wheels/src/styles/the-wheels.scss';
 
 @layer reset-css, the-wheels, site;
 
