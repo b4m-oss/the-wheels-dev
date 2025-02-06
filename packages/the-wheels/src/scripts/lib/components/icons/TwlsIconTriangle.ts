@@ -11,7 +11,7 @@ class TwlsIconTriangle extends HTMLElement {
     this.render();
   }
 
-  attributeChangedCallback(name: string, oldValue: string | null, newValue: string | null) {
+  attributeChangedCallback(oldValue: string | null, newValue: string | null) {
     if (oldValue !== newValue) {
       this.render();
     }
