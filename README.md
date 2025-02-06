@@ -25,6 +25,7 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 | Modal          | ✅     | Dialog screen overlays main screen.          |
 | Accordion      | ✅     | Collapse content with header.                |
 | Message Panel  | ✅     | Panel for alert, caution, messages.          |
+| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |
 | Form           | 🛠️     | See below                                    |
 | Tip            | --     | Tiny information                             |
 | Dropdown       | --     | Click to show menu or something nearby.      |
