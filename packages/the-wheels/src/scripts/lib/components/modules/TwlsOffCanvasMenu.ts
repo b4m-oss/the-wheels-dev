@@ -14,12 +14,11 @@ class TwlsOffCanvasMenu extends HTMLElement {
     this.innerHTML = `
       <div class="backdrop"></div>
       <div class="off-canvas">
-        <button class="close-button">Close</button>
         <div class="menu-content">
           ${this.innerHTML} <!-- Light DOMの内容をそのまま挿入 -->
         </div>
       </div>
-      <button class="toggle-button">Menu</button>
+      <twls-button class="ghost toggle-button" label="Menu" style="max-height: fit-content;" />
     `;
   }
 
@@ -28,10 +27,15 @@ class TwlsOffCanvasMenu extends HTMLElement {
     const closeButton = this.querySelector('.close-button');
     const backdrop = this.querySelector('.backdrop');
     const offCanvas = this.querySelector('.off-canvas');
+    const links = this.querySelectorAll('.menu-content a[href^="#"]');
 
     toggleButton?.addEventListener('click', () => this.toggleMenu(offCanvas, backdrop));
     closeButton?.addEventListener('click', () => this.toggleMenu(offCanvas, backdrop));
     backdrop?.addEventListener('click', () => this.toggleMenu(offCanvas, backdrop));
+
+    links.forEach(link => {
+      link.addEventListener('click', () => this.closeMenu(offCanvas, backdrop));
+    });
   }
 
   private toggleMenu(offCanvas: Element | null, backdrop: Element | null) {
@@ -40,6 +44,15 @@ class TwlsOffCanvasMenu extends HTMLElement {
       offCanvas.classList.toggle('open', this.isOpen);
       backdrop.classList.toggle('visible', this.isOpen);
       document.body.style.overflow = this.isOpen ? 'hidden' : '';
+    }
+  }
+
+  private closeMenu(offCanvas: Element | null, backdrop: Element | null) {
+    if (offCanvas && backdrop) {
+      this.isOpen = false;
+      offCanvas.classList.remove('open');
+      backdrop.classList.remove('visible');
+      document.body.style.overflow = '';
     }
   }
 }

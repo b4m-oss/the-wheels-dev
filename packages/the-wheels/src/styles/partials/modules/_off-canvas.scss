@@ -1,5 +1,5 @@
 /* 720px未満のスタイル */
-@media (max-width: 719px) {
+@media (max-width: 945px) {
   
   .backdrop {
     position: fixed;
@@ -18,7 +18,11 @@
     opacity: 1;
     pointer-events: all;
   }
-
+  twls-off-canvas-menu {
+    display: block;
+    height: max-content;
+    position: relative;
+  }
   .off-canvas {
     position: fixed;
     top: 0;
@@ -32,17 +36,28 @@
 
   .off-canvas.open {
     left: 0; /* 開いた状態 */
+        
+    .menu-content {
+      padding: 1rem 2rem;
+    }
   }
 
   .toggle-button {
     position: fixed;
-    top: 10px;
-    left: 10px;
-    // background-color: #444;
-    // color: white;
-    // border: none;
-    // padding: 10px;
-    // cursor: pointer;
+    top: 1.5rem;
+    left: 1.5rem;
+    height: auto; /* 高さを自動に設定 */
+    max-height: none; /* max-heightを無効化 */
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    display: inline-flex;
+    transition: none; /* トランジションを無効化して影響を排除 */
+    user-select: none; /* テキスト選択を無効化 */
+    outline: none; /* フォーカス時のアウトラインを無効化 */
   }
 
   .close-button {
@@ -50,7 +65,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 10;
+    z-index: 1001;
     // background-color: #444;
     // color: white;
     // border: none;
@@ -64,9 +79,8 @@
 }
 
 /* 720px以上のスタイル */
-@media (min-width: 720px) {
+@media (min-width: 946px) {
   .off-canvas {
-    position: static;
     width: auto;
     height: auto;
     background-color: transparent;

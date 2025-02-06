@@ -53,13 +53,19 @@
     }
   }
 
-  @media (width < 940px) {
+  @media (width <= 945px) {
     grid-template-columns: 1fr;
     grid-template-rows: 0 1fr;
-    .sidebar > * {
+
+    .sidebar {
       padding: 1rem;
-      position: sticky;
-      top: 1rem;
+      border: 0;
+    }
+
+    .sidebar > * {
+      // padding: 1rem;
+      // position: sticky;
+      // top: 1rem;
       // left: -80%;
       width: 21.5rem;
       z-index: 10;
