@@ -13,6 +13,7 @@ import TwlsAccordion from "./lib/components/modules/TwlsAccordion";
 import TwlsAccordionContainer from "./lib/components/lists/TwlsAccordionContainer";
 import TwlsMessagePanel from "./lib/components/elements/TwlsMessagePanel";
 import TwlsIconAlertTriangle from "./lib/components/icons/TwlsIconAlertTriangle";
+import TwlsDropdown from './lib/components/modules/TwlsDropdown';
 import TwlsIconPC from "./lib/components/icons/TwlsIconPC";
 import TwlsIconSun from "./lib/components/icons/TwlsIconSun";
 import TwlsIconMoon from "./lib/components/icons/TwlsIconMoon";
@@ -36,6 +37,7 @@ export {
   TwlsAccordionContainer,
   TwlsMessagePanel,
   TwlsOffCanvasMenu,
+  TwlsDropdown,
   TwlsIconAlertTriangle,
   TwlsIconPC,
   TwlsIconSun,

@@ -13,6 +13,17 @@
     {% include 'components/site/kitchen-sink/04_accordion.njk' %}
     {% include 'components/site/kitchen-sink/05_message-panel.njk' %}
     <section class="content-section">
+      <h2 id="dropdown">Dropdown</h2>
+      <twls-dropdown>
+        <button type="button" class="trigger">
+          <twls-icon-three-dots width="14" height="14" />
+        </button>
+        <div class="content">
+          <p>Dropdown content goes here.</p>
+        </div>
+      </twls-dropdown>
+    </section>
+    <section class="content-section">
       <h2 id="icons">Icons</h2>
       <dl class="gallery">
         <twls-gallery-item title="Triangle">
