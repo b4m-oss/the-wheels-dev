@@ -24,6 +24,8 @@ import TwlsIconTriangle from "./lib/components/icons/TwlsIconTriangle";
 import TwlsOffCanvasMenu from './lib/components/modules/TwlsOffCanvasMenu';
 import TwlsIconHamburger from "./lib/components/icons/TwlsIconHamburger";
 import TwlsIconThreeDots from "./lib/components/icons/TwlsIconThreeDots";
+import TwlsIconChevron from "./lib/components/icons/TwlsIconChevron";
+import TwlsIconChevronEnd from './lib/components/icons/TwlsIconChevronEnd';
 
 export { 
   TwlsCardButton, 
@@ -48,5 +50,7 @@ export {
   TwlsIconArrow,
   TwlsIconTriangle,
   TwlsIconHamburger,
-  TwlsIconThreeDots
+  TwlsIconThreeDots,
+  TwlsIconChevron,
+  TwlsIconChevronEnd
 };
