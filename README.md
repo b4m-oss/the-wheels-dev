@@ -16,22 +16,22 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 
 ### Basic feature
 
-| Function       | Status | Description                                  | status detail                  |
-| -------------- | ------ | -------------------------------------------- | ------------------------------ |
-| Typography     | ✅     | Basic typography for Japanese language.      |                                |
-| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                                |
-| Grid Layout    | 🧠     | Grid layout with utility class.              |                                |
-| Button         | ✅     | Button for multi purpose.                    |                                |
-| Modal          | ✅     | Dialog screen overlays main screen.          |                                |
-| Accordion      | 🛠️     | Collapse content with header.                |                                |
-| Message Panel  | 🛠️     | Panel for alert, caution, messages.          | Style is not applifed.         |
-| Off-canvas     | 🛠️     | Sidepanel collapses when screen is narrow.   | Style should be polished more. |
-| Form           | 🛠️     | See below                                    | Ready to implemented.          |
-| Tip            | --     | Tiny information                             |                                |
-| Dropdown       | --     | Click to show menu or something nearby.      |                                |
-| Pagination     | --     | Smart navigation for multiple pages.         |                                |
-| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.           |
-| i18n           | --     | Develop with Japanese language first.        |                                |
+| Function       | Status | Description                                  | status detail          |
+| -------------- | ------ | -------------------------------------------- | ---------------------- |
+| Typography     | ✅     | Basic typography for Japanese language.      |                        |
+| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                        |
+| Grid Layout    | 🧠     | Grid layout with utility class.              |                        |
+| Button         | ✅     | Button for multi purpose.                    |                        |
+| Modal          | ✅     | Dialog screen overlays main screen.          |                        |
+| Accordion      | 🛠️     | Collapse content with header.                |                        |
+| Message Panel  | 🛠️     | Panel for alert, caution, messages.          | Style is not applifed. |
+| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                        |
+| Form           | 🛠️     | See below                                    | Ready to implemented.  |
+| Tip            | --     | Tiny information                             |                        |
+| Dropdown       | --     | Click to show menu or something nearby.      |                        |
+| Pagination     | --     | Smart navigation for multiple pages.         |                        |
+| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.   |
+| i18n           | --     | Develop with Japanese language first.        |                        |
 
 ### Form feature
 
