@@ -19,6 +19,9 @@ import TwlsIconMoon from "./lib/components/icons/TwlsIconMoon";
 import TwlsIconLock from "./lib/components/icons/TwlsIconLock";
 import TwlsIconArrow from "./lib/components/icons/TwlsIconArrow";
 import TwlsIconTriangle from "./lib/components/icons/TwlsIconTriangle";
+import TwlsOffCanvasMenu from './lib/components/modules/TwlsOffCanvasMenu';
+import TwlsIconHamburger from "./lib/components/icons/TwlsIconHamburger";
+import TwlsIconThreeDots from "./lib/components/icons/TwlsIconThreeDots";
 
 export { 
   TwlsCardButton, 
@@ -32,11 +35,14 @@ export {
   TwlsAccordion,
   TwlsAccordionContainer,
   TwlsMessagePanel,
+  TwlsOffCanvasMenu,
   TwlsIconAlertTriangle,
   TwlsIconPC,
   TwlsIconSun,
   TwlsIconMoon,
   TwlsIconLock,
   TwlsIconArrow,
-  TwlsIconTriangle
+  TwlsIconTriangle,
+  TwlsIconHamburger,
+  TwlsIconThreeDots
 };
