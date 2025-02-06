@@ -12,13 +12,16 @@ class TwlsOffCanvasMenu extends HTMLElement {
 
   private render() {
     this.innerHTML = `
+    
       <div class="backdrop"></div>
       <div class="off-canvas">
         <div class="menu-content">
           ${this.innerHTML} <!-- Light DOMの内容をそのまま挿入 -->
         </div>
       </div>
-      <twls-button class="ghost toggle-button" label="Menu" style="max-height: fit-content;" />
+      <button class="toggle-button">
+        <twls-icon-triangle />
+      </button>
     `;
   }
 
@@ -28,6 +31,9 @@ class TwlsOffCanvasMenu extends HTMLElement {
     const backdrop = this.querySelector('.backdrop');
     const offCanvas = this.querySelector('.off-canvas');
     const links = this.querySelectorAll('.menu-content a[href^="#"]');
+    const triangle = document.querySelector('twls-icon-triangle');
+    const widthAttr = triangle?.getAttributeNode('width');
+    console.log(widthAttr?.nodeValue); // "7"
 
     toggleButton?.addEventListener('click', () => this.toggleMenu(offCanvas, backdrop));
     closeButton?.addEventListener('click', () => this.toggleMenu(offCanvas, backdrop));
@@ -44,6 +50,9 @@ class TwlsOffCanvasMenu extends HTMLElement {
       offCanvas.classList.toggle('open', this.isOpen);
       backdrop.classList.toggle('visible', this.isOpen);
       document.body.style.overflow = this.isOpen ? 'hidden' : '';
+      
+
+
     }
   }
 

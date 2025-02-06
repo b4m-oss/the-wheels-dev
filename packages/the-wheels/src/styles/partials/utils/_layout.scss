@@ -19,6 +19,12 @@
     // min-width: 32rem;
     border-right: 2px solid var(--text-main);
     position: relative;
+    top: 0;
+
+    & > * {
+      position: sticky;
+      top: 0;
+    }
 
     &-container {
       position: sticky;
@@ -60,31 +66,23 @@
     .sidebar {
       padding: 1rem;
       border: 0;
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      &-container {
+        position: sticky;
+      }
     }
 
     .sidebar > * {
-      // padding: 1rem;
-      // position: sticky;
-      // top: 1rem;
-      // left: -80%;
       width: 21.5rem;
       z-index: 10;
       padding: 1rem;
 
       border: 0;
 
-      // * {
-      //   font-size: 1.2rem;
-      // }
-
-      // &-list {
-      //   gap: 3em;
-      // }
-
-      // &-item {
-      //   transform: rotate(45deg);
-      //   transform-origin: left;
-      // }
     }
   }
 }

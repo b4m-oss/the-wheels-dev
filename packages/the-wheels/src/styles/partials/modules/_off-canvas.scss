@@ -1,6 +1,29 @@
 /* 720px未満のスタイル */
 @media (max-width: 945px) {
   
+  .off-canvas {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: all 0.3s ease; /* トランジションの確認 */
+    z-index: 1000;
+    background-color: var(--bg-page);
+          
+    .menu-content {
+      padding: 1rem 2rem;
+    }
+
+    &.open {
+      top: 0;
+      left: 0; /* 開いた状態 */
+      & ~ .toggle-button {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
   .backdrop {
     position: fixed;
     top: 0;
@@ -9,55 +32,33 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; /* トランジションの確認 */
     pointer-events: none;
-    z-index: 999; /* オフキャンバスより下に配置 */
+    z-index: 999;
   }
-
+  
   .backdrop.visible {
     opacity: 1;
     pointer-events: all;
   }
-  twls-off-canvas-menu {
-    display: block;
-    height: max-content;
-    position: relative;
-  }
-  .off-canvas {
-    position: fixed;
-    top: 0;
-    left: -250px; /* 初期状態でビューポート外 */
-    width: 250px;
-    height: 100%;
-    background-color: var(--bg-page);
-    transition: left 0.3s ease;
-    z-index: 1000;
-  }
-
-  .off-canvas.open {
-    left: 0; /* 開いた状態 */
-        
-    .menu-content {
-      padding: 1rem 2rem;
-    }
-  }
 
   .toggle-button {
     position: fixed;
-    top: 1.5rem;
+    bottom: 1.5rem;
     left: 1.5rem;
-    height: auto; /* 高さを自動に設定 */
-    max-height: none; /* max-heightを無効化 */
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px;
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+    aspect-ratio: 1/1;
+    border-radius: calc(var(--br-normal) * 1px);
+    border: 1px solid var(--text-main);
+    padding: 1.5rem;
+    line-height: 0;
+    color: var(--text-main);
     cursor: pointer;
     z-index: 1001;
     display: inline-flex;
-    transition: none; /* トランジションを無効化して影響を排除 */
-    user-select: none; /* テキスト選択を無効化 */
-    outline: none; /* フォーカス時のアウトラインを無効化 */
+    align-items: center;
+    width: auto;
   }
 
   .close-button {
