@@ -4,9 +4,11 @@ class TwlsAccordionContainer extends HTMLElement {
     CHILD_REMOVED: 'twls-accordion-container-child-removed'
   };
 
+  content: string | null = null;
+
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.content = this.innerHTML;
   }
 
   connectedCallback() {
@@ -15,31 +17,37 @@ class TwlsAccordionContainer extends HTMLElement {
   }
 
   private render() {
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <div class="twls-accordion">
-          <slot></slot>
-        </div>
-      `;
-    }
+    this.innerHTML = `
+      <div class="accordion">
+        ${this.content}
+      </div>
+    `;
   }
 
   private setupEventListeners() {
-    // スロットの変更を監視
-    const slot = this.shadowRoot?.querySelector('slot');
-    slot?.addEventListener('slotchange', (e) => {
-      const elements = (e.target as HTMLSlotElement).assignedElements();
-      
-      // 子要素の追加を通知
-      elements.forEach(element => {
-        this.dispatchEvent(new CustomEvent(TwlsAccordionContainer.EVENTS.CHILD_ADDED, {
-          detail: { element }
-        }));
+    // 子要素の追加や削除を監視するためのMutationObserverを設定
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach((node) => {
+            this.dispatchEvent(new CustomEvent(TwlsAccordionContainer.EVENTS.CHILD_ADDED, {
+              detail: { element: node }
+            }));
+          });
+  
+          mutation.removedNodes.forEach((node) => {
+            this.dispatchEvent(new CustomEvent(TwlsAccordionContainer.EVENTS.CHILD_REMOVED, {
+              detail: { element: node }
+            }));
+          });
+        }
       });
     });
+  
+    observer.observe(this, { childList: true });
   }
 }
 
 customElements.define("twls-accordion-container", TwlsAccordionContainer);
 
-export default TwlsAccordionContainer; 
+export default TwlsAccordionContainer;
