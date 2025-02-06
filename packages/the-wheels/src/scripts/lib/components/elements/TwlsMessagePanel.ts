@@ -1,11 +1,21 @@
 class TwlsMessagePanel extends HTMLElement {
+  
+  header: null | string = null
+  content: null | string = null
+  htmlClasses: string[] = []
+
   static get observedAttributes() {
     return ["html-class"];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    const header = this.querySelector('[slot="header"]') ? (this.querySelector('[slot="header"]') as HTMLElement).innerHTML : null
+    const content = this.querySelector('[slot="content"]') ? (this.querySelector('[slot="content"]') as HTMLElement).innerHTML : null
+    this.header = header
+    this.content = content
+    this.htmlClasses = [this.getAttribute("html-class") as string]
+    console.log(this)
   }
 
   connectedCallback() {
@@ -17,20 +27,14 @@ class TwlsMessagePanel extends HTMLElement {
   }
 
   private render() {
-    const htmlClass = this.getAttribute("html-class") || "";
-
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <div class="twls-message-panel ${htmlClass}">
-          <header class="twls-message-panel_header">
-            <slot name="header"></slot>
-          </header>
-          <div class="twls-message-panel_content">
-            <slot name="content"></slot>
-          </div>
+    this.innerHTML = `
+      <div class="message-panel ${this.htmlClasses.join(' ')}">
+        ${this.header ? `<header class="message-panel-header">${this.header}</header>` : ''}
+        <div class="message-panel-content">
+          ${this.content}
         </div>
-      `;
-    }
+      </div>
+    `;
   }
 }
 
