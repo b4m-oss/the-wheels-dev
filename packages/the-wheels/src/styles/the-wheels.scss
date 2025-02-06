@@ -10,6 +10,7 @@
   // variables
   --bg-page: #efefef;
   --bg-page-highlight: #ffffff;
+  --bg-page-optional: #dfdfdf;
   --bg-button-main: #3B3B3B;
   --bg-button-optional: #E1E1E1;
   --bg-button-hover: #696969;
@@ -73,6 +74,7 @@ nav a {
   // Components Importing
   @import "partials/atoms/_button.scss";
   @import "partials/elements/_gallery.scss";
+  @import "partials/elements/_message-panel.scss";
   @import "partials/lists/_radio-group.scss";
   @import "partials/modules/_card-button.scss";
   @import "partials/modules/_modal.scss";
