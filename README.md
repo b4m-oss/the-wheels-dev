@@ -16,22 +16,22 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 
 ### Basic feature
 
-| Function       | Status | Description                                  | status detail          |
-| -------------- | ------ | -------------------------------------------- | ---------------------- |
-| Typography     | ✅     | Basic typography for Japanese language.      |                        |
-| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                        |
-| Grid Layout    | 🧠     | Grid layout with utility class.              |                        |
-| Button         | ✅     | Button for multi purpose.                    |                        |
-| Modal          | ✅     | Dialog screen overlays main screen.          |                        |
-| Accordion      | 🛠️     | Collapse content with header.                |                        |
-| Message Panel  | 🛠️     | Panel for alert, caution, messages.          | Style is not applifed. |
-| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                        |
-| Form           | 🛠️     | See below                                    | Ready to implemented.  |
-| Tip            | --     | Tiny information                             |                        |
-| Dropdown       | --     | Click to show menu or something nearby.      |                        |
-| Pagination     | --     | Smart navigation for multiple pages.         |                        |
-| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.   |
-| i18n           | --     | Develop with Japanese language first.        |                        |
+| Function       | Status | Description                                  | status detail         |
+| -------------- | ------ | -------------------------------------------- | --------------------- |
+| Typography     | ✅     | Basic typography for Japanese language.      |                       |
+| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                       |
+| Grid Layout    | 🧠     | Grid layout with utility class.              |                       |
+| Button         | ✅     | Button for multi purpose.                    |                       |
+| Modal          | ✅     | Dialog screen overlays main screen.          |                       |
+| Accordion      | ✅     | Collapse content with header.                |                       |
+| Message Panel  | ✅     | Panel for alert, caution, messages.          |                       |
+| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                       |
+| Form           | 🛠️     | See below                                    | Ready to implemented. |
+| Tip            | --     | Tiny information                             |                       |
+| Dropdown       | --     | Click to show menu or something nearby.      |                       |
+| Pagination     | --     | Smart navigation for multiple pages.         |                       |
+| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.  |
+| i18n           | --     | Develop with Japanese language first.        |                       |
 
 ### Form feature
 
@@ -66,21 +66,36 @@ We use customized atomic component concept called "**W-ATOMic**".
 
 ## Start to Dev
 
-```bash
-git clone https://github.com/b4m-oss/the-wheels-dev/
-cd the-wheels-dev/dev
+```shell
+git clone https://github.com/b4m-oss/the-wheels-dev/ the-wheels-dev
+cd the-wheels-dev
 npm i
+npm run dev
 ```
 
 ### Requirements
 
 Node.js >= 18
 
-### Stacks we use...
+### Stack we use...
 
 - Sass(SCSS)
 - Vite
+- Vittum
+- Nunjucks
 - WebComponents
+
+## Build Package
+
+```shell
+npm run build
+```
+
+## Build Site
+
+```shell
+npm run build:site
+```
 
 ## License
 
