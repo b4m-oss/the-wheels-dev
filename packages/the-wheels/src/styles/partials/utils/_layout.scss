@@ -56,7 +56,8 @@
   @media (width < 940px) {
     grid-template-columns: 1fr;
     grid-template-rows: 0 1fr;
-    .sidebar {
+    .sidebar > * {
+      padding: 1rem;
       position: sticky;
       top: 1rem;
       // left: -80%;
@@ -66,18 +67,18 @@
 
       border: 0;
 
-      * {
-        font-size: 1.2rem;
-      }
+      // * {
+      //   font-size: 1.2rem;
+      // }
 
-      &-list {
-        gap: 3em;
-      }
+      // &-list {
+      //   gap: 3em;
+      // }
 
-      &-item {
-        transform: rotate(45deg);
-        transform-origin: left;
-      }
+      // &-item {
+      //   transform: rotate(45deg);
+      //   transform-origin: left;
+      // }
     }
   }
 }

@@ -19,6 +19,7 @@ import TwlsIconMoon from "./lib/components/icons/TwlsIconMoon";
 import TwlsIconLock from "./lib/components/icons/TwlsIconLock";
 import TwlsIconArrow from "./lib/components/icons/TwlsIconArrow";
 import TwlsIconTriangle from "./lib/components/icons/TwlsIconTriangle";
+import TwlsOffCanvasMenu from './lib/components/modules/TwlsOffCanvasMenu';
 
 export { 
   TwlsCardButton, 
@@ -38,5 +39,6 @@ export {
   TwlsIconMoon,
   TwlsIconLock,
   TwlsIconArrow,
-  TwlsIconTriangle
+  TwlsIconTriangle,
+  TwlsOffCanvasMenu
 };
