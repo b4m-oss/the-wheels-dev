@@ -16,21 +16,22 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 
 ### Basic feature
 
-| Function       | Status | Description                                  |
-| -------------- | ------ | -------------------------------------------- |
-| Typography     | ✅     | Basic typography for Japanese language.      |
-| Layout         | ✅     | Basic Layout single and with-sidebar layout. |
-| Grid Layout    | 🧠     | Grid layout with utility class.              |
-| Button         | ✅     | Button for multi purpose.                    |
-| Modal          | ✅     | Dialog screen overlays main screen.          |
-| Accordion      | ✅     | Collapse content with header.                |
-| Message Panel  | ✅     | Panel for alert, caution, messages.          |
-| Form           | 🛠️     | See below                                    |
-| Tip            | --     | Tiny information                             |
-| Dropdown       | --     | Click to show menu or something nearby.      |
-| Pagination     | --     | Smart navigation for multiple pages.         |
-| Cookie concent | 🧠     | Agreement for cookie usage.                  |
-| i18n           | --     | Develop with Japanese language first.        |
+| Function       | Status | Description                                  | status detail          |
+| -------------- | ------ | -------------------------------------------- | ---------------------- |
+| Typography     | ✅     | Basic typography for Japanese language.      |                        |
+| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                        |
+| Grid Layout    | 🧠     | Grid layout with utility class.              |                        |
+| Button         | ✅     | Button for multi purpose.                    |                        |
+| Modal          | ✅     | Dialog screen overlays main screen.          |                        |
+| Accordion      | 🛠️     | Collapse content with header.                |                        |
+| Message Panel  | 🛠️     | Panel for alert, caution, messages.          | Style is not applifed. |
+| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                        |
+| Form           | 🛠️     | See below                                    | Ready to implemented.  |
+| Tip            | --     | Tiny information                             |                        |
+| Dropdown       | --     | Click to show menu or something nearby.      |                        |
+| Pagination     | --     | Smart navigation for multiple pages.         |                        |
+| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.   |
+| i18n           | --     | Develop with Japanese language first.        |                        |
 
 ### Form feature
 
@@ -38,16 +39,16 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 | -------------------------------- | ------ | ----------------------------------------------------------------- |
 | Single line input                | 🛠️     | Like `<input type="text">`, password, tel, url... so on.          |
 | Multiline input                  | 🛠️     | The `<textarea>`                                                  |
-| Radio button                     | ✅     | Single select, multiple selectives are shows on single screen.    |
-| Checkbox                         | ✅     | Multiple select, selectives are shows on single screen.           |
+| Radio button                     | 🛠️     | Single select, multiple selectives are shows on single screen.    |
+| Checkbox                         | 🛠️     | Multiple select, selectives are shows on single screen.           |
 | Select                           | 🛠️     | Single or multiple select with dropdown                           |
-| Label, Legend                    | ✅     | Instruction of input or select element                            |
-| Label for required element       | ✅     | Label for required elements are should be with "required" text    |
+| Label, Legend                    | 🛠️     | Instruction of input or select element                            |
+| Label for required element       | 🛠️     | Label for required elements are should be with "required" text    |
 | Label for optional element       | 🛠️     | Label for required elements are should be with "optional" text    |
-| Indicate satisfy input condition | ✅     | Indicate if input condition is satisfied.                         |
-| Text counter                     | --     | Indicate current text count and max length.                       |
-| Text meter                       | --     | Indicate current text count with linear meter.                    |
-| Term of use agreement            | ✅     | Term agreement checkbox with terms in small scrollable container. |
+| Indicate satisfy input condition | 🛠️     | Indicate if input condition is satisfied.                         |
+| Text counter                     | 🛠️     | Indicate current text count and max length.                       |
+| Text meter                       | 🛠️     | Indicate current text count with linear meter.                    |
+| Term of use agreement            | 🛠️     | Term agreement checkbox with terms in small scrollable container. |
 
 ## Twls-ATOMic components
 
