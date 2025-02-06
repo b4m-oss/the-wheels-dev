@@ -1,0 +1,49 @@
+.message-panel {
+  border: 1px solid var(--text-main);
+  border-radius: calc(var(--br-normal) * 2px);
+  max-width: max(calc(17px * 40));
+
+  > .message-panel-content:only-child {
+    padding-top: 2rem;
+  }
+
+  &-header {
+    padding-top: 2rem;
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+    font-weight: bold;
+    --fz: 17;
+  }
+
+  &-content * {
+    --fz: 15;
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+    padding-bottom: 2rem;
+  }
+
+  &.state_optional {
+    background-color: var(--bg-page-optional);
+    border-color: transparent;
+  }
+
+  &.state_highlight {
+    background-color: var(--bg-page-highlight);
+    border-color: transparent;
+  }
+
+  &.state_alert {
+    border-color: var(--alert);
+    * {
+      color: var(--alert);
+    }
+  }
+
+  &.mod_icon {
+    .message-panel-header {
+      position: relative;
+      width: calc(100% + 1.1em);
+      left: -1.1em;
+    }
+  }
+}
