@@ -9,37 +9,51 @@ class TwlsAccordion extends HTMLElement {
     return ["tab-label"];
   }
 
+  tabLabel: string | null = null;
+  content: string | null = null;
+
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
-  }
+    this.tabLabel = this.getAttribute("tab-label") || "";
 
-  connectedCallback() {
-    this.render();
-    this.setupEventListeners();
-  }
-
-  private render() {
-    const tabLabel = this.getAttribute("tab-label") || "";
-
-    if (this.shadowRoot) {
-      this.shadowRoot.innerHTML = `
-        <details class="twls-accordion-item">
-          <summary class="twls-accordion-tab">${tabLabel}</summary>
-          <div class="twls-accordion-detail">
-            <slot></slot>
-          </div>
-        </details>
-      `;
+    if (!this.tabLabel) {
+      console.warn("Accordion label is not found.");
     }
   }
 
+  connectedCallback() {
+    requestAnimationFrame(() => {
+      const contentElement = this.querySelector(".content");
+      this.content = contentElement ? contentElement.innerHTML : null;
+  
+      if (!this.content) {
+        console.warn("Accordion content is not found.");
+      }
+  
+      console.log(this.content);
+  
+      this.render();
+      this.setupEventListeners();
+    });
+  }
+
+  private render() {
+    this.innerHTML = `
+      <details class="accordion-item">
+        <summary class="accordion-tab">${this.tabLabel || ""}</summary>
+        <div class="accordion-detail">
+          ${this.content || ""}
+        </div>
+      </details>
+    `;
+  }
+
   private setupEventListeners() {
-    const details = this.shadowRoot?.querySelector('details');
+    const details = this.querySelector('details');
     if (details) {
       details.addEventListener('toggle', (e) => {
         const isOpen = (e.target as HTMLDetailsElement).open;
-        
+
         // toggle前のイベント発火（キャンセル可能）
         const canToggle = this.dispatchEvent(new CustomEvent(TwlsAccordion.EVENTS.TOGGLE, {
           cancelable: true,
@@ -64,4 +78,4 @@ class TwlsAccordion extends HTMLElement {
 
 customElements.define("twls-accordion", TwlsAccordion);
 
-export default TwlsAccordion; 
+export default TwlsAccordion;
