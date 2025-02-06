@@ -1,0 +1,96 @@
+/* 720px未満のスタイル */
+@media (max-width: 945px) {
+  
+  .off-canvas {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: all 0.3s ease; /* トランジションの確認 */
+    z-index: 1000;
+    background-color: var(--bg-page);
+          
+    .menu-content {
+      padding: 1rem 2rem;
+    }
+
+    &.open {
+      top: 0;
+      left: 0; /* 開いた状態 */
+      & ~ .toggle-button {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease; /* トランジションの確認 */
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  .backdrop.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .toggle-button {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+    aspect-ratio: 1/1;
+    border-radius: calc(var(--br-normal) * 1px);
+    border: 1px solid var(--text-main);
+    padding: 1.5rem;
+    line-height: 0;
+    color: var(--text-main);
+    cursor: pointer;
+    z-index: 1001;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .close-button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+    // background-color: #444;
+    // color: white;
+    // border: none;
+    // padding: 10px;
+    // cursor: pointer;
+  }
+
+  .off-canvas.open .close-button {
+    display: block;
+  }
+}
+
+/* 720px以上のスタイル */
+@media (min-width: 946px) {
+  .off-canvas {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: inherit;
+    transition: none;
+  }
+
+  .toggle-button,
+  .close-button {
+    display: none;
+  }
+}
