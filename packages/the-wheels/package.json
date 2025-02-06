@@ -1,6 +1,6 @@
 {
   "name": "@b4m-oss/the-wheels",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "All purpose design system.",
   "main": "dist/the-wheels.cjs.js",
   "module": "src/main.ts",
