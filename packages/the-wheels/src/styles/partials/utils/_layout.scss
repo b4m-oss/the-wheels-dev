@@ -3,6 +3,13 @@
   padding-right: 6.615%;
 }
 
+.layout-container {
+  width: 100%;
+  @media (width < 945px) {
+    overflow-x: scroll;
+  }
+}
+
 .two-col-wrap {
   width: 94%;
   margin: 0 auto;
@@ -60,8 +67,11 @@
   }
 
   @media (width <= 945px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0 1fr;
+    & {
+      grid-template-columns: 100%;
+      grid-template-rows: 0 1fr;
+    }
+    
 
     .sidebar {
       padding: 1rem;
@@ -73,6 +83,7 @@
 
       &-container {
         position: sticky;
+        top: 0;
       }
     }
 
