@@ -131,5 +131,43 @@
         </twls-gallery-item>
       </dl>
     </section>
+    <section class="content-section">
+      <h2 id="forms">Forms</h2>
+      <form>
+        <fieldset>
+          <dl class="gallery">
+            <twls-gallery-item title="Single Line Input with text counter, required">
+              <twls-single-line-input
+                labelText="お名前"
+                minlength="3"
+                maxlength="50"
+                isRequired="true"
+                placeholder="例）山田 太郎"
+              >
+                <div class="assist-messages">
+                  <p>普段ビジネスでご利用のお名前でお願いいたします。</p>
+                  <p>最低3文字以上、最大50文字以内でお願いいたします。</p>
+                </div>
+              </twls-single-line-input>
+            </twls-gallery-item>
+            <twls-gallery-item title="Single Line Input, optional.">
+              <twls-single-line-input
+                labelText="Email"
+                type="email"
+                minlength="7"
+                maxlength="80"
+                placeholder="例）yamada@example.com"
+              >
+                <div class="assist-messages">
+                  <p>普段ビジネスでご利用のアドレスでお願いいたします。</p>
+                  <p>フリーメールのアドレスはご利用になれません。</p>
+                  <p>最低7文字以上、最大80文字以内でお願いいたします。</p>
+                </div>
+              </twls-single-line-input>
+            </twls-gallery-item>
+          </dl>
+        </fieldset>
+      </form>
+    </section>
   </article>
 {% endblock %}
