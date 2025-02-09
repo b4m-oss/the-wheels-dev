@@ -4,7 +4,7 @@
     width: fit-content;
     text-align: center;
     gap: .5rem;
-    
+
     .pager-container {
         display: flex;
         flex-flow: row;
@@ -16,6 +16,16 @@
             &:hover {
                 cursor: pointer;
                 background-color: var(--bg-page-optional);
+            }
+
+            &:disabled {
+                border-color: transparent;
+                * {
+                    color: #ababab;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
             }
         }
 
