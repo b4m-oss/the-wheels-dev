@@ -14,6 +14,7 @@ import TwlsAccordionContainer from "./lib/components/lists/TwlsAccordionContaine
 import TwlsMessagePanel from "./lib/components/elements/TwlsMessagePanel";
 import TwlsIconAlertTriangle from "./lib/components/icons/TwlsIconAlertTriangle";
 import TwlsDropdown from './lib/components/modules/TwlsDropdown';
+import TwlsPagination from './lib/components/modules/TwlsPagination';
 import TwlsIconPC from "./lib/components/icons/TwlsIconPC";
 import TwlsIconSun from "./lib/components/icons/TwlsIconSun";
 import TwlsIconMoon from "./lib/components/icons/TwlsIconMoon";
@@ -23,6 +24,8 @@ import TwlsIconTriangle from "./lib/components/icons/TwlsIconTriangle";
 import TwlsOffCanvasMenu from './lib/components/modules/TwlsOffCanvasMenu';
 import TwlsIconHamburger from "./lib/components/icons/TwlsIconHamburger";
 import TwlsIconThreeDots from "./lib/components/icons/TwlsIconThreeDots";
+import TwlsIconChevron from "./lib/components/icons/TwlsIconChevron";
+import TwlsIconChevronEnd from './lib/components/icons/TwlsIconChevronEnd';
 
 export { 
   TwlsCardButton, 
@@ -38,6 +41,7 @@ export {
   TwlsMessagePanel,
   TwlsOffCanvasMenu,
   TwlsDropdown,
+  TwlsPagination,
   TwlsIconAlertTriangle,
   TwlsIconPC,
   TwlsIconSun,
@@ -46,5 +50,7 @@ export {
   TwlsIconArrow,
   TwlsIconTriangle,
   TwlsIconHamburger,
-  TwlsIconThreeDots
+  TwlsIconThreeDots,
+  TwlsIconChevron,
+  TwlsIconChevronEnd
 };
