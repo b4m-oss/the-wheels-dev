@@ -1,5 +1,13 @@
+twls-card-button {
+  display: inherit;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+}
+
 .card-button {
-  display: block;
+  display: inherit;
+  grid-template-columns: 100%;
+  grid-template-rows: subgrid subgrid;
   text-decoration: none;
   --bw-normal: 1;
   // width: 100%;
@@ -17,7 +25,7 @@
 
     .label {
       padding-top: calc(
-        2.3rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
+        2.2rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
       );
       padding-left: calc(
         2.7rem - calc((var(--bw-hover) - var(--bw-normal)) * 1px)
@@ -27,7 +35,7 @@
       );
 
       p b {
-        color: var(--text-hightlight) !important;
+        color: var(--text-hightight);
       }
     }
 
@@ -50,7 +58,7 @@
   .label {
     padding-left: 2.7rem;
     padding-right: 2.7rem;
-    padding-top: 2.3rem;
+    padding-top: 2.2rem;
     padding-bottom: 1.2rem;
 
     *:first-child {
@@ -58,10 +66,12 @@
     }
 
     p b {
-      font-size: 2.7rem;
-      line-height: var(--heading-lh);
+      display: block;
+      font-size: 2.45rem;
+      line-height: 1.14;
       font-weight: 600;
       color: var(--text-main);
+      letter-spacing: -0.0125em;
     }
     .caption {
       font-size: 1.4rem;
@@ -76,11 +86,6 @@
     }
   }
   footer {
-    display: flex;
-    flex-flow: row;
-    justify-content: end;
-    align-items: center;
-    gap: 1rem;
     padding-top: 1.2rem;
     padding-right: 2rem;
     padding-bottom: 1.2rem;
