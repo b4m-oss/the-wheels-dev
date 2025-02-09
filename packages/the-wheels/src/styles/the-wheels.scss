@@ -31,6 +31,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body * {
   font-family: 'Noto Sans JP', Inter, sans-serif;
   &[lang="en"] {
@@ -71,6 +75,25 @@ nav a {
   @import "partials/utils/_layout.scss";
   @import "partials/utils/_typography.scss";
 
+  twls-dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 8px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      display: none;
+      min-width: 150px;
+  }
+  .menu.open {
+      display: block;
+  }
+
   // Components Importing
   @import "partials/atoms/_button.scss";
   @import "partials/elements/_gallery.scss";
@@ -79,6 +102,7 @@ nav a {
   @import "partials/modules/_accordion.scss";
   @import "partials/modules/_card-button.scss";
   @import "partials/modules/_modal.scss";
+  @import "partials/modules/_pagination.scss";
   @import "partials/modules/_off-canvas.scss";
   
   .subpage-nav {
