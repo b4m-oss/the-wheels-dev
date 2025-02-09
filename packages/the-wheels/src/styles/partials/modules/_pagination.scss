@@ -1,0 +1,120 @@
+.pagination {
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    text-align: center;
+    gap: .5rem;
+
+    @media (width < 480px) {
+        width: 100%;
+    }
+
+    .pager-container {
+        display: flex;
+        flex-flow: row;
+        gap: .75rem;
+        align-items: center;
+
+        button {
+            border: 0;
+            &:hover {
+                cursor: pointer;
+                background-color: var(--bg-page-optional);
+            }
+
+            &:disabled {
+                border-color: transparent;
+                * {
+                    color: #ababab;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+        .pger-button-oldest, 
+        .pger-button-latest {
+            flex-grow: 1;
+        }
+
+        .pager-button-prev,
+        .pager-counter,
+        .pager-button-next {
+            border: 1px solid var(--text-main);
+            min-width: 4.8rem;
+            min-height: 4.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .pager-button-prev {
+            border-radius: calc(var(--br-normal) * 1px) 0 0 calc(var(--br-normal) * 1px);
+            border-right-width: 0;
+            flex-grow: 1;
+        }
+
+        twls-dropdown {
+            flex-grow: 20;
+        }
+
+        .pager-counter {
+            border-left-width: 0;
+            border-right-width: 0;
+            @media (width < 480px) {
+                width: 100%;
+                * {
+                    --fz: 11;
+                    flex-grow: 2;
+                }
+            }
+        }
+        
+        .pager-button-next {
+            border-radius: 0 calc(var(--br-normal) * 1px) calc(var(--br-normal) * 1px) 0;
+            border-left-width: 0;
+            flex-grow: 1;
+        }
+    }
+    .pager-item-counter {
+        * {
+            --fz: 12;
+            text-align: center;
+        }
+    }
+    .content {
+        max-height: 10em;
+        overflow-y: scroll;
+        text-align: center;
+        padding: 0;
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1rem;
+
+            li {
+                width: calc((100% - 1rem * 2) / 3);
+            }
+        }
+
+        li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+
+            &:hover {
+                background: var(--bg-page-optional);
+            }
+        }
+    }
+}
+
+@media (width < 480px) {
+    [class^="label-"] {
+        display: none;       
+    }
+}

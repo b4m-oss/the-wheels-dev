@@ -16,22 +16,22 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 
 ### Basic feature
 
-| Function       | Status | Description                                  | status detail          |
-| -------------- | ------ | -------------------------------------------- | ---------------------- |
-| Typography     | ✅     | Basic typography for Japanese language.      |                        |
-| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                        |
-| Grid Layout    | 🧠     | Grid layout with utility class.              |                        |
-| Button         | ✅     | Button for multi purpose.                    |                        |
-| Modal          | ✅     | Dialog screen overlays main screen.          |                        |
-| Accordion      | 🛠️     | Collapse content with header.                |                        |
-| Message Panel  | 🛠️     | Panel for alert, caution, messages.          | Style is not applifed. |
-| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                        |
-| Form           | 🛠️     | See below                                    | Ready to implemented.  |
-| Tip            | --     | Tiny information                             |                        |
-| Dropdown       | --     | Click to show menu or something nearby.      |                        |
-| Pagination     | --     | Smart navigation for multiple pages.         |                        |
-| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.   |
-| i18n           | --     | Develop with Japanese language first.        |                        |
+| Function       | Status | Description                                  | status detail         |
+| -------------- | ------ | -------------------------------------------- | --------------------- |
+| Typography     | ✅     | Basic typography for Japanese language.      |                       |
+| Layout         | ✅     | Basic Layout single and with-sidebar layout. |                       |
+| Grid Layout    | 🧠     | Grid layout with utility class.              |                       |
+| Button         | ✅     | Button for multi purpose.                    |                       |
+| Modal          | ✅     | Dialog screen overlays main screen.          |                       |
+| Accordion      | ✅     | Collapse content with header.                |                       |
+| Message Panel  | ✅     | Panel for alert, caution, messages.          |                       |
+| Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                       |
+| Form           | 🛠️     | See below                                    | Ready to implemented. |
+| Tip            | --     | Tiny information                             |                       |
+| Dropdown       | --     | Click to show menu or something nearby.      |                       |
+| Pagination     | --     | Smart navigation for multiple pages.         |                       |
+| Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.  |
+| i18n           | --     | Develop with Japanese language first.        |                       |
 
 ### Form feature
 
@@ -50,37 +50,44 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 | Text meter                       | 🛠️     | Indicate current text count with linear meter.                    |
 | Term of use agreement            | 🛠️     | Term agreement checkbox with terms in small scrollable container. |
 
-## W-ATOMic components
+## Twls-ATOMic components
 
-We use customized atomic component concept called "**W-ATOMic**".
+We use customized atomic component concept called "**Twls-ATOMic**".
 
-| Name                | Role      | Definition                                                                                                                                                                            |
-| ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atom                | item      | Elements that cannot be further divided. (e.g., buttons, chips, etc. Equivalents for Atomic design's atom.)                                                                           |
-| Element             | item      | A collection of multiple Atoms. However, it cannot constitute a function by itself. (e.g., displaying an amount of money, etc. Equivalents for Atomic design's element.)              |
-| Module              | Container | A collection of multiple Atoms or Elements that together constitute a stand-alone function. (e.g., cards, pagers, drop-downs, modals, etc. Equivalents for Atomic design's molecules) |
-| List                | Container | A set of Elements or Modules of the same type (e.g., product listings, etc.)                                                                                                          |
-| Layout              | Template  | A Layout pattern for a page or screen. The page or screen must select a single Layout.                                                                                                |
-| Page or Screen      | Screen    | Screen. When screen is reflowable, call it as Page. However, this distinction is not strictly necessary.                                                                              |
-| Site or System, App | Solution  | A page, or set of screens, is a digital solution that encompasses multiple functions for one or more purposes.                                                                        |
+[See here](./docs/contents/components.md).
 
 ## Start to Dev
 
-```bash
-git clone https://github.com/b4m-oss/the-wheels-dev/
-cd the-wheels-dev/dev
+```shell
+git clone https://github.com/b4m-oss/the-wheels-dev/ the-wheels-dev
+cd the-wheels-dev
 npm i
+npm run dev
 ```
 
 ### Requirements
 
 Node.js >= 18
 
-### Stacks we use...
+### Stack we use...
 
 - Sass(SCSS)
 - Vite
+- Vittum
+- Nunjucks
 - WebComponents
+
+## Build Package
+
+```shell
+npm run build
+```
+
+## Build Site
+
+```shell
+npm run build:site
+```
 
 ## License
 
