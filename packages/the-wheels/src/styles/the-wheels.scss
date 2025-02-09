@@ -17,6 +17,7 @@
   --text-main: #464646;
   --text-caption: #666666;
   --text-highlight: #000000;
+  --text-optional: #cccccc;
   --alert: #ca2727;
   --fz-root-pc: 18;
   --fz-root-mobile: 16;
@@ -104,6 +105,7 @@ nav a {
   @import "partials/modules/_modal.scss";
   @import "partials/modules/_pagination.scss";
   @import "partials/modules/_off-canvas.scss";
+  @import "partials/forms/basics.scss";
   
   .subpage-nav {
     padding-left: 6.615%;
