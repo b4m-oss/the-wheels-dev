@@ -28,8 +28,8 @@ We develop on Nuxt 3, and aim publish on npm package as a CSS and Vanilla JavaSc
 | Off-canvas     | ✅     | Sidepanel collapses when screen is narrow.   |                       |
 | Form           | 🛠️     | See below                                    | Ready to implemented. |
 | Tip            | --     | Tiny information                             |                       |
-| Dropdown       | --     | Click to show menu or something nearby.      |                       |
-| Pagination     | --     | Smart navigation for multiple pages.         |                       |
+| Dropdown       | ✅     | Click to show menu or something nearby.      |                       |
+| Pagination     | ✅     | Smart navigation for multiple pages.         |                       |
 | Cookie concent | 🧠     | Agreement for cookie usage.                  | Under consideration.  |
 | i18n           | --     | Develop with Japanese language first.        |                       |
 
