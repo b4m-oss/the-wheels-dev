@@ -13,6 +13,21 @@
     {% include 'components/site/kitchen-sink/04_accordion.njk' %}
     {% include 'components/site/kitchen-sink/05_message-panel.njk' %}
     <section class="content-section">
+      <h2 id="dropdown">Dropdown</h2>
+      <twls-dropdown>
+        <button type="button" class="trigger">
+          <twls-icon-three-dots width="14" height="14" />
+        </button>
+        <div class="content">
+          <p>Dropdown content goes here.</p>
+        </div>
+      </twls-dropdown>
+    </section>
+    <section class="content-section">
+      <h2 id="pagination">Pagination</h2>
+      <twls-pagination />
+    </section>
+    <section class="content-section">
       <h2 id="icons">Icons</h2>
       <dl class="gallery">
         <twls-gallery-item title="Triangle">
@@ -41,6 +56,12 @@
         </twls-gallery-item>
         <twls-gallery-item title="ThreeDots">
           <twls-icon-three-dots width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-three-dots>
+        </twls-gallery-item>
+        <twls-gallery-item title="Chevron">
+          <twls-icon-chevron width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-chevron>
+        </twls-gallery-item>
+        <twls-gallery-item title="Chevron End">
+          <twls-icon-chevron-end width="48" height="48" fill="var(--text-highlight)" rotate="0"></twls-icon-chevron-end>
         </twls-gallery-item>
       </dl>
     </section>
