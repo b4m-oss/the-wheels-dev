@@ -15,6 +15,7 @@ import TwlsMessagePanel from "./lib/components/elements/TwlsMessagePanel";
 import TwlsIconAlertTriangle from "./lib/components/icons/TwlsIconAlertTriangle";
 import TwlsDropdown from './lib/components/modules/TwlsDropdown';
 import TwlsPagination from './lib/components/modules/TwlsPagination';
+import TwlsSingleLineInput from './lib/components/forms/TwlsSIngleLineInput';
 import TwlsIconPC from "./lib/components/icons/TwlsIconPC";
 import TwlsIconSun from "./lib/components/icons/TwlsIconSun";
 import TwlsIconMoon from "./lib/components/icons/TwlsIconMoon";
@@ -42,6 +43,7 @@ export {
   TwlsOffCanvasMenu,
   TwlsDropdown,
   TwlsPagination,
+  TwlsSingleLineInput,
   TwlsIconAlertTriangle,
   TwlsIconPC,
   TwlsIconSun,
