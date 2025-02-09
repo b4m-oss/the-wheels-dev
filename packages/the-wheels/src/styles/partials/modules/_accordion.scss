@@ -4,7 +4,7 @@
 .accordion-item {
   border-top: 1px solid var(--text-main);
   .accordion-tab {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     position: relative;
 
     &:hover {
@@ -12,8 +12,14 @@
       background: var(--bg-page-optional);
     }
   }
+  &[open] {
+    .accordion-tab {
+      padding-bottom: 1rem;
+    }
+  }
   .accordion-detail {
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
+    padding-top: 1rem;
     padding-top: 0;
   }
 }
