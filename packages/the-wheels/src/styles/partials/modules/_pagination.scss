@@ -15,6 +15,10 @@
         gap: .75rem;
         align-items: center;
 
+        * {
+          background: transparent;
+        }
+
         button {
             border: 0;
             &:hover {
