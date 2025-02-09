@@ -5,10 +5,14 @@
     text-align: center;
     gap: .5rem;
 
+    @media (width < 480px) {
+        width: 100%;
+    }
+
     .pager-container {
         display: flex;
         flex-flow: row;
-        gap: 1rem;
+        gap: .75rem;
         align-items: center;
 
         button {
@@ -28,6 +32,10 @@
                 }
             }
         }
+        .pger-button-oldest, 
+        .pger-button-latest {
+            flex-grow: 1;
+        }
 
         .pager-button-prev,
         .pager-counter,
@@ -45,16 +53,29 @@
         .pager-button-prev {
             border-radius: calc(var(--br-normal) * 1px) 0 0 calc(var(--br-normal) * 1px);
             border-right-width: 0;
+            flex-grow: 1;
+        }
+
+        twls-dropdown {
+            flex-grow: 20;
         }
 
         .pager-counter {
             border-left-width: 0;
             border-right-width: 0;
+            @media (width < 480px) {
+                width: 100%;
+                * {
+                    --fz: 11;
+                    flex-grow: 2;
+                }
+            }
         }
         
         .pager-button-next {
             border-radius: 0 calc(var(--br-normal) * 1px) calc(var(--br-normal) * 1px) 0;
             border-left-width: 0;
+            flex-grow: 1;
         }
     }
     .pager-item-counter {
@@ -89,5 +110,11 @@
                 background: var(--bg-page-optional);
             }
         }
+    }
+}
+
+@media (width < 480px) {
+    [class^="label-"] {
+        display: none;       
     }
 }

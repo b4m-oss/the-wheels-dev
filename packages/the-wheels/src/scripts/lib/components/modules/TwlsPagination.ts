@@ -14,8 +14,9 @@ class TwlsPagination extends HTMLElement {
     const nextLabel = this.getAttribute("nextLabel") || null;
     const currentPageNum = this.getAttribute("currentPageNum") || null;
     const totalPageNum = this.getAttribute("totalPageNum") || null;
-    const currentPageItemCount = this.getAttribute("currentPageCount") || null;
+    const currentPageItemCount = this.getAttribute("currentPageItemCount") || null;
     const totalItemCount = this.getAttribute("totalItemCount") || null;
+    const content = this.innerHTML;
     this.innerHTML = `
       <nav class="pagination">
         <div class="pager-container">
@@ -28,7 +29,7 @@ class TwlsPagination extends HTMLElement {
             <button type="button" class="pager-button-prev">
               <a href="${prevLink}">
                 <twls-icon-chevron width="12" height="12" rotate="180"></twls-icon-chevron>
-                ${prevLabel ? prevLabel : ''}
+                ${prevLabel ? `<span class="label-next">${prevLabel}</span>` : ''}
               </a>
             </button>
             `:`
@@ -39,70 +40,21 @@ class TwlsPagination extends HTMLElement {
           <twls-dropdown>
             <button class="pager-counter trigger">
             ${currentPageNum ? `
-              <span class="pager-count-current">${currentPageNum}ページ目</span>
+              <span class="pager-count-current">${currentPageNum}<span class="label-counter">ページ目</span></span>
             ` : ``}              
               <span class="pager-count-divider">/</span>
             ${totalPageNum ? `
-              <span class="pager-count-total">全${totalPageNum}ページ</span>
+              <span class="pager-count-total"><span class="label-counter">全</span>${totalPageNum}<span class="label-counter">ページ</span></span>
               ` : ``}
             </button>
             <div class="content">
-              <ul class="pager-all-list">
-                <li class="pager-all-item"><a href="">1</a></li>
-                <li class="pager-all-item"><a href="">2</a></li>
-                <li class="pager-all-item"><a href="">3</a></li>
-                <li class="pager-all-item"><a href="">4</a></li>
-                <li class="pager-all-item"><a href="">5</a></li>
-                <li class="pager-all-item"><a href="">6</a></li>
-                <li class="pager-all-item"><a href="">7</a></li>
-                <li class="pager-all-item"><a href="">8</a></li>
-                <li class="pager-all-item"><a href="">9</a></li>
-                <li class="pager-all-item"><a href="">10</a></li>
-                <li class="pager-all-item"><a href="">11</a></li>
-                <li class="pager-all-item"><a href="">12</a></li>
-                <li class="pager-all-item"><a href="">13</a></li>
-                <li class="pager-all-item"><a href="">14</a></li>
-                <li class="pager-all-item"><a href="">15</a></li>
-                <li class="pager-all-item"><a href="">16</a></li>
-                <li class="pager-all-item"><a href="">17</a></li>
-                <li class="pager-all-item"><a href="">18</a></li>
-                <li class="pager-all-item"><a href="">19</a></li>
-                <li class="pager-all-item"><a href="">20</a></li>
-                <li class="pager-all-item"><a href="">21</a></li>
-                <li class="pager-all-item"><a href="">22</a></li>
-                <li class="pager-all-item"><a href="">23</a></li>
-                <li class="pager-all-item"><a href="">24</a></li>
-                <li class="pager-all-item"><a href="">25</a></li>
-                <li class="pager-all-item"><a href="">26</a></li>
-                <li class="pager-all-item"><a href="">27</a></li>
-                <li class="pager-all-item"><a href="">28</a></li>
-                <li class="pager-all-item"><a href="">29</a></li>
-                <li class="pager-all-item"><a href="">30</a></li>
-                <li class="pager-all-item"><a href="">31</a></li>
-                <li class="pager-all-item"><a href="">32</a></li>
-                <li class="pager-all-item"><a href="">33</a></li>
-                <li class="pager-all-item"><a href="">34</a></li>
-                <li class="pager-all-item"><a href="">35</a></li>
-                <li class="pager-all-item"><a href="">36</a></li>
-                <li class="pager-all-item"><a href="">37</a></li>
-                <li class="pager-all-item"><a href="">38</a></li>
-                <li class="pager-all-item"><a href="">39</a></li>
-                <li class="pager-all-item"><a href="">40</a></li>
-                <li class="pager-all-item"><a href="">41</a></li>
-                <li class="pager-all-item"><a href="">42</a></li>
-                <li class="pager-all-item"><a href="">43</a></li>
-                <li class="pager-all-item"><a href="">44</a></li>
-                <li class="pager-all-item"><a href="">45</a></li>
-                <li class="pager-all-item"><a href="">46</a></li>
-                <li class="pager-all-item"><a href="">47</a></li>
-                <li class="pager-all-item"><a href="">48</a></li>
-              </ul>
+              ${content}
             </div>
           </twls-dropdown>
           ${nextLink ? `
           <button type="button" class="pager-button-next">
             <a href="${nextLink}">
-              ${nextLabel ? nextLabel : ''}
+              ${nextLabel ? `<span class="label-next">${nextLabel}</span>` : ''}
               <twls-icon-chevron width="12" height="12" rotate="0"></twls-icon-chevron>
             </a>
           </button>
