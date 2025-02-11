@@ -13,6 +13,12 @@
     padding-right: 4.3rem;
     font-weight: bold;
     --fz: 17;
+
+    @media (width < 480px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 1.5rem;
+    } 
   }
 
   &-content * {
@@ -20,6 +26,13 @@
     padding-left: 4.3rem;
     padding-right: 4.3rem;
     padding-bottom: 2rem;
+
+    @media (width < 480px) {
+      --fz: 13.5;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 1.5rem;
+    } 
   }
 
   &.state_optional {
@@ -44,6 +57,11 @@
       position: relative;
       width: calc(100% + 1.1em);
       left: -1.1em;
+
+      @media (width < 480px) {
+        left: 0;
+        width: 100%;
+      } 
     }
   }
 }
