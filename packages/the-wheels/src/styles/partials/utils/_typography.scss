@@ -27,10 +27,20 @@
     font-weight: 800;
     color: var(--text-highlight);
     margin-bottom: 1.25rem;
+
+    @media (width < 480px) {
+      --fz: 40;
+      margin-bottom: -1rem;
+    } 
   }
 
   h2, .heading-2 {
     --fz: 50;
+
+    @media (width < 480px) {
+      --fz: 30;
+      margin-bottom: -1rem;
+    } 
   }
 
   h3, .heading-3 {
